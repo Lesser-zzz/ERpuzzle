@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이터널리턴 3:3 구도 퍼즐</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; background-color: #2c2f33; color: white; text-align: center; }
+        .board { display: flex; justify-content: space-around; margin-top: 50px; }
+        .team { display: flex; flex-direction: column; gap: 20px; width: 40%; }
+        .team-title { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        .red-team { color: #ff4757; }
+        .blue-team { color: #1e90ff; }
+        
+        .character-card { 
+            background: #2f3542; padding: 15px; border-radius: 8px; 
+            border: 2px solid #57606f; display: flex; gap: 15px; align-items: center;
+        }
+        .char-img { width: 80px; height: 80px; background-color: #747d8c; border-radius: 5px; object-fit: cover; }
+        .char-info { text-align: left; flex-grow: 1; }
+        .char-name { font-size: 20px; font-weight: bold; margin: 0 0 5px 0; color: #f1f2f6; }
+        .char-vars { font-size: 14px; color: #a4b0be; margin-bottom: 5px; }
+        .items { font-size: 12px; color: #eccc68; }
+        
+        #reroll-btn { 
+            margin-top: 40px; padding: 15px 40px; font-size: 20px; font-weight: bold;
+            background-color: #ffa502; color: #2f3542; border: none; border-radius: 8px; cursor: pointer;
+        }
+        #reroll-btn:hover { background-color: #ff7f50; }
+    </style>
+</head>
+<body>
+
+    <h1>이터널리턴 3:3 구도 퍼즐 (MVP)</h1>
+    
+    <div class="board">
+        <!-- 블루팀 -->
+        <div class="team" id="blue-team-container">
+            <div class="team-title blue-team">BLUE TEAM</div>
+            <!-- 카드가 생성될 위치 -->
+        </div>
+
+        <!-- 레드팀 -->
+        <div class="team" id="red-team-container">
+            <div class="team-title red-team">RED TEAM</div>
+            <!-- 카드가 생성될 위치 -->
+        </div>
+    </div>
+
+    <button id="reroll-btn" onclick="rollDice()">🎲 구도 셔플 (Reroll)</button>
+
+    <script>
+        let characterPool = [];
+
+        // 1. data.json 파일 불러오기
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                characterPool = data;
+                rollDice(); // 첫 로딩 시 바로 셔플 1회 실행
+            })
+            .catch(error => console.error('데이터 로드 실패:', error));
+
+        // 2. 랜덤 변수 생성 함수 (레벨, 체력 등)
+        function getRandomVariables() {
+            return {
+                level: Math.floor(Math.random() * (20 - 10 + 1)) + 10, // 10~20레벨
+                health_percent: Math.floor(Math.random() * 100) + 1,   // 1~100%
+                has_ult: Math.random() > 0.5 ? 'ON' : '쿨다운'           // 50% 확률로 궁극기 유무
+            };
+        }
+
+        // 3. 카드 HTML 생성 함수
+        function createCardHTML(charData) {
+            const vars = getRandomVariables();
+            const items = charData.core_items_order.slice(0, 3).join(', '); // 전설템 3개만 표시 예시
+            
+            return `
+                <div class="character-card">
+                    <img src="${charData.image}" alt="${charData.name}" class="char-img" onerror="this.style.display='none'">
+                    <div class="char-info">
+                        <h3 class="char-name">${charData.name} (${charData.weapon})</h3>
+                        <div class="char-vars">
+                            Lv.${vars.level} | 체력: ${vars.health_percent}% | 궁극기: ${vars.has_ult}
+                        </div>
+                        <div class="items">코어: ${items}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 4. 주사위 굴리기 (셔플 로직)
+        function rollDice() {
+            if (characterPool.length < 6) return; // 데이터가 부족하면 실행 안 함
+
+            // 데이터 풀 섞기
+            const shuffled = [...characterPool].sort(() => 0.5 - Math.random());
+            
+            // 6명 뽑아서 양 팀에 분배
+            const blueTeam = shuffled.slice(0, 3);
+            const redTeam = shuffled.slice(3, 6);
+
+            // 화면에 렌더링
+            document.getElementById('blue-team-container').innerHTML = 
+                '<div class="team-title blue-team">BLUE TEAM</div>' + 
+                blueTeam.map(char => createCardHTML(char)).join('');
+                
+            document.getElementById('red-team-container').innerHTML = 
+                '<div class="team-title red-team">RED TEAM</div>' + 
+                redTeam.map(char => createCardHTML(char)).join('');
+        }
+    </script>
+</body>
+</html>
