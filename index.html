@@ -60,44 +60,54 @@
             })
             .catch(error => console.error('데이터 로드 실패:', error));
 
-        // 2. 랜덤 변수 생성 함수 (레벨, 체력 등)
-        function getRandomVariables() {
-            return {
-                level: Math.floor(Math.random() * (20 - 10 + 1)) + 10, // 10~20레벨
-                health_percent: Math.floor(Math.random() * 100) + 1,   // 1~100%
-                has_ult: Math.random() > 0.5 ? 'ON' : '쿨다운'           // 50% 확률로 궁극기 유무
-            };
-        }
-
-        // 3. 카드 HTML 생성 함수
+        // 2. 카드 HTML 생성 함수
         function createCardHTML(charData) {
-            const vars = getRandomVariables();
-            const items = charData.core_items_order.slice(0, 3).join(', '); // 전설템 3개만 표시 예시
-            
             return `
                 <div class="character-card">
                     <img src="${charData.image}" alt="${charData.name}" class="char-img" onerror="this.style.display='none'">
                     <div class="char-info">
                         <h3 class="char-name">${charData.name} (${charData.weapon})</h3>
                         <div class="char-vars">
-                            Lv.${vars.level} | 체력: ${vars.health_percent}% | 궁극기: ${vars.has_ult}
+                            Lv.${charData.level} | 체력: ${charData.health_percent}% | 궁극기: ${charData.has_ult}
                         </div>
-                        <div class="items">코어: ${items}</div>
+                        <div class="items">코어: ${charData.items_text}</div>
                     </div>
                 </div>
             `;
         }
 
-        // 4. 주사위 굴리기 (셔플 로직)
+        // 3. 주사위 굴리기 (셔플 로직)
         function rollDice() {
-            if (characterPool.length < 6) return; // 데이터가 부족하면 실행 안 함
+            if (characterPool.length < 6) return;
+
+            // 이번 매치의 '기준 레벨' 생성 (10 ~ 16레벨 사이)
+            const baseLevel = Math.floor(Math.random() * (16 - 10 + 1)) + 10; 
 
             // 데이터 풀 섞기
             const shuffled = [...characterPool].sort(() => 0.5 - Math.random());
-            
-            // 6명 뽑아서 양 팀에 분배
-            const blueTeam = shuffled.slice(0, 3);
-            const redTeam = shuffled.slice(3, 6);
+            const selectedChars = shuffled.slice(0, 6);
+
+            // 6명의 캐릭터에게 랜덤 변수 부여
+            const finalTeamData = selectedChars.map(char => {
+                // 기준 레벨에 0~2를 더해서 최대 2레벨 차이만 나도록 설정
+                const charLevel = baseLevel + Math.floor(Math.random() * 3); 
+                
+                // 전설 아이템 개수 랜덤 설정 (0~5개)
+                const legCount = Math.floor(Math.random() * 6);
+                const items = legCount > 0 ? char.core_items_order.slice(0, legCount).join(', ') : '전설 아이템 없음 (0코어)';
+
+                return {
+                    ...char,
+                    level: charLevel,
+                    health_percent: Math.floor(Math.random() * 100) + 1,
+                    has_ult: Math.random() > 0.5 ? 'ON' : '쿨다운',
+                    items_text: items
+                };
+            });
+
+            // 6명을 양 팀에 3명씩 분배
+            const blueTeam = finalTeamData.slice(0, 3);
+            const redTeam = finalTeamData.slice(3, 6);
 
             // 화면에 렌더링
             document.getElementById('blue-team-container').innerHTML = 
