@@ -4,25 +4,43 @@
     <meta charset="UTF-8">
     <title>이터널리턴 3:3 구도 퍼즐</title>
     <style>
-        body { font-family: 'Malgun Gothic', sans-serif; background-color: #2c2f33; color: white; text-align: center; }
-        .board { display: flex; justify-content: space-around; margin-top: 50px; }
-        .team { display: flex; flex-direction: column; gap: 20px; width: 40%; }
-        .team-title { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
-        .red-team { color: #ff4757; }
-        .blue-team { color: #1e90ff; }
+        body { font-family: 'Malgun Gothic', sans-serif; background-color: #2c2f33; color: white; text-align: center; margin: 0; padding: 20px; }
+        h1 { margin-bottom: 5px; }
         
-        .character-card { 
-            background: #2f3542; padding: 15px; border-radius: 8px; 
-            border: 2px solid #57606f; display: flex; gap: 15px; align-items: center;
+        /* 1. 환경 변수 패널 */
+        .env-panel { 
+            background: #ffa502; color: #2f3542; padding: 10px 20px; 
+            border-radius: 8px; display: inline-block; font-size: 18px; font-weight: bold; margin-bottom: 20px; 
         }
-        .char-img { width: 80px; height: 80px; background-color: #747d8c; border-radius: 5px; object-fit: cover; }
-        .char-info { text-align: left; flex-grow: 1; }
-        .char-name { font-size: 20px; font-weight: bold; margin: 0 0 5px 0; color: #f1f2f6; }
-        .char-vars { font-size: 14px; color: #a4b0be; margin-bottom: 5px; }
-        .items { font-size: 12px; color: #eccc68; }
+
+        /* 2. 2D 전장 보드 */
+        .battlefield { 
+            position: relative; width: 900px; height: 500px; margin: 0 auto;
+            background-color: #1e272e; border: 3px solid #57606f; border-radius: 12px; overflow: hidden;
+        }
+        /* 중앙 경계선 (참고용) */
+        .battlefield::after {
+            content: ''; position: absolute; left: 50%; top: 0; bottom: 0;
+            width: 2px; background: dashed rgba(255, 255, 255, 0.2);
+        }
+
+        /* 3. 흩뿌려질 캐릭터 카드 (미니 버전) */
+        .character-card { 
+            position: absolute; width: 140px; background: rgba(47, 53, 66, 0.9); 
+            border: 2px solid; border-radius: 8px; padding: 8px; text-align: left;
+            transform: translate(-50%, -50%); /* 중심점 맞추기 */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        }
+        .blue-team { border-color: #1e90ff; }
+        .red-team { border-color: #ff4757; }
+
+        .char-img { width: 100%; height: 60px; object-fit: cover; border-radius: 4px; background: #747d8c; }
+        .char-name { font-size: 14px; font-weight: bold; margin: 5px 0 2px 0; color: #f1f2f6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .char-vars { font-size: 11px; color: #a4b0be; line-height: 1.2; margin-bottom: 4px; }
+        .items { font-size: 10px; color: #eccc68; line-height: 1.2; word-break: keep-all; }
         
         #reroll-btn { 
-            margin-top: 40px; padding: 15px 40px; font-size: 20px; font-weight: bold;
+            margin-top: 20px; padding: 15px 40px; font-size: 20px; font-weight: bold;
             background-color: #ffa502; color: #2f3542; border: none; border-radius: 8px; cursor: pointer;
         }
         #reroll-btn:hover { background-color: #ff7f50; }
@@ -30,93 +48,88 @@
 </head>
 <body>
 
-    <h1>이터널리턴 3:3 구도 퍼즐 (MVP)</h1>
+    <h1>이터널리턴 3:3 구도 퍼즐 (MVP v2)</h1>
     
-    <div class="board">
-        <!-- 블루팀 -->
-        <div class="team" id="blue-team-container">
-            <div class="team-title blue-team">BLUE TEAM</div>
-            <!-- 카드가 생성될 위치 -->
-        </div>
-
-        <!-- 레드팀 -->
-        <div class="team" id="red-team-container">
-            <div class="team-title red-team">RED TEAM</div>
-            <!-- 카드가 생성될 위치 -->
-        </div>
+    <!-- 전장 환경 패널 -->
+    <div id="env-display" class="env-panel">전장 환경을 불러오는 중...</div>
+    
+    <!-- 2D 전장 보드 -->
+    <div class="battlefield" id="battlefield-container">
+        <!-- 카드가 생성되어 무작위 배치될 위치 -->
     </div>
 
-    <button id="reroll-btn" onclick="rollDice()">🎲 구도 셔플 (Reroll)</button>
+    <button id="reroll-btn" onclick="rollDice()">🎲 구도 및 진형 셔플</button>
 
     <script>
         let characterPool = [];
 
-        // 1. data.json 파일 불러오기
+        // 데이터 로드
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
                 characterPool = data;
-                rollDice(); // 첫 로딩 시 바로 셔플 1회 실행
+                rollDice();
             })
             .catch(error => console.error('데이터 로드 실패:', error));
 
-        // 2. 카드 HTML 생성 함수
-        function createCardHTML(charData) {
+        // 카드 HTML 생성 및 무작위 위치 배정 함수
+        function createPositionedCard(charData, isBlueTeam) {
+            // 체력 상황 3가지로 제한
+            const hpOptions = [100, 70, 50];
+            const charHealth = hpOptions[Math.floor(Math.random() * hpOptions.length)];
+            
+            // X 좌표: 블루팀(5~45%), 레드팀(55~95%) 영역 안에서 무작위
+            const posX = isBlueTeam ? Math.floor(Math.random() * 41) + 5 : Math.floor(Math.random() * 41) + 55;
+            // Y 좌표: 위아래(10~90%) 영역 안에서 무작위
+            const posY = Math.floor(Math.random() * 81) + 10;
+            
+            const teamClass = isBlueTeam ? 'blue-team' : 'red-team';
+
             return `
-                <div class="character-card">
+                <div class="character-card ${teamClass}" style="left: ${posX}%; top: ${posY}%;">
                     <img src="${charData.image}" alt="${charData.name}" class="char-img" onerror="this.style.display='none'">
-                    <div class="char-info">
-                        <h3 class="char-name">${charData.name} (${charData.weapon})</h3>
-                        <div class="char-vars">
-                            Lv.${charData.level} | 체력: ${charData.health_percent}% | 궁극기: ${charData.has_ult}
-                        </div>
-                        <div class="items">코어: ${charData.items_text}</div>
+                    <h3 class="char-name">${charData.name} (${charData.weapon})</h3>
+                    <div class="char-vars">
+                        Lv.${charData.level} | 체력: ${charHealth}%<br>궁극기: ${charData.has_ult}
                     </div>
+                    <div class="items">코어: ${charData.items_text}</div>
                 </div>
             `;
         }
 
-        // 3. 주사위 굴리기 (셔플 로직)
+        // 셔플 로직
         function rollDice() {
             if (characterPool.length < 6) return;
 
-            // 이번 매치의 '기준 레벨' 생성 (10 ~ 16레벨 사이)
+            // 1. 환경 변수 세팅
+            const terrains = ['좁은 골목', '개활지', '벽과 장애물 지역'];
+            const times = ['낮', '밤'];
+            
+            const currentTerrain = terrains[Math.floor(Math.random() * terrains.length)];
+            const currentTime = times[Math.floor(Math.random() * times.length)];
+            document.getElementById('env-display').innerText = `현재 전장: ${currentTime} / ${currentTerrain}`;
+
+            // 2. 캐릭터 변수 세팅
             const baseLevel = Math.floor(Math.random() * (16 - 10 + 1)) + 10; 
-
-            // 데이터 풀 섞기
             const shuffled = [...characterPool].sort(() => 0.5 - Math.random());
-            const selectedChars = shuffled.slice(0, 6);
-
-            // 6명의 캐릭터에게 랜덤 변수 부여
-            const finalTeamData = selectedChars.map(char => {
-                // 기준 레벨에 0~2를 더해서 최대 2레벨 차이만 나도록 설정
-                const charLevel = baseLevel + Math.floor(Math.random() * 3); 
-                
-                // 전설 아이템 개수 랜덤 설정 (0~5개)
+            
+            const finalTeamData = shuffled.slice(0, 6).map(char => {
                 const legCount = Math.floor(Math.random() * 6);
-                const items = legCount > 0 ? char.core_items_order.slice(0, legCount).join(', ') : '전설 아이템 없음 (0코어)';
+                const items = legCount > 0 ? char.core_items_order.slice(0, legCount).join(', ') : '전설 없음';
 
                 return {
                     ...char,
-                    level: charLevel,
-                    health_percent: Math.floor(Math.random() * 100) + 1,
+                    level: baseLevel + Math.floor(Math.random() * 3),
                     has_ult: Math.random() > 0.5 ? 'ON' : '쿨다운',
                     items_text: items
                 };
             });
 
-            // 6명을 양 팀에 3명씩 분배
-            const blueTeam = finalTeamData.slice(0, 3);
-            const redTeam = finalTeamData.slice(3, 6);
+            // 3. 화면 렌더링 (흩뿌리기)
+            const blueTeamHTML = finalTeamData.slice(0, 3).map(char => createPositionedCard(char, true)).join('');
+            const redTeamHTML = finalTeamData.slice(3, 6).map(char => createPositionedCard(char, false)).join('');
 
-            // 화면에 렌더링
-            document.getElementById('blue-team-container').innerHTML = 
-                '<div class="team-title blue-team">BLUE TEAM</div>' + 
-                blueTeam.map(char => createCardHTML(char)).join('');
-                
-            document.getElementById('red-team-container').innerHTML = 
-                '<div class="team-title red-team">RED TEAM</div>' + 
-                redTeam.map(char => createCardHTML(char)).join('');
+            document.getElementById('battlefield-container').innerHTML = blueTeamHTML + redTeamHTML;
         }
     </script>
 </body>
