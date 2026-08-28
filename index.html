@@ -12,8 +12,11 @@
         select { padding: 4px; border-radius: 4px; background: #1e272e; color: white; border: 1px solid #57606f; font-size: 12px; }
         select option:disabled { color: #747d8c; background: #2f3542; }
 
-        .battlefield { position: relative; width: 900px; height: 500px; margin: 0 auto; background-color: #1e272e; border: 3px solid #57606f; border-radius: 12px; overflow: hidden; }
-        .character-card { position: absolute; width: 140px; background: rgba(47, 53, 66, 0.85); border: 2px solid; border-radius: 8px; padding: 6px; text-align: left; transform: translate(-50%, -50%); transition: all 0.2s ease-in-out; cursor: pointer; z-index: 1; }
+        /* 전장 크기 확대 */
+        .battlefield { position: relative; width: 1100px; height: 600px; margin: 0 auto; background-color: #1e272e; border: 3px solid #57606f; border-radius: 12px; overflow: hidden; }
+        
+        /* 카드 크기 최적화 */
+        .character-card { position: absolute; width: 130px; background: rgba(47, 53, 66, 0.85); border: 2px solid; border-radius: 8px; padding: 6px; text-align: left; transform: translate(-50%, -50%); transition: all 0.2s ease-in-out; cursor: pointer; z-index: 1; }
         .character-card:hover { background: rgba(47, 53, 66, 1); transform: translate(-50%, -50%) scale(1.15); z-index: 10; box-shadow: 0 8px 12px rgba(0,0,0,0.8); }
         .blue-team { border-color: #1e90ff; }
         .red-team { border-color: #ff4757; }
@@ -29,10 +32,7 @@
         #eval-btn { background-color: #1e90ff; color: white; }
         #eval-btn:hover { background-color: #3742fa; }
         
-        #evaluation-result { 
-            display: none; margin: 20px auto; padding: 20px; background: #2f3542; 
-            border: 2px dashed #1e90ff; border-radius: 8px; max-width: 800px; font-size: 16px; line-height: 1.6;
-        }
+        #evaluation-result { display: none; margin: 20px auto; padding: 20px; background: #2f3542; border: 2px dashed #1e90ff; border-radius: 8px; max-width: 800px; font-size: 16px; line-height: 1.6; }
     </style>
 </head>
 <body>
@@ -60,12 +60,11 @@
         <button id="eval-btn" class="action-btn" onclick="showEvaluation()">💡 모범 답안 보기 (Beta)</button>
     </div>
 
-    <!-- 평가 함수 결과창 -->
     <div id="evaluation-result"></div>
 
     <script>
         let characterPool = [];
-        let currentBlueTeam = []; // 평가 함수용 데이터 저장
+        let currentBlueTeam = []; 
         let currentRedTeam = [];
 
         fetch('data.json')
@@ -135,7 +134,7 @@
 
         function rollDice() {
             if (characterPool.length === 0) return;
-            document.getElementById('evaluation-result').style.display = 'none'; // 셔플 시 답안 숨기기
+            document.getElementById('evaluation-result').style.display = 'none'; 
             currentBlueTeam = [];
             currentRedTeam = [];
 
@@ -182,13 +181,15 @@
                 const finalWskill = wSkillVal ? wSkillVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 const finalTac = tacVal ? tacVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 
-                // 평가 함수 계산을 위해 현재 상태 저장
                 const matchData = { name: charData.name, weapon: charData.weapon, role: charData.role, hp: finalHp, level: finalLvl, items: finalItemCount, ult: finalUlt, wskill: finalWskill, tac: finalTac };
                 if (isBlue) currentBlueTeam.push(matchData);
                 else currentRedTeam.push(matchData);
 
-                const posX = isBlue ? Math.floor(Math.random() * 41) + 5 : Math.floor(Math.random() * 41) + 55;
-                const posY = Math.floor(Math.random() * 81) + 10;
+                // 카드 겹침 방지 및 안전 구역(Safe Zone) 산출 로직
+                const minX = isBlue ? 8 : 55;
+                const maxX = isBlue ? 45 : 92;
+                const posX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
+                const posY = Math.floor(Math.random() * (85 - 15 + 1)) + 15;
                 
                 const itemsText = finalItemCount > 0 ? charData.core_items_order.slice(0, finalItemCount).join(', ') : '전설 없음';
                 const roleBadge = charData.role ? `<span style="background: #ffa502; color: #2f3542; padding: 2px 4px; border-radius: 4px; font-weight: bold; font-size: 10px;">${charData.role}</span>` : '';
@@ -212,7 +213,6 @@
             document.getElementById('battlefield-container').innerHTML = html;
         }
 
-        // 평가 함수 엔진
         function showEvaluation() {
             if (currentBlueTeam.length === 0) return;
 
@@ -222,7 +222,6 @@
                     if (char.ult === 'ON') score += 30;
                     if (char.wskill === 'ON') score += 15;
                     if (char.tac === 'ON') score += 20;
-                    // 체력 비례 적용 (반피면 전투력 절반)
                     score = score * (char.hp / 100);
                     return sum;
                 }, 0);
@@ -233,15 +232,15 @@
             const totalPower = bluePower + redPower;
 
             const isBlueAdvantage = bluePower >= redPower;
-            const winRate = ((Math.max(bluePower, redPower) / totalPower) * 100).toFixed(1);
+            // NaN 버그 방지: totalPower가 0일 경우 50.0%로 처리
+            const winRate = totalPower === 0 ? "50.0" : ((Math.max(bluePower, redPower) / totalPower) * 100).toFixed(1);
             const winningTeam = isBlueAdvantage ? "<span style='color:#1e90ff'>블루팀</span>" : "<span style='color:#ff4757'>레드팀</span>";
 
-            // 불리한 팀의 가장 취약한 타겟 찾기
             const getPrimaryTarget = (team) => {
                 let maxScore = -1;
                 let target = null;
                 team.forEach(char => {
-                    let targetScore = (100 - char.hp) * 2; // 체력이 낮을수록 타겟 1순위
+                    let targetScore = (100 - char.hp) * 2; 
                     if (char.ult === '쿨다운') targetScore += 50; 
                     if (char.tac === '쿨다운') targetScore += 30;
                     
