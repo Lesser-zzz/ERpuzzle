@@ -75,6 +75,12 @@
             let charOpts = '<option value="">캐릭터 (랜덤)</option>';
             characterPool.forEach(c => charOpts += `<option value="${c.id}">${c.name} (${c.weapon})</option>`);
 
+            // ★ 이 부분 추가: characterPool 배열을 이름(name) 기준으로 가나다순 정렬!
+            const sortedPool = [...characterPool].sort((a, b) => a.name.localeCompare(b.name));
+        
+            // 정렬된 배열(sortedPool)로 드롭다운 옵션 생성
+            sortedPool.forEach(c => charOpts += `<option value="${c.id}">${c.name} (${c.weapon})</option>`);
+
             const hpOpts = `<option value="">체력 (랜덤)</option><option value="100">100%</option><option value="70">70%</option><option value="50">50%</option>`;
             const ultOpts = `<option value="">궁극기 (랜덤)</option><option value="ON">ON</option><option value="쿨다운">쿨다운</option>`;
             
