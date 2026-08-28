@@ -112,23 +112,44 @@
             document.getElementById('red-controls').innerHTML = createTeamControls('RED', 'r');
         }
 
+        // 1. 드롭다운 동적 중복 방지 (이름 기준)
         function updateTeamDisables(teamPrefix) {
-            let selectedIds = [];
+            let selectedNames = [];
+            // 해당 팀에서 선택된 캐릭터들의 '이름(name)' 수집
             for(let i=0; i<3; i++) {
                 const val = document.getElementById(`${teamPrefix}-char-${i}`).value;
-                if(val) selectedIds.push(val);
+                if(val) {
+                    const charObj = characterPool.find(c => c.id === val);
+                    if(charObj) selectedNames.push(charObj.name);
+                }
             }
             
+            // 각 슬롯의 드롭다운 옵션 비활성화 처리
             for(let i=0; i<3; i++) {
                 const selectEl = document.getElementById(`${teamPrefix}-char-${i}`);
                 const currentVal = selectEl.value;
+                let currentName = "";
+                
+                if(currentVal) {
+                    const charObj = characterPool.find(c => c.id === currentVal);
+                    if(charObj) currentName = charObj.name;
+                }
                 
                 Array.from(selectEl.options).forEach(opt => {
-                    opt.disabled = (opt.value !== "" && selectedIds.includes(opt.value) && opt.value !== currentVal);
+                    if (opt.value === "") {
+                        opt.disabled = false;
+                    } else {
+                        const optCharObj = characterPool.find(c => c.id === opt.value);
+                        if(optCharObj) {
+                            // 이미 선택된 이름 목록에 있고, 현재 슬롯에 띄워진 이름이 아니라면 비활성화
+                            opt.disabled = (selectedNames.includes(optCharObj.name) && optCharObj.name !== currentName);
+                        }
+                    }
                 });
             }
         }
 
+        // 2. 주사위 굴리기 및 난수 생성 시 중복 방지 (이름 기준)
         function rollDice() {
             if (characterPool.length === 0) return;
             document.getElementById('evaluation-result').style.display = 'none'; 
@@ -141,13 +162,21 @@
 
             const baseLevel = Math.floor(Math.random() * (16 - 10 + 1)) + 10; 
             
-            let usedIdsBlue = [];
-            let usedIdsRed = [];
+            // 팀별로 이미 사용된 '이름(name)' 파악
+            let usedNamesBlue = [];
+            let usedNamesRed = [];
             for(let i=0; i<3; i++) {
                 let bVal = document.getElementById(`b-char-${i}`).value;
                 let rVal = document.getElementById(`r-char-${i}`).value;
-                if(bVal) usedIdsBlue.push(bVal);
-                if(rVal) usedIdsRed.push(rVal);
+                
+                if(bVal) {
+                    const bChar = characterPool.find(c => c.id === bVal);
+                    if(bChar) usedNamesBlue.push(bChar.name);
+                }
+                if(rVal) {
+                    const rChar = characterPool.find(c => c.id === rVal);
+                    if(rChar) usedNamesRed.push(rChar.name);
+                }
             }
 
             let html = '';
@@ -165,10 +194,11 @@
                 if (charVal) {
                     charData = characterPool.find(c => c.id === charVal);
                 } else {
-                    let teamUsedIds = isBlue ? usedIdsBlue : usedIdsRed;
-                    let availableChars = characterPool.filter(c => !teamUsedIds.includes(c.id));
+                    // ID가 아닌 이름(name)을 기준으로 필터링
+                    let teamUsedNames = isBlue ? usedNamesBlue : usedNamesRed;
+                    let availableChars = characterPool.filter(c => !teamUsedNames.includes(c.name));
                     charData = availableChars[Math.floor(Math.random() * availableChars.length)];
-                    teamUsedIds.push(charData.id); 
+                    teamUsedNames.push(charData.name); // 뽑힌 캐릭터의 '이름'을 사용 목록에 추가
                 }
 
                 const finalHp = hpVal ? parseInt(hpVal) : [100, 70, 50][Math.floor(Math.random() * 3)];
