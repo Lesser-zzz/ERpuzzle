@@ -8,7 +8,7 @@
       "서리바람 흉갑",
       "요술램프",
       "성기사의 투구",
-      "요술봉",
+      "마법봉",
       "헤르메스의 부츠"
     ]
   },
@@ -359,7 +359,7 @@
       "갤럭시 스텝",
       "아오자이",
       "간장과 막야",
-      "오토암즈",
+      "오토-암즈",
       "트와일라잇"
     ]
   },
@@ -1174,8 +1174,554 @@
       "아오자이",
       "이퀄리브리엄",
       "트와일라잇",
-      "오토암즈",
+      "오토-암즈",
       "블레이드 부츠"
+    ]
+  },
+  {
+    "id": "Nadine_Crossbow",
+    "name": "나딘",
+    "weapon": "석궁",
+    "image": "https://i.namu.wiki/i/FePrHLipjuCBXsTdUijdimfeLdMSVsneR_LjPTixSsqfyrCfR3lkCYbXjlmxAvorZzK68b1HhyrO6e8-mGDc9g.webp",
+    "core_items_order": [
+      "빛의 증표",
+      "운명의 주사위",
+      "현자의 로브",
+      "알렉산드로스",
+      "혈색반월-진홍"
+    ]
+  },
+  {
+    "id": "Darko_Bat_2",
+    "name": "다르코",
+    "weapon": "방망이",
+    "image": "https://i.namu.wiki/i/Hx77MTRuLKPfbFxug6M0YZnISk6rgsPJt-wDPDucVuJz4T0vTIXk7nXT8ppC8XY_HPmCfPYuZkkkI_t6ot67uQ.webp",
+    "core_items_order": [
+      "천사의 고리",
+      "여의봉",
+      "타이탄 아머",
+      "달빛 펜던트",
+      "택티컬 슈즈"
+    ]
+  },
+  {
+    "id": "Leon_Tonfa",
+    "name": "레온",
+    "weapon": "톤파",
+    "image": "https://i.namu.wiki/i/PDmEEbx-bp2bcmbJlejJGV2WSR59LEQJp-w4bVda_BFyARPiwg6iuXghp8jRqhs4f9Dzo5YEXrnYG0qZ9GiXpA.webp",
+    "core_items_order": [
+      "오르비스",
+      "흑요석 짓테",
+      "핏빛 망토",
+      "페르소나",
+      "칼날 다리"
+    ]
+  },
+  {
+    "id": "Luke_Bat_2",
+    "name": "루크",
+    "weapon": "방망이",
+    "image": "https://i.namu.wiki/i/qg0zLG5DPZ_YgaUqFHQkGKQfycbbzN_aQHYBBwBpd4yZOXJAwbrs_I2TxC9b8igkl3-EkupalD_N6O2e6uUrhA.webp",
+    "core_items_order": [
+      "헬릭스",
+      "타이탄 아머",
+      "여의봉",
+      "미스릴 투구",
+      "블레이드 부츠"
+    ]
+  },
+  {
+    "id": "Luke_Bat_3",
+    "name": "루크",
+    "weapon": "방망이",
+    "image": "https://i.namu.wiki/i/qg0zLG5DPZ_YgaUqFHQkGKQfycbbzN_aQHYBBwBpd4yZOXJAwbrs_I2TxC9b8igkl3-EkupalD_N6O2e6uUrhA.webp",
+    "core_items_order": [
+      "블래스터 헬멧",
+      "프시케의 칼날",
+      "여의봉",
+      "아이언 메이든",
+      "택티컬 아머"
+    ]
+  },
+  {
+    "id": "LiDailin_Glove_2",
+    "name": "리 다이린",
+    "weapon": "글러브",
+    "image": "https://i.namu.wiki/i/dhqhrDnfPcc-p5JAa9hLRcgoS3AUt90ZfiSXPbKhdjlkQ5tl0T_Wz33WFM0BYYnMsy4YacrnLRgpltewjyBzPA.webp",
+    "core_items_order": [
+      "미니어쳐 솔라 시스템",
+      "불꽃 드레스",
+      "주작자문",
+      "캡틴 햇",
+      "EOD 부츠"
+    ]
+  },
+  {
+    "id": "LiDailin_Nunchaku",
+    "name": "리 다이린",
+    "weapon": "쌍절곤",
+    "image": "https://i.namu.wiki/i/dhqhrDnfPcc-p5JAa9hLRcgoS3AUt90ZfiSXPbKhdjlkQ5tl0T_Wz33WFM0BYYnMsy4YacrnLRgpltewjyBzPA.webp",
+    "core_items_order": [
+      "레가투스",
+      "갤럭시 스텝",
+      "고스트",
+      "네온 체인",
+      "미스릴 완장"
+    ]
+  },
+  {
+    "id": "Markus_Axe",
+    "name": "마커스",
+    "weapon": "도끼",
+    "image": "https://i.namu.wiki/i/y4MTffD9RPrURN1DiFyJmi3scfXcUrxrOyumqRxuUSJJHv_CXSpv_Ldx2R9MIJuh959Zp7-C-gC7_mCVXMr3wg.webp",
+    "core_items_order": [
+      "야생의 허기",
+      "토템",
+      "반고부",
+      "미스릴 갑옷",
+      "EOD 부츠"
+    ]
+  },
+  {
+    "id": "Daniel_OneHandSword_2",
+    "name": "다니엘",
+    "weapon": "단검",
+    "image": "https://i.namu.wiki/i/-xH5OmiZB8YkLAO8SNaUk0Dr0-9kMAKPxhhUHFZVFAqb_vyHqCxUEvaYOGCAd3BXq-P1o__DpjkqbunXr6WfJA.webp",
+    "core_items_order": [
+      "소울 리퍼",
+      "불꽃 드레스",
+      "미스릴 투구",
+      "샤를마뉴의 방패",
+      "EOD 부츠"
+    ]
+  },
+  {
+    "id": "Magnus_Hammer_2",
+    "name": "매그너스",
+    "weapon": "망치",
+    "image": "https://i.namu.wiki/i/VDIqLoS6ZDCvgicR2goD2_3FnxBxpq-NQKw3RWuOcj6lYvm0n-XM3UUjNkI-Kj88PW18C3NFdol3Fy68-3w9uQ.webp",
+    "core_items_order": [
+      "둠스데이",
+      "성법의",
+      "검은 베일",
+      "용의 비늘",
+      "글레이셜 슈즈"
+    ]
+  },
+  {
+    "id": "Magnus_Bat",
+    "name": "매그너스",
+    "weapon": "방망이",
+    "image": "https://i.namu.wiki/i/VDIqLoS6ZDCvgicR2goD2_3FnxBxpq-NQKw3RWuOcj6lYvm0n-XM3UUjNkI-Kj88PW18C3NFdol3Fy68-3w9uQ.webp",
+    "core_items_order": [
+      "서리바람 흉갑",
+      "하트 온 파이어",
+      "캡틴 햇",
+      "롤리팝",
+      "EOD 부츠"
+    ]
+  },
+  {
+    "id": "Magnus_Bat_2",
+    "name": "매그너스",
+    "weapon": "방망이",
+    "image": "https://i.namu.wiki/i/VDIqLoS6ZDCvgicR2goD2_3FnxBxpq-NQKw3RWuOcj6lYvm0n-XM3UUjNkI-Kj88PW18C3NFdol3Fy68-3w9uQ.webp",
+    "core_items_order": [
+      "여의봉",
+      "큐브 워치",
+      "길리 슈트",
+      "블래스터 헬멧",
+      "알렉산드로스"
+    ]
+  },
+  {
+    "id": "Xiukai_OneHandSword",
+    "name": "쇼우",
+    "weapon": "단검",
+    "image": "https://i.namu.wiki/i/NgD1RuwLGOf0Ux1LaB3FqnDh-hn7F3OXiCbw-6r0BM3vQxZPWRrTgdrVqYFLbXyZe4VXA0BdfvDk21vitde0ww.webp",
+    "core_items_order": [
+      "미니어쳐 솔라 시스템",
+      "성기사의 투구",
+      "스페이스 부츠",
+      "배틀 슈트",
+      "월식"
+    ]
+  },
+  {
+    "id": "Xiukai_OneHandSword_2",
+    "name": "쇼우",
+    "weapon": "단검",
+    "image": "https://i.namu.wiki/i/NgD1RuwLGOf0Ux1LaB3FqnDh-hn7F3OXiCbw-6r0BM3vQxZPWRrTgdrVqYFLbXyZe4VXA0BdfvDk21vitde0ww.webp",
+    "core_items_order": [
+      "성법의",
+      "악의",
+      "우주 비행사의 헬멧",
+      "용의 비늘",
+      "칼날 다리"
+    ]
+  },
+  {
+    "id": "Sua_Bat",
+    "name": "수아",
+    "weapon": "방망이",
+    "image": "https://i.namu.wiki/i/rmuBgqxVc-N4ZBt_qUpWh_V-EUBrTl1yRG29q9CzXSnWFhfGZNSGhuIjDm0Ath-kX7mE5wxO1Dq1ihpnwP9gCQ.webp",
+    "core_items_order": [
+      "성법의",
+      "사이버 스토커",
+      "마법봉",
+      "호루스의 눈",
+      "와일드 워커"
+    ]
+  },
+  {
+    "id": "Sissela_HighAngleFire",
+    "name": "시셀라",
+    "weapon": "투척",
+    "image": "https://i.namu.wiki/i/R3BjwYYsKq3yYXr8jcct1S_tpraeDuJHhIPnYPkuxeuolNSHErzAVxcnsVxvwL4J7BgNxwLytG55a7L3p4aPQQ.webp",
+    "core_items_order": [
+      "핏빛 망토",
+      "파초선",
+      "검은 죽음",
+      "칼날 다리",
+      "체이서-새벽"
+    ]
+  },
+  {
+    "id": "Adela_Bat",
+    "name": "아델라",
+    "weapon": "방망이",
+    "image": "https://i.namu.wiki/i/F7Y_QQdiEf91IrKB2zUrIeE-9ovMh9dx6ybe52j6r2Cb0LERFm2zo7csr8lTAaw5Q3tFkarpYQhN9zHSdncoYg.webp",
+    "core_items_order": [
+      "쿤달라",
+      "성법의",
+      "터럭손 방망이",
+      "용의 비늘",
+      "글레이셜 슈즈"
+    ]
+  },
+  {
+    "id": "Aya_SniperRifle",
+    "name": "아야",
+    "weapon": "저격총",
+    "image": "https://i.namu.wiki/i/yh215_7IPFSAPmF54PPTVOWkw8_mlpKtuOws7aLWKs-E1oTgMofXBynKgV43E2jWK_FLLF9Twc9eBquysrBbuQ.webp",
+    "core_items_order": [
+      "호루스의 눈",
+      "성법의",
+      "데드 아이",
+      "검은 죽음",
+      "칼날 다리"
+    ]
+  },
+  {
+    "id": "Aya_Pistol",
+    "name": "아야",
+    "weapon": "권총",
+    "image": "https://i.namu.wiki/i/yh215_7IPFSAPmF54PPTVOWkw8_mlpKtuOws7aLWKs-E1oTgMofXBynKgV43E2jWK_FLLF9Twc9eBquysrBbuQ.webp",
+    "core_items_order": [
+      "스카디의 팔찌",
+      "페르소나",
+      "알타이르",
+      "카바나",
+      "글레이셜 슈즈"
+    ]
+  },
+  {
+    "id": "Isol_Pistol",
+    "name": "아이솔",
+    "weapon": "권총",
+    "image": "https://i.namu.wiki/i/31we95VTgj4kVyZfDKUwIWjFbZJoMv4LhT3INq0UQz1Ft8Dkejv0yXgHTTZWdEOwFhCvXzSpLQUzo7xtsMnaaw.webp",
+    "core_items_order": [
+      "핏빛 망토",
+      "페르소나",
+      "아흐라만의 손길",
+      "알타이르",
+      "글레이셜 슈즈"
+    ]
+  },
+  {
+    "id": "Jan_Glove",
+    "name": "얀",
+    "weapon": "글러브",
+    "image": "https://i.namu.wiki/i/ASKzSyLmizO3BcFxnFbPp62fl_rXGTFAlOO9yvY7DYe5K0jXucc9dmXyPa9cLaRg8DMfUTW28YPApKW4t_XQuw.webp",
+    "core_items_order": [
+      "오토-암즈",
+      "레이싱 슈트",
+      "인사이트",
+      "천잠장갑",
+      "택티컬 슈즈"
+    ]
+  },
+  {
+    "id": "Estelle_Axe_2",
+    "name": "에스텔",
+    "weapon": "도끼",
+    "image": "https://i.namu.wiki/i/qxh5IcaVIdKRAvBN26wDBN1gfhUFI8zPcxEXGuqlwOibCJUc4RE2CnPaD7WaJWYEwwNzu57vT5rwyRXTJVcrdQ.webp",
+    "core_items_order": [
+      "성법의",
+      "요명월",
+      "네플리온",
+      "우주 비행사의 헬멧",
+      "스페이스 부츠"
+    ]
+  },
+  {
+    "id": "Aiden_TwoHandSword_2",
+    "name": "에이든",
+    "weapon": "양손검",
+    "image": "https://i.namu.wiki/i/OKvAj9nCG3LL8FXtMA6ug59LEVyT_f_JdJbz88Bk266hff-GflqcSAMRZMyR9RFARcjpxbfm0ThlbI4GmvUkBA.webp",
+    "core_items_order": [
+      "천사의 고리",
+      "갤럭시 스텝",
+      "현자의 로브",
+      "미스릴 퀴버",
+      "레바테인"
+    ]
+  },
+  {
+    "id": "Echion_VFArm_2",
+    "name": "에키온",
+    "weapon": "VF의수",
+    "image": "https://i.namu.wiki/i/LSwvJBKIOYV9T3LOWk09C_iGF3QzGpDB__WQI6LiAj_E2vXUgbew4sudPI-4aNS1PzbbVhs5WOM5aak7CYpvYg.webp",
+    "core_items_order": [
+      "아이언 메이든",
+      "택티컬 아머",
+      "월계관",
+      "프시케의 칼날",
+      "슈퍼사이드와인더-ML"
+    ]
+  },
+  {
+    "id": "Echion_VFArm_3",
+    "name": "에키온",
+    "weapon": "VF의수",
+    "image": "https://i.namu.wiki/i/LSwvJBKIOYV9T3LOWk09C_iGF3QzGpDB__WQI6LiAj_E2vXUgbew4sudPI-4aNS1PzbbVhs5WOM5aak7CYpvYg.webp",
+    "core_items_order": [
+      "레가투스",
+      "미스릴 완장",
+      "길리 슈트",
+      "헤르메스의 부츠",
+      "데스애더퀸-VBS"
+    ]
+  },
+  {
+    "id": "Echion_VFArm_4",
+    "name": "에키온",
+    "weapon": "VF의수",
+    "image": "https://i.namu.wiki/i/LSwvJBKIOYV9T3LOWk09C_iGF3QzGpDB__WQI6LiAj_E2vXUgbew4sudPI-4aNS1PzbbVhs5WOM5aak7CYpvYg.webp",
+    "core_items_order": [
+      "미니어쳐 솔라 시스템",
+      "불꽃 드레스",
+      "EOD 부츠",
+      "드워프의 투구",
+      "슈퍼사이드와인더-ML"
+    ]
+  },
+  {
+    "id": "Emma_DirectFire",
+    "name": "엠마",
+    "weapon": "암기",
+    "image": "https://i.namu.wiki/i/DSO-tofc2Wnuu_KSTG0LwMhoKdIkH_oP7geJFkWN-rTavi5YN-FyswHvhUDitWxibDxKnhJTiflFk31ay8O4kg.webp",
+    "core_items_order": [
+      "페르소나",
+      "건곤권",
+      "아흐라만의 손길",
+      "쿠튀리에",
+      "글레이셜 슈즈"
+    ]
+  },
+  {
+    "id": "Yuki_TwoHandSword",
+    "name": "유키",
+    "weapon": "양손검",
+    "image": "https://i.namu.wiki/i/Y4o1ro59jYFrf4Vad8WgzHdeG25ithBrIjbNdoAHyIdvyIzU52hZZLgm5MxOM2Gv6xlchDI1u_pDwgezRElVkQ.webp",
+    "core_items_order": [
+      "스펙터",
+      "이퀄리브리엄",
+      "미스릴 투구",
+      "샤를마뉴의 방패",
+      "미라지 워커"
+    ]
+  },
+  {
+    "id": "Yuki_TwoHandSword_2",
+    "name": "유키",
+    "weapon": "양손검",
+    "image": "https://i.namu.wiki/i/Y4o1ro59jYFrf4Vad8WgzHdeG25ithBrIjbNdoAHyIdvyIzU52hZZLgm5MxOM2Gv6xlchDI1u_pDwgezRElVkQ.webp",
+    "core_items_order": [
+      "오메르타",
+      "빛의 증표",
+      "미스릴 완장",
+      "이퀄리브리엄",
+      "알렉산드로스"
+    ]
+  },
+  {
+    "id": "Yuki_DualSword_2",
+    "name": "유키",
+    "weapon": "쌍검",
+    "image": "https://i.namu.wiki/i/Y4o1ro59jYFrf4Vad8WgzHdeG25ithBrIjbNdoAHyIdvyIzU52hZZLgm5MxOM2Gv6xlchDI1u_pDwgezRElVkQ.webp",
+    "core_items_order": [
+      "오메르타",
+      "자웅일대검",
+      "큐브 워치",
+      "빛의 증표",
+      "갤럭시 스텝"
+    ]
+  },
+  {
+    "id": "Istvan_Spear_2",
+    "name": "이슈트반",
+    "weapon": "창",
+    "image": "https://i.namu.wiki/i/ER_rtY8RvTP7E2RbX6BZQ4_gHIJ-pFWF8XyIajiiFpgVMMJDVxWWtkoEiP1WX9O0FaHuYWrCo4at90NQpvKaBQ.webp",
+    "core_items_order": [
+      "헬릭스",
+      "반역의 의지",
+      "월계관",
+      "애각창",
+      "헤르메스의 부츠"
+    ]
+  },
+  {
+    "id": "Zahir_HighAngleFire",
+    "name": "자히르",
+    "weapon": "투척",
+    "image": "https://i.namu.wiki/i/DsgfrK8c7k-CPM9H-65fX7mQjDXUANMUMiWai1wn3ckUN7mKLTwWglJTDGZHWc_cMYh2ddCgChyZpRQdBt1QAw.webp",
+    "core_items_order": [
+      "스카디의 팔찌",
+      "앙 가르드",
+      "칼날 다리",
+      "성법의",
+      "체이서"
+    ]
+  },
+  {
+    "id": "Jackie_OneHandSword",
+    "name": "재키",
+    "weapon": "단검",
+    "image": "https://i.namu.wiki/i/3mRln5UuyRATOzOVdPd_U2ASbXBuzF8RdflPFpYSWVBQu1NNj4kkiX9zzDhSaCS9gFPaqZoPZtbOHs73HMvNdA.webp",
+    "core_items_order": [
+      "큐브 워치",
+      "택티컬 아머",
+      "소울 리퍼",
+      "갤럭시 스텝",
+      "아이실드"
+    ]
+  },
+  {
+    "id": "Jackie_DualSword",
+    "name": "재키",
+    "weapon": "쌍검",
+    "image": "https://i.namu.wiki/i/3mRln5UuyRATOzOVdPd_U2ASbXBuzF8RdflPFpYSWVBQu1NNj4kkiX9zzDhSaCS9gFPaqZoPZtbOHs73HMvNdA.webp",
+    "core_items_order": [
+      "아오자이",
+      "큐브 워치",
+      "갤럭시 스텝",
+      "자웅일대검",
+      "아이실드"
+    ]
+  },
+  {
+    "id": "Jackie_TwoHandSword",
+    "name": "재키",
+    "weapon": "양손검",
+    "image": "https://i.namu.wiki/i/3mRln5UuyRATOzOVdPd_U2ASbXBuzF8RdflPFpYSWVBQu1NNj4kkiX9zzDhSaCS9gFPaqZoPZtbOHs73HMvNdA.webp",
+    "core_items_order": [
+      "큐브 워치",
+      "오메르타",
+      "이퀄리브리엄",
+      "알렉산드로스",
+      "아이실드"
+    ]
+  },
+  {
+    "id": "Camilo_DualSword",
+    "name": "카밀로",
+    "weapon": "쌍검",
+    "image": "https://i.namu.wiki/i/gk_LIwa5tApoOkoeOKUvfayU05g8JOQJRapvyWK9MDOMiiQ-VT_zP7_ZgUG-7eJhoyNrr6SWLzRzPRcuOTrGhA.webp",
+    "core_items_order": [
+      "아오자이",
+      "간장과 막야",
+      "빛의 증표",
+      "레이더",
+      "레이싱 부츠"
+    ]
+  },
+  {
+    "id": "Cathy_OneHandSword",
+    "name": "캐시",
+    "weapon": "단검",
+    "image": "https://i.namu.wiki/i/xsnSKCVfR14hUtgP9RVP6W12y9fB42PxMFvtu1IYoiYE_KvScSwWazPmI9XmkqOHaQP3o-DKNYxsOMFsdO7zGw.webp",
+    "core_items_order": [
+      "페르소나",
+      "월식",
+      "핏빛 망토",
+      "칼날 다리",
+      "용의 비늘"
+    ]
+  },
+  {
+    "id": "Fenrir_Glove_2",
+    "name": "펜리르",
+    "weapon": "글러브",
+    "image": "https://i.namu.wiki/i/kKaSi8-qfK0a-1_X0RcpfxLysH9xtQ-6basgERZOV2EVHHn4525AYOi5smAf9n4t5ADVHexUXM6acuQSVDTvDQ.webp",
+    "core_items_order": [
+      "헬릭스",
+      "반역의 의지",
+      "인사이트",
+      "천잠장갑",
+      "택티컬 슈즈"
+    ]
+  },
+  {
+    "id": "Fiora_Rapier",
+    "name": "피오라",
+    "weapon": "레이피어",
+    "image": "https://i.namu.wiki/i/QkXjAHf8QzleBnOZljyq2seTJ1GUaI1jkVOeqEGhQysABR7yFlIbgI7DZsHKQwQ78VFlm9bHe_G5cT1jUSZgwQ.webp",
+    "core_items_order": [
+      "앙 가르드",
+      "필드 쏜",
+      "요명월",
+      "진은 드레스",
+      "와일드 워커"
+    ]
+  },
+  {
+    "id": "Fiora_Spear",
+    "name": "피오라",
+    "weapon": "창",
+    "image": "https://i.namu.wiki/i/QkXjAHf8QzleBnOZljyq2seTJ1GUaI1jkVOeqEGhQysABR7yFlIbgI7DZsHKQwQ78VFlm9bHe_G5cT1jUSZgwQ.webp",
+    "core_items_order": [
+      "성법의",
+      "쿤달라",
+      "별 사냥꾼",
+      "글레이셜 슈즈",
+      "용의 비늘"
+    ]
+  },
+  {
+    "id": "Hyunwoo_Tonfa",
+    "name": "현우",
+    "weapon": "톤파",
+    "image": "https://i.namu.wiki/i/BSIZdNfA-ddPNv4OV8RyNu01x_0xj04_nTko4Xw_CY-eiRgVwfxiIz1U5TmqWomggoOcmZ-Md_MYuUrowSsp1Q.webp",
+    "core_items_order": [
+      "흑요석 짓테",
+      "검은 베일",
+      "카바나",
+      "에메랄드 타블렛",
+      "아이언 메이든"
+    ]
+  },
+  {
+    "id": "Hyejin_DirectFire",
+    "name": "혜진",
+    "weapon": "암기",
+    "image": "https://i.namu.wiki/i/-20Wi6vOsTFvPEtDQ9DEStxY5BEsS_Bv0X7aCl4wwqZwQ8TbUwBGTKCQKlFd9R63XDu_3opJnSYN1_0hvMHMbA.webp",
+    "core_items_order": [
+      "페르소나",
+      "오르비스",
+      "핏빛 망토",
+      "칼날 다리",
+      "흑련비표-새벽"
     ]
   }
 ]
