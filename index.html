@@ -12,11 +12,9 @@
         select { padding: 4px; border-radius: 4px; background: #1e272e; color: white; border: 1px solid #57606f; font-size: 12px; }
         select option:disabled { color: #747d8c; background: #2f3542; }
 
-        /* 전장 크기 확대 */
+        /* 전장 크기 확대 및 카드 제어 */
         .battlefield { position: relative; width: 1100px; height: 600px; margin: 0 auto; background-color: #1e272e; border: 3px solid #57606f; border-radius: 12px; overflow: hidden; }
-        
-        /* 카드 크기 최적화 */
-        .character-card { position: absolute; width: 130px; background: rgba(47, 53, 66, 0.85); border: 2px solid; border-radius: 8px; padding: 6px; text-align: left; transform: translate(-50%, -50%); transition: all 0.2s ease-in-out; cursor: pointer; z-index: 1; }
+        .character-card { position: absolute; width: 140px; background: rgba(47, 53, 66, 0.85); border: 2px solid; border-radius: 8px; padding: 6px; text-align: left; transform: translate(-50%, -50%); transition: all 0.2s ease-in-out; cursor: pointer; z-index: 1; }
         .character-card:hover { background: rgba(47, 53, 66, 1); transform: translate(-50%, -50%) scale(1.15); z-index: 10; box-shadow: 0 8px 12px rgba(0,0,0,0.8); }
         .blue-team { border-color: #1e90ff; }
         .red-team { border-color: #ff4757; }
@@ -181,25 +179,28 @@
                 const finalWskill = wSkillVal ? wSkillVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 const finalTac = tacVal ? tacVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 
-                const matchData = { name: charData.name, weapon: charData.weapon, role: charData.role, hp: finalHp, level: finalLvl, items: finalItemCount, ult: finalUlt, wskill: finalWskill, tac: finalTac };
+                const matchData = { name: charData.name, weapon: charData.weapon, role: charData.role, description: charData.description, hp: finalHp, level: finalLvl, items: finalItemCount, ult: finalUlt, wskill: finalWskill, tac: finalTac };
                 if (isBlue) currentBlueTeam.push(matchData);
                 else currentRedTeam.push(matchData);
 
-                // 카드 겹침 방지 및 안전 구역(Safe Zone) 산출 로직
                 const minX = isBlue ? 8 : 55;
                 const maxX = isBlue ? 45 : 92;
                 const posX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
                 const posY = Math.floor(Math.random() * (85 - 15 + 1)) + 15;
                 
                 const itemsText = finalItemCount > 0 ? charData.core_items_order.slice(0, finalItemCount).join(', ') : '전설 없음';
+                
+                // 역할군 뱃지와 부가설명 뱃지 생성
                 const roleBadge = charData.role ? `<span style="background: #ffa502; color: #2f3542; padding: 2px 4px; border-radius: 4px; font-weight: bold; font-size: 10px;">${charData.role}</span>` : '';
+                const descBadge = charData.description ? `<span style="background: #1e90ff; color: white; padding: 2px 4px; border-radius: 4px; font-weight: bold; font-size: 10px; margin-left: 4px;">${charData.description}</span>` : '';
 
                 return `
                     <div class="character-card ${isBlue ? 'blue-team' : 'red-team'}" style="left: ${posX}%; top: ${posY}%;">
                         <img src="${charData.image}" alt="${charData.name}" class="char-img" onerror="this.style.display='none'">
                         <h3 class="char-name">${charData.name} (${charData.weapon})</h3>
                         <div class="char-vars">
-                            ${roleBadge} Lv.${finalLvl} | 체력: ${finalHp}%<br>
+                            <div style="margin-bottom: 4px;">${roleBadge}${descBadge}</div>
+                            Lv.${finalLvl} | 체력: ${finalHp}%<br>
                             궁: ${finalUlt} | 무스: ${finalWskill} | 전술: ${finalTac}
                         </div>
                         <div class="items">코어: ${itemsText}</div>
@@ -223,7 +224,9 @@
                     if (char.wskill === 'ON') score += 15;
                     if (char.tac === 'ON') score += 20;
                     score = score * (char.hp / 100);
-                    return sum;
+                    
+                    // 버그 수정: 산출된 점수를 sum에 정확히 더해줌
+                    return sum + score; 
                 }, 0);
             };
 
@@ -232,7 +235,6 @@
             const totalPower = bluePower + redPower;
 
             const isBlueAdvantage = bluePower >= redPower;
-            // NaN 버그 방지: totalPower가 0일 경우 50.0%로 처리
             const winRate = totalPower === 0 ? "50.0" : ((Math.max(bluePower, redPower) / totalPower) * 100).toFixed(1);
             const winningTeam = isBlueAdvantage ? "<span style='color:#1e90ff'>블루팀</span>" : "<span style='color:#ff4757'>레드팀</span>";
 
@@ -253,11 +255,12 @@
             };
 
             const targetChar = isBlueAdvantage ? getPrimaryTarget(currentRedTeam) : getPrimaryTarget(currentBlueTeam);
+            const targetDescText = targetChar.description ? ` - ${targetChar.description}` : '';
 
             const resultHtml = `
                 <strong style="color: #ffa502; font-size: 18px;">[엔진 평가 결과]</strong><br><br>
                 📊 <strong>판세 분석:</strong> 하드코딩된 가중치 기준, 현재 <strong>${winningTeam}</strong>이(가) 약 <strong>${winRate}%</strong> 유리한 구도입니다.<br><br>
-                🎯 <strong>최우선 포커싱 타겟:</strong> <strong>${targetChar.name} (${targetChar.weapon})</strong><br>
+                🎯 <strong>최우선 포커싱 타겟:</strong> <strong>${targetChar.name} (${targetChar.weapon})${targetDescText}</strong><br>
                 <span style="font-size: 14px; color: #a4b0be;">(산출 사유: 체력 ${targetChar.hp}% 상태 및 궁극기/전술 스킬 유무 복합 계산)</span>
             `;
 
