@@ -5,7 +5,7 @@
     "weapon": "방망이",
     "role": "퓨어탱커",
     "description": "",
-    "image": "https://i.namu.wiki/i/Slb9aX-1WPzDyccSkRW9Nq0UmOzRCbTCGqecTmDXpgDTjY-ze_LYZ2H9YauHxEzl4V35f4Y2Cgccsafs2gyc9g.webp",
+    "image": "./images/characters/Garnet_Bat.webp",
     "core_items_order": [
       "서리바람 흉갑",
       "요술램프",
@@ -20,7 +20,7 @@
     "weapon": "활",
     "role": "스증원딜",
     "description": "공속",
-    "image": "https://i.namu.wiki/i/FePrHLipjuCBXsTdUijdimfeLdMSVsneR_LjPTixSsqfyrCfR3lkCYbXjlmxAvorZzK68b1HhyrO6e8-mGDc9g.webp",
+    "image": "./images/characters/Nadine_Bow.webp",
     "core_items_order": [
       "블레이드 부츠",
       "성법의",
@@ -35,7 +35,7 @@
     "weapon": "석궁",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/FePrHLipjuCBXsTdUijdimfeLdMSVsneR_LjPTixSsqfyrCfR3lkCYbXjlmxAvorZzK68b1HhyrO6e8-mGDc9g.webp",
+    "image": "./images/characters/Nadine_Crossbow.webp",
     "core_items_order": [
       "빛의 증표",
       "운명의 주사위",
@@ -50,7 +50,7 @@
     "weapon": "카메라",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/m9ToVAGx-MsK_09Tk36e-Uw5L7nzDkHGeX03a27wMqKyqmpimRg8nj9STJUVWDTGGgHSZlo692_7j3r9wOrCBQ.webp",
+    "image": "./images/characters/Nathapon_Camera.webp",
     "core_items_order": [
       "트리플 포커스",
       "페르소나",
@@ -65,7 +65,7 @@
     "weapon": "권총",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/ilQ_q1Xkdg7d3DHIBemUXkTBpXb0fXhp8A3VarMfbWoGvt9q6lhzhp4F-7b39-u4vbrvK2ibCO3sq2lWITKC5A.webp",
+    "image": "./images/characters/Niah_Pistol.webp",
     "core_items_order": [
       "아흐라만의 손길",
       "앙 가르드",
@@ -80,7 +80,7 @@
     "weapon": "글러브",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/e4C571DCYjAN4q02MCdUMV2DNuQAHhvrInmRGIkikhzGnk5jAwW0BsAZFypkpgBZFnsY1Thd2-BfpMfXWg5oUw.webp",
+    "image": "./images/characters/Nicky_Glove.webp",
     "core_items_order": [
       "레버넌트",
       "요명월",
@@ -95,7 +95,7 @@
     "weapon": "단검",
     "role": "암살자",
     "description": "치명",
-    "image": "https://i.namu.wiki/i/-xH5OmiZB8YkLAO8SNaUk0Dr0-9kMAKPxhhUHFZVFAqb_vyHqCxUEvaYOGCAd3BXq-P1o__DpjkqbunXr6WfJA.webp",
+    "image": "./images/characters/Daniel_OneHandSword.webp",
     "core_items_order": [
       "택티컬 아머",
       "미스릴 완장",
@@ -110,7 +110,7 @@
     "weapon": "단검",
     "role": "탱브루저",
     "description": "탱",
-    "image": "https://i.namu.wiki/i/-xH5OmiZB8YkLAO8SNaUk0Dr0-9kMAKPxhhUHFZVFAqb_vyHqCxUEvaYOGCAd3BXq-P1o__DpjkqbunXr6WfJA.webp",
+    "image": "./images/characters/Daniel_OneHandSword_2.webp",
     "core_items_order": [
       "소울 리퍼",
       "불꽃 드레스",
@@ -125,7 +125,7 @@
     "weapon": "방망이",
     "role": "딜브루저",
     "description": "치명",
-    "image": "https://i.namu.wiki/i/Hx77MTRuLKPfbFxug6M0YZnISk6rgsPJt-wDPDucVuJz4T0vTIXk7nXT8ppC8XY_HPmCfPYuZkkkI_t6ot67uQ.webp",
+    "image": "./images/characters/Darko_Bat.webp",
     "core_items_order": [
       "스펙터",
       "미스릴 완장",
@@ -140,7 +140,7 @@
     "weapon": "방망이",
     "role": "탱브루저",
     "description": "천고",
-    "image": "https://i.namu.wiki/i/Hx77MTRuLKPfbFxug6M0YZnISk6rgsPJt-wDPDucVuJz4T0vTIXk7nXT8ppC8XY_HPmCfPYuZkkkI_t6ot67uQ.webp",
+    "image": "./images/characters/Darko_Bat_2.webp",
     "core_items_order": [
       "천사의 고리",
       "여의봉",
@@ -155,7 +155,7 @@
     "weapon": "양손검",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/ndSGw61LfWi-HZ6rcXan1dS9WTEKMfmVO05zWn5jGp8zRZnGOuCDc804FA_T5bZsdD_zbHqFMNbbwq8gNEttYA.webp",
+    "image": "./images/characters/DebiMarlene_TwoHandSword.webp",
     "core_items_order": [
       "천사의 고리",
       "미스릴 방패",
@@ -170,7 +170,7 @@
     "weapon": "방망이",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/fOem0jV8iYJ-Y0VtC4ng1GGyznrqGA26iLpudrlzidmzHquQ1bfv9ffroTEncrDGYKjGkNQ39EjWG26TpZP7WA.webp",
+    "image": "./images/characters/Tia_Bat.webp",
     "core_items_order": [
       "페르소나",
       "롤리팝",
@@ -185,7 +185,7 @@
     "weapon": "채찍",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/SAsgiHwBOxP9Btwvi4cecKdGHg8jDQyu9YJzJH6M0O-6orqzk5Q9JbRt0PlwODCE5jUcp6Mj-UW36MmhbtN3zw.webp",
+    "image": "./images/characters/Laura_Whip.webp",
     "core_items_order": [
       "앙 가르드",
       "우라누스",
@@ -200,7 +200,7 @@
     "weapon": "채찍",
     "role": "퓨어탱커",
     "description": "",
-    "image": "https://i.namu.wiki/i/zO_lefdRKuZr4NUWQ9ka2ajBIUKOrNuAhfT_8UpVYS6nufgB5ex1bXSltB5hLGCkjJAd8GSrMtkMgQRLRlmtVw.webp",
+    "image": "./images/characters/Lenox_Whip.webp",
     "core_items_order": [
       "바니햇",
       "미스릴 갑옷",
@@ -215,7 +215,7 @@
     "weapon": "권총",
     "role": "서포터",
     "description": "",
-    "image": "https://i.namu.wiki/i/-TYcDn1odwvRcWIvhbMTm-j9miuXGxa0V6Xxb7EhM1lismwbTuCRJGs0yNUkWbyN4R836LUDGARtF0OmH5torw.webp",
+    "image": "./images/characters/Leni_Pistol.webp",
     "core_items_order": [
       "엘프 드레스",
       "천룡잠",
@@ -230,7 +230,7 @@
     "weapon": "글러브",
     "role": "암살자",
     "description": "",
-    "image": "https://i.namu.wiki/i/PDmEEbx-bp2bcmbJlejJGV2WSR59LEQJp-w4bVda_BFyARPiwg6iuXghp8jRqhs4f9Dzo5YEXrnYG0qZ9GiXpA.webp",
+    "image": "./images/characters/Leon_Glove.webp",
     "core_items_order": [
       "텔루리안 타임피스",
       "레이싱 헬멧",
@@ -245,7 +245,7 @@
     "weapon": "톤파",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/PDmEEbx-bp2bcmbJlejJGV2WSR59LEQJp-w4bVda_BFyARPiwg6iuXghp8jRqhs4f9Dzo5YEXrnYG0qZ9GiXpA.webp",
+    "image": "./images/characters/Leon_Tonfa.webp",
     "core_items_order": [
       "오르비스",
       "흑요석 짓테",
@@ -260,7 +260,7 @@
     "weapon": "권총",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/9_oNF6pRybbIYTH2I0khcxaw-pRhmO6aMC44W6ADi9zrej7k5wm58Q4zKgl4AF6qaMAUMr7WhzzUXfG2SUGL9A.webp",
+    "image": "./images/characters/Rozzi_Pistol.webp",
     "core_items_order": [
       "플라즈마 건",
       "레이더",
@@ -275,7 +275,7 @@
     "weapon": "저격총",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/Fw5SU26-pU5wJaqfJdjY6v-911kbGmkSh3szAk8ZmtqU5caaZG0cBsaIVz3Ve2Hck-wq_p9DfYNp9ew7UR5AzQ.webp",
+    "image": "./images/characters/Lucia_SniperRifle.webp",
     "core_items_order": [
       "호루스",
       "성법의",
@@ -290,7 +290,7 @@
     "weapon": "방망이",
     "role": "탱브루저",
     "description": "극탱",
-    "image": "https://i.namu.wiki/i/qg0zLG5DPZ_YgaUqFHQkGKQfycbbzN_aQHYBBwBpd4yZOXJAwbrs_I2TxC9b8igkl3-EkupalD_N6O2e6uUrhA.webp",
+    "image": "./images/characters/Luke_Bat.webp",
     "core_items_order": [
       "야생의 허기",
       "미스릴 방패",
@@ -305,7 +305,7 @@
     "weapon": "방망이",
     "role": "탱브루저",
     "description": "브루저",
-    "image": "https://i.namu.wiki/i/qg0zLG5DPZ_YgaUqFHQkGKQfycbbzN_aQHYBBwBpd4yZOXJAwbrs_I2TxC9b8igkl3-EkupalD_N6O2e6uUrhA.webp",
+    "image": "./images/characters/Luke_Bat_2.webp",
     "core_items_order": [
       "헬릭스",
       "타이탄 아머",
@@ -320,7 +320,7 @@
     "weapon": "방망이",
     "role": "암살자",
     "description": "방관",
-    "image": "https://i.namu.wiki/i/qg0zLG5DPZ_YgaUqFHQkGKQfycbbzN_aQHYBBwBpd4yZOXJAwbrs_I2TxC9b8igkl3-EkupalD_N6O2e6uUrhA.webp",
+    "image": "./images/characters/Luke_Bat_3.webp",
     "core_items_order": [
       "블래스터 헬멧",
       "프시케의 칼날",
@@ -335,7 +335,7 @@
     "weapon": "기타",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/TOFN22-WluhboWZUY8mcIFKq56Zf46nlPIeFVuqdUwvPKN-15d76F4QtVEOySYJCCrB3AdEWBlGKsDioSNulIA.webp",
+    "image": "./images/characters/Lenore_Guitar.webp",
     "core_items_order": [
       "헤븐즈 도어",
       "용의 비늘",
@@ -350,7 +350,7 @@
     "weapon": "글러브",
     "role": "암살자",
     "description": "",
-    "image": "https://i.namu.wiki/i/dhqhrDnfPcc-p5JAa9hLRcgoS3AUt90ZfiSXPbKhdjlkQ5tl0T_Wz33WFM0BYYnMsy4YacrnLRgpltewjyBzPA.webp",
+    "image": "./images/characters/LiDailin_Glove.webp",
     "core_items_order": [
       "택티컬 아머",
       "인사이트",
@@ -365,7 +365,7 @@
     "weapon": "글러브",
     "role": "탱브루저",
     "description": "탱",
-    "image": "https://i.namu.wiki/i/dhqhrDnfPcc-p5JAa9hLRcgoS3AUt90ZfiSXPbKhdjlkQ5tl0T_Wz33WFM0BYYnMsy4YacrnLRgpltewjyBzPA.webp",
+    "image": "./images/characters/LiDailin_Glove_2.webp",
     "core_items_order": [
       "미니어쳐 솔라 시스템",
       "불꽃 드레스",
@@ -380,7 +380,7 @@
     "weapon": "쌍절곤",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/dhqhrDnfPcc-p5JAa9hLRcgoS3AUt90ZfiSXPbKhdjlkQ5tl0T_Wz33WFM0BYYnMsy4YacrnLRgpltewjyBzPA.webp",
+    "image": "./images/characters/LiDailin_Nunchaku.webp",
     "core_items_order": [
       "레가투스",
       "갤럭시 스텝",
@@ -395,7 +395,7 @@
     "weapon": "활",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/6U0wTr-koeo4euPowVyiXXe0Q4LFTMUi1X5hwoqs6etRyrtLNeiP1R5rrLnB9mfyfmD_8vqbVC11kE5gqk2irg.webp",
+    "image": "./images/characters/Rio_Bow.webp",
     "core_items_order": [
       "길리 슈트",
       "운명의 주사위",
@@ -410,7 +410,7 @@
     "weapon": "카메라",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/KtOclmoiPSBl2CjccILHGytl32VuSwAthwEKtTaUM4IzDny5b46vdr29AWg1FpZYdVAlYeg3cxJUuqOkxKRYuQ.webp",
+    "image": "./images/characters/Martina_Camera.webp",
     "core_items_order": [
       "운명의 주사위",
       "트와일라잇",
@@ -425,7 +425,7 @@
     "weapon": "채찍",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/rx0aoCqnYYw6VkGPuTH6yP30ytN6tnMStDtAyv8eISbFOIh6t93y9i2KxFNSruZ4fmegPTfuJ9rVBkgMcfLyDA.webp",
+    "image": "./images/characters/Mai_Whip.webp",
     "core_items_order": [
       "불꽃 드레스",
       "토템",
@@ -440,7 +440,7 @@
     "weapon": "망치",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/y4MTffD9RPrURN1DiFyJmi3scfXcUrxrOyumqRxuUSJJHv_CXSpv_Ldx2R9MIJuh959Zp7-C-gC7_mCVXMr3wg.webp",
+    "image": "./images/characters/Markus_Hammer.webp",
     "core_items_order": [
       "야생의 허기",
       "토템",
@@ -455,7 +455,7 @@
     "weapon": "도끼",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/y4MTffD9RPrURN1DiFyJmi3scfXcUrxrOyumqRxuUSJJHv_CXSpv_Ldx2R9MIJuh959Zp7-C-gC7_mCVXMr3wg.webp",
+    "image": "./images/characters/Markus_Axe.webp",
     "core_items_order": [
       "야생의 허기",
       "토템",
@@ -470,7 +470,7 @@
     "weapon": "망치",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/VDIqLoS6ZDCvgicR2goD2_3FnxBxpq-NQKw3RWuOcj6lYvm0n-XM3UUjNkI-Kj88PW18C3NFdol3Fy68-3w9uQ.webp",
+    "image": "./images/characters/Magnus_Hammer.webp",
     "core_items_order": [
       "서리바람 흉갑",
       "하트 온 파이어",
@@ -485,7 +485,7 @@
     "weapon": "망치",
     "role": "스증원딜",
     "description": "포킹",
-    "image": "https://i.namu.wiki/i/VDIqLoS6ZDCvgicR2goD2_3FnxBxpq-NQKw3RWuOcj6lYvm0n-XM3UUjNkI-Kj88PW18C3NFdol3Fy68-3w9uQ.webp",
+    "image": "./images/characters/Magnus_Hammer_2.webp",
     "core_items_order": [
       "둠스데이",
       "성법의",
@@ -500,7 +500,7 @@
     "weapon": "방망이",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/VDIqLoS6ZDCvgicR2goD2_3FnxBxpq-NQKw3RWuOcj6lYvm0n-XM3UUjNkI-Kj88PW18C3NFdol3Fy68-3w9uQ.webp",
+    "image": "./images/characters/Magnus_Bat.webp",
     "core_items_order": [
       "서리바람 흉갑",
       "하트 온 파이어",
@@ -515,7 +515,7 @@
     "weapon": "방망이",
     "role": "딜브루저",
     "description": "치명",
-    "image": "https://i.namu.wiki/i/VDIqLoS6ZDCvgicR2goD2_3FnxBxpq-NQKw3RWuOcj6lYvm0n-XM3UUjNkI-Kj88PW18C3NFdol3Fy68-3w9uQ.webp",
+    "image": "./images/characters/Magnus_Bat_2.webp",
     "core_items_order": [
       "여의봉",
       "큐브 워치",
@@ -530,7 +530,7 @@
     "weapon": "망치",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/5XRF6th03t4r8rdkmq3o6vqbf3U7zllnCFMtaB8GezAB1SKmnmceNdLqxiUTCVoUZsTOq_0TjsEt_mgrAI2veg.webp",
+    "image": "./images/characters/Mirka_Hammer.webp",
     "core_items_order": [
       "바니햇",
       "하트 온 파이어",
@@ -545,7 +545,7 @@
     "weapon": "아르카나",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/2TC32AKpz61uwx8iSIkzdQk7wfdqLdUjKseV5FXUrv58uNiSaxAGmTdkEWZjhXr67JG_Yu1f83xYqkPyW_CsZQ.webp",
+    "image": "./images/characters/Vanya_Arcana.webp",
     "core_items_order": [
       "여제",
       "성법의",
@@ -560,7 +560,7 @@
     "weapon": "권총",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/vUMoAyWRI7cwlnUqKPo_eDwLXkUo_8HF-vCs6YiwcpXNqAKJ8vF5Jyt8RlnC-WyOL9px2gUNLnZKyM9KmqoPOg.webp",
+    "image": "./images/characters/Babara_Pistol.webp",
     "core_items_order": [
       "이단심판관",
       "천룡잠",
@@ -575,7 +575,7 @@
     "weapon": "저격총",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/xXczubZutFBi1h6pyMMajx_R3JmXdWTcnRZq9cHhTDE9XXcZBSPry4eWwxGgkmmW-wcJhJRdnqWqGAUJJjRKQQ.webp",
+    "image": "./images/characters/Bernice_SniperRifle.webp",
     "core_items_order": [
       "살라딘의 화살통",
       "화령장",
@@ -590,7 +590,7 @@
     "weapon": "쌍검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/Op5VFhm1g-4PfDgMEf91_ArkbCDBoDQ_X4QXxErvxdtaaR5S2jtsxpJzvDcIhdEOGQ2sbUqe0T_qzVchX7I01Q.webp",
+    "image": "./images/characters/Blair_DualSword.webp",
     "core_items_order": [
       "갤럭시 스텝",
       "아오자이",
@@ -605,7 +605,7 @@
     "weapon": "아르카나",
     "role": "암살자",
     "description": "",
-    "image": "https://i.namu.wiki/i/TDRFI7O2Y0xvbQmoKiKq6Vft2L3pdtbsY2iEvCDDZfSjU3OktDPYBKzwTyAlTqHVh14qGMg_-SRzb-c7cQIo7w.webp",
+    "image": "./images/characters/Bianca_Arcana.webp",
     "core_items_order": [
       "성법의",
       "전술 고글",
@@ -620,7 +620,7 @@
     "weapon": "방망이",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/iDDS22kPdP3rehInySERqjwiYjiO4dTYAfY2dSiB8H3dr56kbDcQsINeKwabS7cDEyWSqnT0cPItcQcJ0NArLw.webp",
+    "image": "./images/characters/Bihyung_Bat.webp",
     "core_items_order": [
       "달빛 펜던트",
       "팬텀 자켓",
@@ -635,7 +635,7 @@
     "weapon": "아르카나",
     "role": "서포터",
     "description": "",
-    "image": "https://i.namu.wiki/i/dHNxQ4SsCeNeBMG_y8U7SO2ZPhoU0DPqZodmHVGEX_M3n40y5rmaGQkyvZdy_iXYzSR8wy-Y0wVsOPyVmmARmA.webp",
+    "image": "./images/characters/Charlotte_Arcana.webp",
     "core_items_order": [
       "엘프 드레스",
       "백야의 관",
@@ -650,7 +650,7 @@
     "weapon": "양손검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/YaFBqbsmCf8ICw023kBBMH6q8pX8cr2yNtcsgHnYru6ZcZ_tsuWgpytUhNdzUf3-1kY2eU2uZBJBccyVWnCjwg.webp",
+    "image": "./images/characters/Ceres_TwoHandSword.webp",
     "core_items_order": [
       ""
     ]
@@ -661,7 +661,7 @@
     "weapon": "투척",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/0JAGgzcC_hyH2GsgDTodKpFupldmVsB50lM6SpCDFR6xdZggPyaNxkh4GXDPo2wQpo6JRlKIA5KZc-RR5uBzEg.webp",
+    "image": "./images/characters/Celine_HighAngleFire.webp",
     "core_items_order": [
       "스카디의 팔찌",
       "페르소나",
@@ -676,7 +676,7 @@
     "weapon": "창",
     "role": "퓨어탱커",
     "description": "",
-    "image": "https://i.namu.wiki/i/NgD1RuwLGOf0Ux1LaB3FqnDh-hn7F3OXiCbw-6r0BM3vQxZPWRrTgdrVqYFLbXyZe4VXA0BdfvDk21vitde0ww.webp",
+    "image": "./images/characters/Xiukai_Spear.webp",
     "core_items_order": [
       "미니어쳐 솔라 시스템",
       "성기사의 투구",
@@ -691,7 +691,7 @@
     "weapon": "단검",
     "role": "퓨어탱커",
     "description": "",
-    "image": "https://i.namu.wiki/i/NgD1RuwLGOf0Ux1LaB3FqnDh-hn7F3OXiCbw-6r0BM3vQxZPWRrTgdrVqYFLbXyZe4VXA0BdfvDk21vitde0ww.webp",
+    "image": "./images/characters/Xiukai_OneHandSword.webp",
     "core_items_order": [
       "미니어쳐 솔라 시스템",
       "성기사의 투구",
@@ -706,7 +706,7 @@
     "weapon": "단검",
     "role": "딜브루저",
     "description": "극딜",
-    "image": "https://i.namu.wiki/i/NgD1RuwLGOf0Ux1LaB3FqnDh-hn7F3OXiCbw-6r0BM3vQxZPWRrTgdrVqYFLbXyZe4VXA0BdfvDk21vitde0ww.webp",
+    "image": "./images/characters/Xiukai_OneHandSword_2.webp",
     "core_items_order": [
       "성법의",
       "악의",
@@ -721,7 +721,7 @@
     "weapon": "단검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/mPmdg0rXTvuJbMjJh445yirE26a9k_0RhRa5wsuC1RBWy3JRaVFdv8byJfOYjmvvLh2ZJYmSVbgrbbA7_uL5Qw.webp",
+    "image": "./images/characters/Shoichi_OneHandSword.webp",
     "core_items_order": [
       "앙 가르드",
       "틴달로스의 군주",
@@ -736,7 +736,7 @@
     "weapon": "망치",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/rmuBgqxVc-N4ZBt_qUpWh_V-EUBrTl1yRG29q9CzXSnWFhfGZNSGhuIjDm0Ath-kX7mE5wxO1Dq1ihpnwP9gCQ.webp",
+    "image": "./images/characters/Sua_Hammer.webp",
     "core_items_order": [
       "쿠튀리에",
       "둠스데이",
@@ -751,7 +751,7 @@
     "weapon": "방망이",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/rmuBgqxVc-N4ZBt_qUpWh_V-EUBrTl1yRG29q9CzXSnWFhfGZNSGhuIjDm0Ath-kX7mE5wxO1Dq1ihpnwP9gCQ.webp",
+    "image": "./images/characters/Sua_Bat.webp",
     "core_items_order": [
       "성법의",
       "사이버 스토커",
@@ -766,7 +766,7 @@
     "weapon": "레이피어",
     "role": "암살자",
     "description": "",
-    "image": "https://i.namu.wiki/i/reD3eASrRCmUfKb4Tqq5UpKc0kmRdH8CeA8TBrgG1kI4C8RsEukzOkazjzm8LExufAXzOwUcbL0hgJfh9WHGCg.webp",
+    "image": "./images/characters/Shurin_Rapier.webp",
     "core_items_order": [
       "아오자이",
       "주와이외즈",
@@ -781,7 +781,7 @@
     "weapon": "암기",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/R3BjwYYsKq3yYXr8jcct1S_tpraeDuJHhIPnYPkuxeuolNSHErzAVxcnsVxvwL4J7BgNxwLytG55a7L3p4aPQQ.webp",
+    "image": "./images/characters/Sissela_DirectFire.webp",
     "core_items_order": [
       "핏빛 망토",
       "페르소나",
@@ -796,7 +796,7 @@
     "weapon": "투척",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/R3BjwYYsKq3yYXr8jcct1S_tpraeDuJHhIPnYPkuxeuolNSHErzAVxcnsVxvwL4J7BgNxwLytG55a7L3p4aPQQ.webp",
+    "image": "./images/characters/Sissela_HighAngleFire.webp",
     "core_items_order": [
       "핏빛 망토",
       "파초선",
@@ -811,7 +811,7 @@
     "weapon": "권총",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/NLlI1oyk0IERcY7Xl-KSZSV0cCaNf6A9hTtGBd36IR_y8faiC9NGz655BtOcv6oQsvLijcHh-7m8A4FEvm4kXg.webp",
+    "image": "./images/characters/Silvia_Pistol.webp",
     "core_items_order": [
       "성법의",
       "호루스",
@@ -826,7 +826,7 @@
     "weapon": "레이피어",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/F7Y_QQdiEf91IrKB2zUrIeE-9ovMh9dx6ybe52j6r2Cb0LERFm2zo7csr8lTAaw5Q3tFkarpYQhN9zHSdncoYg.webp",
+    "image": "./images/characters/Adela_Rapier.webp",
     "core_items_order": [
       "아르고스의 눈",
       "페르소나",
@@ -841,7 +841,7 @@
     "weapon": "방망이",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/F7Y_QQdiEf91IrKB2zUrIeE-9ovMh9dx6ybe52j6r2Cb0LERFm2zo7csr8lTAaw5Q3tFkarpYQhN9zHSdncoYg.webp",
+    "image": "./images/characters/Adela_Bat.webp",
     "core_items_order": [
       "쿤달라",
       "성법의",
@@ -856,7 +856,7 @@
     "weapon": "투척",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/IV2h3PnqQdpcT9D7A1M2jIvAH_X9FT2jTwMkLgcivG2Ok90R6ewiSo7Q8zv42PJSeA4m_k0YDYhvFvmlNOKFOg.webp",
+    "image": "./images/characters/Adriana_HighAngleFire.webp",
     "core_items_order": [
       "핏빛 망토",
       "페르소나",
@@ -871,7 +871,7 @@
     "weapon": "아르카나",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/sgYQL80ffx73s4WuL0p2yjyroofQCeBacmbYL6GUcBnWsydtTozACllLxva3c2iyF_PkTH13bdRcLPUFKmWQcg.webp",
+    "image": "./images/characters/Adina_Arcana.webp",
     "core_items_order": [
       "핏빛 망토",
       "페르소나",
@@ -886,7 +886,7 @@
     "weapon": "아르카나",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/EdnQ_SeLpQyhP6VSCEgB0ektZhVdjTPgbx7NaBqhzw36f9hCF0DBwyVLxqACaWIlduunKC-avEOso5TPHP81-g.webp",
+    "image": "./images/characters/Arda_Arcana.webp",
     "core_items_order": [
       "이단심판관",
       "천룡잠",
@@ -901,7 +901,7 @@
     "weapon": "도끼",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/RKY7w-pSL_uAx-Qj94603Gat4tmJ-_Blt8iLWy8PZrkGNEwySfmjKp_BM3Ri8LNkRUAAeWj8tAhfKXNcou-3wg.webp",
+    "image": "./images/characters/Abigail_Axe.webp",
     "core_items_order": [
       "앙 가르드",
       "네플리온",
@@ -916,7 +916,7 @@
     "weapon": "돌격 소총",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/yh215_7IPFSAPmF54PPTVOWkw8_mlpKtuOws7aLWKs-E1oTgMofXBynKgV43E2jWK_FLLF9Twc9eBquysrBbuQ.webp",
+    "image": "./images/characters/Aya_AssaultRifle.webp",
     "core_items_order": [
       "레가투스",
       "저지먼트",
@@ -931,7 +931,7 @@
     "weapon": "저격총",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/yh215_7IPFSAPmF54PPTVOWkw8_mlpKtuOws7aLWKs-E1oTgMofXBynKgV43E2jWK_FLLF9Twc9eBquysrBbuQ.webp",
+    "image": "./images/characters/Aya_SniperRifle.webp",
     "core_items_order": [
       "호루스의 눈",
       "성법의",
@@ -946,7 +946,7 @@
     "weapon": "권총",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/yh215_7IPFSAPmF54PPTVOWkw8_mlpKtuOws7aLWKs-E1oTgMofXBynKgV43E2jWK_FLLF9Twc9eBquysrBbuQ.webp",
+    "image": "./images/characters/Aya_Pistol.webp",
     "core_items_order": [
       "스카디의 팔찌",
       "페르소나",
@@ -961,7 +961,7 @@
     "weapon": "돌격 소총",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/31we95VTgj4kVyZfDKUwIWjFbZJoMv4LhT3INq0UQz1Ft8Dkejv0yXgHTTZWdEOwFhCvXzSpLQUzo7xtsMnaaw.webp",
+    "image": "./images/characters/Isol_AssaultRifle.webp",
     "core_items_order": [
       "살라딘의 화살통",
       "레가투스",
@@ -976,7 +976,7 @@
     "weapon": "권총",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/31we95VTgj4kVyZfDKUwIWjFbZJoMv4LhT3INq0UQz1Ft8Dkejv0yXgHTTZWdEOwFhCvXzSpLQUzo7xtsMnaaw.webp",
+    "image": "./images/characters/Isol_Pistol.webp",
     "core_items_order": [
       "핏빛 망토",
       "페르소나",
@@ -991,7 +991,7 @@
     "weapon": "톤파",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/bn6OdB0TDTsYl3TLC6MX99bIj4H8TG9iu-NssBlH6J3voU6udfwvrU_fTaryW_th0-u_aHp_gDTLgNDAFUjkAA.webp",
+    "image": "./images/characters/Isaac_Tonfa.webp",
     "core_items_order": [
       "천사의 고리",
       "맨티스 톤파",
@@ -1006,7 +1006,7 @@
     "weapon": "톤파",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/yhTZWWvHK8AKMA8gORljQ41m1HUVu_qzJmu2E0P_fLZJF5PbkKl8NgfUWO0EetmkyfWBZQSC6_FA8eGc9VtCUQ.webp",
+    "image": "./images/characters/Alex_Tonfa.webp",
     "core_items_order": [
       "헬릭스",
       "레이싱 슈트",
@@ -1021,7 +1021,7 @@
     "weapon": "글러브",
     "role": "퓨어탱커",
     "description": "",
-    "image": "https://i.namu.wiki/i/QwX4f0kv9rD89ccKm6iLzRm9KTI3S3t5hxWFKJ2E7Vp_mfzghf_sxiXb2VwUi7BLgGNvMS-bC9URxZUlMbn-Nw.webp",
+    "image": "./images/characters/Alonso_Glove.webp",
     "core_items_order": [
       "유령 신부의 드레스",
       "하트 온 파이어",
@@ -1036,7 +1036,7 @@
     "weapon": "톤파",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/ASKzSyLmizO3BcFxnFbPp62fl_rXGTFAlOO9yvY7DYe5K0jXucc9dmXyPa9cLaRg8DMfUTW28YPApKW4t_XQuw.webp",
+    "image": "./images/characters/Jan_Tonfa.webp",
     "core_items_order": [
       "앙 가르드",
       "윈드러너",
@@ -1051,7 +1051,7 @@
     "weapon": "글러브",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/ASKzSyLmizO3BcFxnFbPp62fl_rXGTFAlOO9yvY7DYe5K0jXucc9dmXyPa9cLaRg8DMfUTW28YPApKW4t_XQuw.webp",
+    "image": "./images/characters/Jan_Glove.webp",
     "core_items_order": [
       "오토-암즈",
       "레이싱 슈트",
@@ -1066,7 +1066,7 @@
     "weapon": "도끼",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/qxh5IcaVIdKRAvBN26wDBN1gfhUFI8zPcxEXGuqlwOibCJUc4RE2CnPaD7WaJWYEwwNzu57vT5rwyRXTJVcrdQ.webp",
+    "image": "./images/characters/Estelle_Axe.webp",
     "core_items_order": [
       "서리바람 흉갑",
       "하트 온 파이어",
@@ -1081,7 +1081,7 @@
     "weapon": "도끼",
     "role": "딜브루저",
     "description": "극딜",
-    "image": "https://i.namu.wiki/i/qxh5IcaVIdKRAvBN26wDBN1gfhUFI8zPcxEXGuqlwOibCJUc4RE2CnPaD7WaJWYEwwNzu57vT5rwyRXTJVcrdQ.webp",
+    "image": "./images/characters/Estelle_Axe_2.webp",
     "core_items_order": [
       "성법의",
       "요명월",
@@ -1096,7 +1096,7 @@
     "weapon": "양손검",
     "role": "딜브루저",
     "description": "천고",
-    "image": "https://i.namu.wiki/i/OKvAj9nCG3LL8FXtMA6ug59LEVyT_f_JdJbz88Bk266hff-GflqcSAMRZMyR9RFARcjpxbfm0ThlbI4GmvUkBA.webp",
+    "image": "./images/characters/Aiden_TwoHandSword.webp",
     "core_items_order": [
       "천사의 고리",
       "이퀄리브리엄",
@@ -1111,7 +1111,7 @@
     "weapon": "양손검",
     "role": "딜브루저",
     "description": "현로렙테",
-    "image": "https://i.namu.wiki/i/OKvAj9nCG3LL8FXtMA6ug59LEVyT_f_JdJbz88Bk266hff-GflqcSAMRZMyR9RFARcjpxbfm0ThlbI4GmvUkBA.webp",
+    "image": "./images/characters/Aiden_TwoHandSword_2.webp",
     "core_items_order": [
       "천사의 고리",
       "갤럭시 스텝",
@@ -1126,7 +1126,7 @@
     "weapon": "VF의수",
     "role": "탱브루저",
     "description": "블맘",
-    "image": "https://i.namu.wiki/i/LSwvJBKIOYV9T3LOWk09C_iGF3QzGpDB__WQI6LiAj_E2vXUgbew4sudPI-4aNS1PzbbVhs5WOM5aak7CYpvYg.webp",
+    "image": "./images/characters/Echion_VFArm.webp",
     "core_items_order": [
       "야생의 허기",
       "토템",
@@ -1141,7 +1141,7 @@
     "weapon": "VF의수",
     "role": "암살자",
     "description": "방관",
-    "image": "https://i.namu.wiki/i/LSwvJBKIOYV9T3LOWk09C_iGF3QzGpDB__WQI6LiAj_E2vXUgbew4sudPI-4aNS1PzbbVhs5WOM5aak7CYpvYg.webp",
+    "image": "./images/characters/Echion_VFArm_2.webp",
     "core_items_order": [
       "아이언 메이든",
       "택티컬 아머",
@@ -1156,7 +1156,7 @@
     "weapon": "VF의수",
     "role": "딜브루저",
     "description": "데에",
-    "image": "https://i.namu.wiki/i/LSwvJBKIOYV9T3LOWk09C_iGF3QzGpDB__WQI6LiAj_E2vXUgbew4sudPI-4aNS1PzbbVhs5WOM5aak7CYpvYg.webp",
+    "image": "./images/characters/Echion_VFArm_3.webp",
     "core_items_order": [
       "레가투스",
       "미스릴 완장",
@@ -1171,7 +1171,7 @@
     "weapon": "VF의수",
     "role": "탱브루저",
     "description": "사와",
-    "image": "https://i.namu.wiki/i/LSwvJBKIOYV9T3LOWk09C_iGF3QzGpDB__WQI6LiAj_E2vXUgbew4sudPI-4aNS1PzbbVhs5WOM5aak7CYpvYg.webp",
+    "image": "./images/characters/Echion_VFArm_4.webp",
     "core_items_order": [
       "미니어쳐 솔라 시스템",
       "불꽃 드레스",
@@ -1186,7 +1186,7 @@
     "weapon": "레이피어",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/yJgZKZbJAC4-xIEpRmAxjEui0PutHOL-dBGnkJuIQubr7ltl9tPY3z1lFtmCaGt1j2dt-jBr5qpOd6-bd-4wjQ.webp",
+    "image": "./images/characters/Elena_Rapier.webp",
     "core_items_order": [
       "불꽃 드레스",
       "미니어쳐 솔라 시스템",
@@ -1201,7 +1201,7 @@
     "weapon": "아르카나",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/DSO-tofc2Wnuu_KSTG0LwMhoKdIkH_oP7geJFkWN-rTavi5YN-FyswHvhUDitWxibDxKnhJTiflFk31ay8O4kg.webp",
+    "image": "./images/characters/Emma_Arcana.webp",
     "core_items_order": [
       "호루스",
       "성법의",
@@ -1216,7 +1216,7 @@
     "weapon": "암기",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/DSO-tofc2Wnuu_KSTG0LwMhoKdIkH_oP7geJFkWN-rTavi5YN-FyswHvhUDitWxibDxKnhJTiflFk31ay8O4kg.webp",
+    "image": "./images/characters/Emma_DirectFire.webp",
     "core_items_order": [
       "페르소나",
       "건곤권",
@@ -1231,7 +1231,7 @@
     "weapon": "아르카나",
     "role": "서포터",
     "description": "",
-    "image": "https://i.namu.wiki/i/TBaiHNuabajwR4SJxD_Xo-EWlQ_XE-LYjajbzUG4XIU6DSM5V8uVtY5COapkEBfNo43r4Rhu_v9cA_8Nu_2o7A.webp",
+    "image": "./images/characters/Johann_Arcana.webp",
     "core_items_order": [
       "클라다 반지",
       "더 썬",
@@ -1246,7 +1246,7 @@
     "weapon": "투척",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/dcpy2WXDRKIAb0fqEbNmKRUAUzZEMkeJiDLjVHdPZiR5eOOlDBkSGgN7jbiRKQ-9xK2bPkjViR-KVD9ONdInfQ.webp",
+    "image": "./images/characters/William_HighAngleFire.webp",
     "core_items_order": [
       "운명의 주사위",
       "쿼드 아이",
@@ -1261,7 +1261,7 @@
     "weapon": "아르카나",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/ttT3PR-9VxEP--BmFjGjfT3q1SI6uHr_eiEGck8nSppStwf1i4C-lORgU-ECpB7PsiH7sOYlXpGlx536O3Zk3w.webp",
+    "image": "./images/characters/Yumin_Arcana.webp",
     "core_items_order": [
       "스카디의 팔찌",
       "쿠튀리에",
@@ -1276,7 +1276,7 @@
     "weapon": "석궁",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/W-XujOrEuPdUPYhMEKFapE24kRsAkZ1BAN4Mifl0kVBf2dAk6dbZ8AQJJn8hLjOtB4F5IPbq4YNzxZEr6Je31w.webp",
+    "image": "./images/characters/Justina_Crossbow.webp",
     "core_items_order": [
       "카바나",
       "페르소나",
@@ -1291,7 +1291,7 @@
     "weapon": "쌍검",
     "role": "딜브루저",
     "description": "브루저",
-    "image": "https://i.namu.wiki/i/Y4o1ro59jYFrf4Vad8WgzHdeG25ithBrIjbNdoAHyIdvyIzU52hZZLgm5MxOM2Gv6xlchDI1u_pDwgezRElVkQ.webp",
+    "image": "./images/characters/Yuki_DualSword.webp",
     "core_items_order": [
       "오메르타",
       "서슬가시 체인",
@@ -1306,7 +1306,7 @@
     "weapon": "양손검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/Y4o1ro59jYFrf4Vad8WgzHdeG25ithBrIjbNdoAHyIdvyIzU52hZZLgm5MxOM2Gv6xlchDI1u_pDwgezRElVkQ.webp",
+    "image": "./images/characters/Yuki_TwoHandSword.webp",
     "core_items_order": [
       "스펙터",
       "이퀄리브리엄",
@@ -1321,7 +1321,7 @@
     "weapon": "양손검",
     "role": "딜브루저",
     "description": "치명",
-    "image": "https://i.namu.wiki/i/Y4o1ro59jYFrf4Vad8WgzHdeG25ithBrIjbNdoAHyIdvyIzU52hZZLgm5MxOM2Gv6xlchDI1u_pDwgezRElVkQ.webp",
+    "image": "./images/characters/Yuki_TwoHandSword_2.webp",
     "core_items_order": [
       "오메르타",
       "빛의 증표",
@@ -1336,7 +1336,7 @@
     "weapon": "쌍검",
     "role": "딜브루저",
     "description": "치명",
-    "image": "https://i.namu.wiki/i/Y4o1ro59jYFrf4Vad8WgzHdeG25ithBrIjbNdoAHyIdvyIzU52hZZLgm5MxOM2Gv6xlchDI1u_pDwgezRElVkQ.webp",
+    "image": "./images/characters/Yuki_DualSword_2.webp",
     "core_items_order": [
       "오메르타",
       "자웅일대검",
@@ -1351,7 +1351,7 @@
     "weapon": "투척",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/RJt1DajU7g4PHV58dxLABt159fyqPfizfSJzmYBok1v_X-3zFdPwuRA_piL0n3z-2pFKBnZ_LlCtwpvgs2ceeA.webp",
+    "image": "./images/characters/Irem_HighAngleFire.webp",
     "core_items_order": [
       "호루스",
       "성법의",
@@ -1366,7 +1366,7 @@
     "weapon": "투척",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/3MgtzTy8xW-kR6mjqdB-3kpNCH12eKZo4uzsFb6_ZZruYo1mg_0HS2kPVXrxHoSnARpIJMIHukVMElAJV0wqMQ.webp",
+    "image": "./images/characters/Eva_HighAngleFire.webp",
     "core_items_order": [
       "쿠튀리에",
       "천룡잠",
@@ -1381,7 +1381,7 @@
     "weapon": "창",
     "role": "암살자",
     "description": "방관",
-    "image": "https://i.namu.wiki/i/ER_rtY8RvTP7E2RbX6BZQ4_gHIJ-pFWF8XyIajiiFpgVMMJDVxWWtkoEiP1WX9O0FaHuYWrCo4at90NQpvKaBQ.webp",
+    "image": "./images/characters/Istvan_Spear.webp",
     "core_items_order": [
       "프시케의 칼날",
       "월계관",
@@ -1396,7 +1396,7 @@
     "weapon": "창",
     "role": "딜브루저",
     "description": "와류",
-    "image": "https://i.namu.wiki/i/ER_rtY8RvTP7E2RbX6BZQ4_gHIJ-pFWF8XyIajiiFpgVMMJDVxWWtkoEiP1WX9O0FaHuYWrCo4at90NQpvKaBQ.webp",
+    "image": "./images/characters/Istvan_Spear_2.webp",
     "core_items_order": [
       "헬릭스",
       "반역의 의지",
@@ -1411,7 +1411,7 @@
     "weapon": "단검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/LzaS-Mi9wSBwDskzdUUt229I91CVbjio8ITHidHCMzqip8Y31OBHcqvMmLjoX6jpi7YIhs_MYXW7IOS7LTpoiA.webp",
+    "image": "./images/characters/Ian_OneHandSword.webp",
     "core_items_order": [
       "달빛 펜던트",
       "오메르타",
@@ -1426,7 +1426,7 @@
     "weapon": "망치",
     "role": "퓨어탱커",
     "description": "",
-    "image": "https://i.namu.wiki/i/TN4cKlZ4qr21LO4ENUVL6CjiDTvvxwNH_NVMbs2s4HY3dGJyA0rGqrarIz2giKesTRfh3uPG4JjLNEF_FnsYtg.webp",
+    "image": "./images/characters/Eleven_Hammer.webp",
     "core_items_order": [
       "유령 신부의 드레스",
       "하트 온 파이어",
@@ -1441,7 +1441,7 @@
     "weapon": "암기",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/DsgfrK8c7k-CPM9H-65fX7mQjDXUANMUMiWai1wn3ckUN7mKLTwWglJTDGZHWc_cMYh2ddCgChyZpRQdBt1QAw.webp",
+    "image": "./images/characters/Zahir_DirectFire.webp",
     "core_items_order": [
       "빙백은침",
       "앙 가르드",
@@ -1456,7 +1456,7 @@
     "weapon": "투척",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/DsgfrK8c7k-CPM9H-65fX7mQjDXUANMUMiWai1wn3ckUN7mKLTwWglJTDGZHWc_cMYh2ddCgChyZpRQdBt1QAw.webp",
+    "image": "./images/characters/Zahir_HighAngleFire.webp",
     "core_items_order": [
       "스카디의 팔찌",
       "앙 가르드",
@@ -1471,7 +1471,7 @@
     "weapon": "도끼",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/3mRln5UuyRATOzOVdPd_U2ASbXBuzF8RdflPFpYSWVBQu1NNj4kkiX9zzDhSaCS9gFPaqZoPZtbOHs73HMvNdA.webp",
+    "image": "./images/characters/Jackie_Axe.webp",
     "core_items_order": [
       "미니어쳐 솔라 시스템",
       "캡틴 햇",
@@ -1486,7 +1486,7 @@
     "weapon": "단검",
     "role": "암살자",
     "description": "",
-    "image": "https://i.namu.wiki/i/3mRln5UuyRATOzOVdPd_U2ASbXBuzF8RdflPFpYSWVBQu1NNj4kkiX9zzDhSaCS9gFPaqZoPZtbOHs73HMvNdA.webp",
+    "image": "./images/characters/Jackie_OneHandSword.webp",
     "core_items_order": [
       "큐브 워치",
       "택티컬 아머",
@@ -1501,7 +1501,7 @@
     "weapon": "쌍검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/3mRln5UuyRATOzOVdPd_U2ASbXBuzF8RdflPFpYSWVBQu1NNj4kkiX9zzDhSaCS9gFPaqZoPZtbOHs73HMvNdA.webp",
+    "image": "./images/characters/Jackie_DualSword.webp",
     "core_items_order": [
       "아오자이",
       "큐브 워치",
@@ -1516,7 +1516,7 @@
     "weapon": "양손검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/3mRln5UuyRATOzOVdPd_U2ASbXBuzF8RdflPFpYSWVBQu1NNj4kkiX9zzDhSaCS9gFPaqZoPZtbOHs73HMvNdA.webp",
+    "image": "./images/characters/Jackie_TwoHandSword.webp",
     "core_items_order": [
       "큐브 워치",
       "오메르타",
@@ -1531,7 +1531,7 @@
     "weapon": "권총",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/w6tSQEAGXgpqrotznNPU7IUgs1KE49J4xSQWrrSef7N11rf7pjWsjczEChwSFPKA_NT5B_TDY6wGFoXJGHkKQg.webp",
+    "image": "./images/characters/Jenny_Pistol.webp",
     "core_items_order": [
       "카바나",
       "텔루리안 타임피스",
@@ -1546,7 +1546,7 @@
     "weapon": "암기",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/l4MlMvJzY0xzdbtBBXi6mLNB72BHBCEa73QUCz0m8MC9MotUPyHMFaZ4xKCPTqS_JNMhQV7izL-6Iv3o5T3CeA.webp",
+    "image": "./images/characters/Tsubame_DirectFire.webp",
     "core_items_order": [
       "수다르사나",
       "운명의 주사위",
@@ -1561,7 +1561,7 @@
     "weapon": "레이피어",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/gk_LIwa5tApoOkoeOKUvfayU05g8JOQJRapvyWK9MDOMiiQ-VT_zP7_ZgUG-7eJhoyNrr6SWLzRzPRcuOTrGhA.webp",
+    "image": "./images/characters/Camilo_Rapier.webp",
     "core_items_order": [
       "레이싱 부츠",
       "아오자이",
@@ -1576,7 +1576,7 @@
     "weapon": "쌍검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/gk_LIwa5tApoOkoeOKUvfayU05g8JOQJRapvyWK9MDOMiiQ-VT_zP7_ZgUG-7eJhoyNrr6SWLzRzPRcuOTrGhA.webp",
+    "image": "./images/characters/Camilo_DualSword.webp",
     "core_items_order": [
       "아오자이",
       "간장과 막야",
@@ -1591,7 +1591,7 @@
     "weapon": "저격총",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/fU03ZVp1snkzdlR0NfRkHA9OOXMMP2vyI9xHW51bpvLkqw5s279MpSdCjl_eotSJNM4IBF-LfIQf86Lx8hT9TA.webp",
+    "image": "./images/characters/Katja_SniperRifle.webp",
     "core_items_order": [
       "현자총통",
       "운명의 주사위",
@@ -1606,7 +1606,7 @@
     "weapon": "석궁",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/A4iOdcH9FQj7UzWttjCBGCJlyICYZxTutP-nNCwhOrZnIkwegczs-jYC51FY6q7hJzM-YSOJaCUo3AELD3-EbA.webp",
+    "image": "./images/characters/Karla_Crossbow.webp",
     "core_items_order": [
       "성법의",
       "레이싱 헬멧",
@@ -1621,7 +1621,7 @@
     "weapon": "쌍검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/xsnSKCVfR14hUtgP9RVP6W12y9fB42PxMFvtu1IYoiYE_KvScSwWazPmI9XmkqOHaQP3o-DKNYxsOMFsdO7zGw.webp",
+    "image": "./images/characters/Cathy_DualSword.webp",
     "core_items_order": [
       "성법의",
       "사이버 스토커",
@@ -1636,7 +1636,7 @@
     "weapon": "단검",
     "role": "암살자",
     "description": "",
-    "image": "https://i.namu.wiki/i/xsnSKCVfR14hUtgP9RVP6W12y9fB42PxMFvtu1IYoiYE_KvScSwWazPmI9XmkqOHaQP3o-DKNYxsOMFsdO7zGw.webp",
+    "image": "./images/characters/Cathy_OneHandSword.webp",
     "core_items_order": [
       "페르소나",
       "월식",
@@ -1651,7 +1651,7 @@
     "weapon": "도끼",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/RnHiuxlh_Y4LE0_Q-d77Q079MtZl5HvRNJ3HPEQjoGA2KaAxLgG1afxQtWpuViQfeU1IDjz0VE40N17NgBL-7Q.webp",
+    "image": "./images/characters/Kenneth_Axe.webp",
     "core_items_order": [
       "스펙터",
       "반고부",
@@ -1666,7 +1666,7 @@
     "weapon": "아르카나",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/NuFww0mTQMvAkeKvpeNc5JNjoox12bmVpblsbDdd7obTgFmS8Y0c-HPXwO75GPCPLfM2FBhOQvB66NjjIJlRWQ.webp",
+    "image": "./images/characters/Coraline_Arcana.webp",
     "core_items_order": [
       "성법의",
       "더 행맨",
@@ -1681,7 +1681,7 @@
     "weapon": "권총",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/oqHY-enAKngVYkYOkgx3bFtMI8k7xpdQ9e8heiWZx7XMcpPL9oqiG29FhNgIzBLudy-8Vyu9QiMEWcYu0Ekfyw.webp",
+    "image": "./images/characters/Craver_Pistol.webp",
     "core_items_order": [
       "쿠튀리에",
       "사이버 스토커",
@@ -1696,7 +1696,7 @@
     "weapon": "암기",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/-2IdxTAEjGYR9E5hYGsp131-LC5qTpSx-B74NvKGjeTl2HYrn2HsXV_mKpKUB6hCoDQkxrN8XeeSzwSEUoLz3A.webp",
+    "image": "./images/characters/Chloe_DirectFire.webp",
     "core_items_order": [
       "운명의 주사위",
       "길리 슈트",
@@ -1711,7 +1711,7 @@
     "weapon": "레이피어",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/ndFdjpJURSw6_JwO3VJDKxKY2gUa_mNVLL8xqEkQ6UH63s_YuARr5bO13gQFqVfCU06IDnfm05q_7Ed20267xw.webp",
+    "image": "./images/characters/Chiara_Rapier.webp",
     "core_items_order": [
       "페르소나",
       "필드 쏜",
@@ -1726,7 +1726,7 @@
     "weapon": "암기",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/hhqYexXwdrBUJEYQcEr8iqZMKA7jrUUh7tLhazVg4DF0-COZWZ06wtld9qlEc9sWT9eMoGpdOx71H1lL5naYPA.webp",
+    "image": "./images/characters/Tazia_DirectFire.webp",
     "core_items_order": [
       "앙 가르드",
       "와일드 워커",
@@ -1741,7 +1741,7 @@
     "weapon": "저격총",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/RWVgLaoSCmb4Clg9R0FYPXVHeYbqlHR4zBbcpmSOYxUXkEAghXcKLIKlVWieC6NcoZRI2B4vgyHmod6_TxFs8Q.webp",
+    "image": "./images/characters/Theodore_SniperRifle.webp",
     "core_items_order": [
       "블레이드 부츠",
       "성법의",
@@ -1756,7 +1756,7 @@
     "weapon": "글러브",
     "role": "암살자",
     "description": "",
-    "image": "https://i.namu.wiki/i/kKaSi8-qfK0a-1_X0RcpfxLysH9xtQ-6basgERZOV2EVHHn4525AYOi5smAf9n4t5ADVHexUXM6acuQSVDTvDQ.webp",
+    "image": "./images/characters/Fenrir_Glove.webp",
     "core_items_order": [
       "프시케의 칼날",
       "트와일라잇",
@@ -1771,7 +1771,7 @@
     "weapon": "글러브",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/kKaSi8-qfK0a-1_X0RcpfxLysH9xtQ-6basgERZOV2EVHHn4525AYOi5smAf9n4t5ADVHexUXM6acuQSVDTvDQ.webp",
+    "image": "./images/characters/Fenrir_Glove_2.webp",
     "core_items_order": [
       "헬릭스",
       "반역의 의지",
@@ -1786,7 +1786,7 @@
     "weapon": "창",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/8KQGjV0LclWwLmR33_Gl-ci0GzxW9c3hmrOPye-9VHUgBhapLqjWIhPdewo65-9x3l2i9eYAULVueCxGtdRm8w.webp",
+    "image": "./images/characters/Felix_Spear.webp",
     "core_items_order": [
       "레이더",
       "애각창",
@@ -1801,7 +1801,7 @@
     "weapon": "기타",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/2aQGzcZcUp9bxkUWbgKLlBRHysvWTf-a7BZw8JFdX3EVD-I-kyQ1BYU_B-EGBDlSlHJgM00e3vZIdivULK3ZpQ.webp",
+    "image": "./images/characters/Priya_Guitar.webp",
     "core_items_order": [
       "천상의 메아리",
       "에메랄드 타블렛",
@@ -1816,7 +1816,7 @@
     "weapon": "양손검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/QkXjAHf8QzleBnOZljyq2seTJ1GUaI1jkVOeqEGhQysABR7yFlIbgI7DZsHKQwQ78VFlm9bHe_G5cT1jUSZgwQ.webp",
+    "image": "./images/characters/Fiora_TwoHandSword.webp",
     "core_items_order": [
       "앙 가르드",
       "알마스",
@@ -1831,7 +1831,7 @@
     "weapon": "레이피어",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/QkXjAHf8QzleBnOZljyq2seTJ1GUaI1jkVOeqEGhQysABR7yFlIbgI7DZsHKQwQ78VFlm9bHe_G5cT1jUSZgwQ.webp",
+    "image": "./images/characters/Fiora_Rapier.webp",
     "core_items_order": [
       "앙 가르드",
       "필드 쏜",
@@ -1846,7 +1846,7 @@
     "weapon": "창",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/QkXjAHf8QzleBnOZljyq2seTJ1GUaI1jkVOeqEGhQysABR7yFlIbgI7DZsHKQwQ78VFlm9bHe_G5cT1jUSZgwQ.webp",
+    "image": "./images/characters/Fiora_Spear.webp",
     "core_items_order": [
       "성법의",
       "쿤달라",
@@ -1861,7 +1861,7 @@
     "weapon": "쌍절곤",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/OKBKxQSUReEwjcuPA_w2cOLTcSAbEYCv6BAoU0ynzFub7rCGrQ49tPYAVI90OUfvEoEl7UG6nl3twCwOZ1_ePw.webp",
+    "image": "./images/characters/Piolo_Nunchaku.webp",
     "core_items_order": [
       "성법의",
       "사이버 스토커",
@@ -1876,7 +1876,7 @@
     "weapon": "기타",
     "role": "평원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/kqsYgFLWZ1ZuKbemdLiMNgKMVC0m8_g-tT_LVl3Cz1kXjFdK_e_lmPpDRd_AlQrnH72QLaGJmkP4ipLq0om6Gg.webp",
+    "image": "./images/characters/Hart_Guitar.webp",
     "core_items_order": [
       "운명의 주사위",
       "프리 버드",
@@ -1891,7 +1891,7 @@
     "weapon": "돌격 소총",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/tf9g6V0nXmZLA-oD1pK3fE1HQPDWICe3zbFQqHfytwR8JGro24mR29B9NAu3nu9SBLEaSKTvq_EiQCnAsJOSpQ.webp",
+    "image": "./images/characters/Haze_AssaultRifle.webp",
     "core_items_order": [
       "핏빛 망토",
       "검은 베일",
@@ -1906,7 +1906,7 @@
     "weapon": "암기",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/S-9fj87qMUV3lbmwf-eCvRvcz-EWJdLppPxIfOaD5B6Qgd1RBwGU5safcua6OrySqCRyJErOWTbXc2FyufXMVQ.webp",
+    "image": "./images/characters/Henry_DirectFire.webp",
     "core_items_order": [
       "오르비스",
       "천룡잠",
@@ -1921,7 +1921,7 @@
     "weapon": "글러브",
     "role": "탱브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/BSIZdNfA-ddPNv4OV8RyNu01x_0xj04_nTko4Xw_CY-eiRgVwfxiIz1U5TmqWomggoOcmZ-Md_MYuUrowSsp1Q.webp",
+    "image": "./images/characters/Hyunwoo_Glove.webp",
     "core_items_order": [
       "레이싱 슈트",
       "주작자문",
@@ -1936,7 +1936,7 @@
     "weapon": "톤파",
     "role": "암살자",
     "description": "",
-    "image": "https://i.namu.wiki/i/BSIZdNfA-ddPNv4OV8RyNu01x_0xj04_nTko4Xw_CY-eiRgVwfxiIz1U5TmqWomggoOcmZ-Md_MYuUrowSsp1Q.webp",
+    "image": "./images/characters/Hyunwoo_Tonfa.webp",
     "core_items_order": [
       "흑요석 짓테",
       "검은 베일",
@@ -1951,7 +1951,7 @@
     "weapon": "활",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/-20Wi6vOsTFvPEtDQ9DEStxY5BEsS_Bv0X7aCl4wwqZwQ8TbUwBGTKCQKlFd9R63XDu_3opJnSYN1_0hvMHMbA.webp",
+    "image": "./images/characters/Hyejin_Bow.webp",
     "core_items_order": [
       "성법의",
       "스카디의 팔찌",
@@ -1966,7 +1966,7 @@
     "weapon": "암기",
     "role": "스증원딜",
     "description": "",
-    "image": "https://i.namu.wiki/i/-20Wi6vOsTFvPEtDQ9DEStxY5BEsS_Bv0X7aCl4wwqZwQ8TbUwBGTKCQKlFd9R63XDu_3opJnSYN1_0hvMHMbA.webp",
+    "image": "./images/characters/Hyejin_DirectFire.webp",
     "core_items_order": [
       "페르소나",
       "오르비스",
@@ -1981,7 +1981,7 @@
     "weapon": "양손검",
     "role": "딜브루저",
     "description": "",
-    "image": "https://i.namu.wiki/i/kKmO7-RjPAGFO1WszLJhjJAz2-4qC-eqyInXsUd5DmGogr4LQb5son1pIPcWmi4xaGky1IMOjf9Vgzx8Y-xioQ.webp",
+    "image": "./images/characters/Hisui_TwoHandSword.webp",
     "core_items_order": [
       "아오자이",
       "이퀄리브리엄",
