@@ -24,15 +24,27 @@
             width: 2px; background: dashed rgba(255, 255, 255, 0.2);
         }
 
-        /* 3. 흩뿌려질 캐릭터 카드 (미니 버전) */
+        /* 3. 흩뿌려질 캐릭터 카드 (투명도 및 호버 효과 적용) */
         .character-card { 
-            position: absolute; width: 140px; background: rgba(47, 53, 66, 0.9); 
-            border: 2px solid; border-radius: 8px; padding: 8px; text-align: left;
-            transform: translate(-50%, -50%); /* 중심점 맞추기 */
+            position: absolute; width: 120px; 
+            background: rgba(47, 53, 66, 0.85); /* 기본적으로 살짝 투명하게 */
+            border: 2px solid; border-radius: 8px; padding: 6px; text-align: left;
+            transform: translate(-50%, -50%); 
             box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+            transition: all 0.2s ease-in-out; /* 부드러운 전환 효과 */
+            cursor: pointer;
+            z-index: 1;
         }
         .blue-team { border-color: #1e90ff; }
         .red-team { border-color: #ff4757; }
+
+        /* 마우스 오버 시 가려진 카드가 튀어나옴 */
+        .character-card:hover {
+            background: rgba(47, 53, 66, 1);
+            transform: translate(-50%, -50%) scale(1.15);
+            z-index: 10;
+            box-shadow: 0 8px 12px rgba(0,0,0,0.8);
+        }
 
         .char-img { width: 100%; height: 60px; object-fit: cover; border-radius: 4px; background: #747d8c; }
         .char-name { font-size: 14px; font-weight: bold; margin: 5px 0 2px 0; color: #f1f2f6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -72,15 +84,15 @@
             })
             .catch(error => console.error('데이터 로드 실패:', error));
 
-        // 카드 HTML 생성 및 무작위 위치 배정 함수
+        // 카드 HTML 생성 및 완전 무작위 위치 배정 함수
         function createPositionedCard(charData, isBlueTeam) {
-            // 체력 상황 3가지로 제한
             const hpOptions = [100, 70, 50];
             const charHealth = hpOptions[Math.floor(Math.random() * hpOptions.length)];
             
             // X 좌표: 블루팀(5~45%), 레드팀(55~95%) 영역 안에서 무작위
             const posX = isBlueTeam ? Math.floor(Math.random() * 41) + 5 : Math.floor(Math.random() * 41) + 55;
-            // Y 좌표: 위아래(10~90%) 영역 안에서 무작위
+            
+            // Y 좌표: 위아래(10~90%) 영역 안에서 슬롯 없이 완전 무작위
             const posY = Math.floor(Math.random() * 81) + 10;
             
             const teamClass = isBlueTeam ? 'blue-team' : 'red-team';
