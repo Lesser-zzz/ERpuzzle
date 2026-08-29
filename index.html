@@ -12,7 +12,6 @@
         select { padding: 4px; border-radius: 4px; background: #1e272e; color: white; border: 1px solid #57606f; font-size: 12px; }
         select option:disabled { color: #747d8c; background: #2f3542; }
 
-        /* 프리셋 버튼 스타일 */
         .preset-group { margin-bottom: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
         .preset-btn { padding: 8px 15px; font-weight: bold; background: #1e90ff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: 0.2s; font-size: 13px; }
         .preset-btn:hover { background: #3742fa; }
@@ -27,7 +26,6 @@
         .char-img { width: 100%; height: 60px; object-fit: cover; border-radius: 4px; background: #747d8c; }
         .char-name { font-size: 13px; font-weight: bold; margin: 5px 0 2px 0; color: #f1f2f6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         
-        /* 가시성 개선 CSS */
         .char-vars { font-size: 11px; margin-bottom: 5px; color: #f5f6fa; line-height: 1.4; }
         .stat-on { color: #2ecc71; font-weight: bold; }
         .stat-off { color: #7f8fa6; text-decoration: line-through; }
@@ -38,17 +36,15 @@
         #reroll-btn { background-color: #ffa502; color: #2f3542; }
         #reroll-btn:hover { background-color: #ff7f50; }
         
-        /* 평가 기능(Beta) 관련 CSS 복구 */
         #eval-btn { background-color: #1e90ff; color: white; }
         #eval-btn:hover { background-color: #3742fa; }
-        #evaluation-result { display: none; margin: 20px auto; padding: 20px; background: #2f3542; border: 2px dashed #1e90ff; border-radius: 8px; max-width: 800px; font-size: 16px; line-height: 1.6; }
+        #evaluation-result { display: none; margin: 20px auto; padding: 20px; background: #2f3542; border: 2px dashed #1e90ff; border-radius: 8px; max-width: 800px; font-size: 16px; line-height: 1.6; text-align: left; }
     </style>
 </head>
 <body>
 
     <h1>이터널리턴 3:3 구도 퍼즐</h1>
     
-    <!-- 프리셋 제어판 -->
     <div class="preset-group">
         <button class="preset-btn" onclick="applyPreset(8, 1)">☀️ 2낮 (Lv.8 / 1코어)</button>
         <button class="preset-btn" onclick="applyPreset(13, 3)">🌙 3밤 (Lv.13 / 3코어)</button>
@@ -61,7 +57,7 @@
         <div class="control-row">
             <span class="control-label">환경:</span>
             <select id="env-time"><option value="">시간 (랜덤)</option><option value="낮">낮</option><option value="밤">밤</option></select>
-            <select id="env-terrain"><option value="">지형 (랜덤)</option><option value="좁은 골목">좁은 골목</option><option value="개활지">개활지</option><option value="벽과 장애물 지역">벽과 장애물</option></select>
+            <select id="env-terrain"><option value="">지형 (랜덤)</option><option value="좁은 골목">좁은 골목</option><option value="개활지">개활지</option><option value="벽과 장애물 지역">벽과 장애물 지역</option></select>
         </div>
         <hr style="border-color: #57606f;">
         <div id="blue-controls"></div>
@@ -73,18 +69,15 @@
     
     <div class="battlefield" id="battlefield-container"></div>
     
-    <!-- 버튼 그룹 복구 -->
     <div class="btn-group">
         <button id="reroll-btn" class="action-btn" onclick="rollDice()">🎲 설정 적용 & 셔플</button>
         <button id="eval-btn" class="action-btn" onclick="showEvaluation()">💡 모범 답안 보기 (Beta)</button>
     </div>
 
-    <!-- 평가 결과창 복구 -->
     <div id="evaluation-result"></div>
 
     <script>
         let characterPool = [];
-        // 평가를 위한 데이터 저장 배열 복구
         let currentBlueTeam = []; 
         let currentRedTeam = [];
 
@@ -192,16 +185,18 @@
 
         function rollDice() {
             if (characterPool.length === 0) return;
-            // 셔플 시 결과창 숨기기 & 데이터 초기화 복구
             document.getElementById('evaluation-result').style.display = 'none'; 
             currentBlueTeam = [];
             currentRedTeam = [];
+
+            const timeVal = document.getElementById('env-time').value || ['낮', '밤'][Math.floor(Math.random() * 2)];
+            const terrainVal = document.getElementById('env-terrain').value || ['좁은 골목', '개활지', '벽과 장애물 지역'][Math.floor(Math.random() * 3)];
+            document.getElementById('env-display').innerText = `현재 전장: ${timeVal} / ${terrainVal}`;
 
             const baseLevel = Math.floor(Math.random() * (16 - 10 + 1)) + 10; 
             
             let usedNamesBlue = [];
             let usedNamesRed = [];
-            
             for(let i=0; i<3; i++) {
                 let bVal = document.getElementById(`b-char-${i}`).value;
                 let rVal = document.getElementById(`r-char-${i}`).value;
@@ -244,8 +239,18 @@
                 const finalWskill = wSkillVal ? wSkillVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 const finalTac = tacVal ? tacVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 
-                // 엔진 계산용 데이터 푸시 복구
-                const matchData = { name: charData.name, weapon: charData.weapon, role: charData.role, description: charData.description, hp: finalHp, level: finalLvl, items: finalItemCount, ult: finalUlt, wskill: finalWskill, tac: finalTac };
+                const matchData = { 
+                    name: charData.name, 
+                    weapon: charData.weapon, 
+                    role: charData.role, 
+                    description: charData.description, 
+                    hp: finalHp, 
+                    level: finalLvl, 
+                    items: finalItemCount, 
+                    ult: finalUlt, 
+                    wskill: finalWskill, 
+                    tac: finalTac 
+                };
                 if (isBlue) currentBlueTeam.push(matchData);
                 else currentRedTeam.push(matchData);
 
@@ -258,7 +263,6 @@
                 
                 const getStatusSpan = (label, status) => status === 'ON' ? `<span class="stat-on">${label}: ON</span>` : `<span class="stat-off">${label}: OFF</span>`;
                 
-                // 역할군 뱃지와 부가설명 뱃지 생성
                 const roleBadge = charData.role ? `<span style="background: #ffa502; color: #2f3542; padding: 2px 4px; border-radius: 4px; font-weight: bold; font-size: 10px;">${charData.role}</span>` : '';
                 const descBadge = charData.description ? `<span style="background: #1e90ff; color: white; padding: 2px 4px; border-radius: 4px; font-weight: bold; font-size: 10px; margin-left: 4px;">${charData.description}</span>` : '';
 
@@ -283,15 +287,14 @@
             document.getElementById('battlefield-container').innerHTML = html;
         }
 
-        // 평가 엔진 함수 (환경 변수 및 지형/밤 보정 적용)
+        // 지형 및 밤 시간대 변수가 반영된 평가 엔진 함수
         function showEvaluation() {
             if (currentBlueTeam.length === 0) return;
 
-            // DOM에서 현재 전장 환경 값 읽어오기
             const timeVal = document.getElementById('env-time').value;
             const terrainVal = document.getElementById('env-terrain').value;
 
-            const getPowerScore = (team, opponentTeam) => {
+            const getPowerScore = (team) => {
                 return team.reduce((sum, char) => {
                     let score = (char.level * 10) + (char.items * 15);
                     if (char.ult === 'ON') score += 30;
@@ -300,40 +303,38 @@
 
                     // 1. 지형 변수 보정
                     if (terrainVal === '좁은 골목' && (char.role === '탱커' || char.role === '브루저')) {
-                        score *= 1.15; // 좁은 공간 진형 붕괴 및 근접 교전 유리함 반영 (+15%)
+                        score *= 1.15;
                     } else if (terrainVal === '개활지' && char.role === '원딜') {
-                        score *= 1.15; // 개활지 딜링 환경 보정 (+15%)
+                        score *= 1.15;
                     }
 
-                    // 2. 밤 시간대 변수 보정 (암살자/기습 특화 역할군 상향)
+                    // 2. 밤 시간대 변수 보정 (암살자/치명타/기습형 역할군 상향)
                     if (timeVal === '밤' && (char.role === '암살자' || char.role === '치명타')) {
-                        score *= 1.10; // 시야 제한 및 기습 유리함 반영 (+10%)
+                        score *= 1.10;
                     }
 
-                    // 체력 비율 비례 적용
                     score = score * (char.hp / 100);
                     return sum + score; 
                 }, 0);
             };
 
-            const bluePower = getPowerScore(currentBlueTeam, currentRedTeam);
-            const redPower = getPowerScore(currentRedTeam, currentBlueTeam);
+            const bluePower = getPowerScore(currentBlueTeam);
+            const redPower = getPowerScore(currentRedTeam);
             const totalPower = bluePower + redPower;
 
             const isBlueAdvantage = bluePower >= redPower;
             const winRate = totalPower === 0 ? "50.0" : ((Math.max(bluePower, redPower) / totalPower) * 100).toFixed(1);
             const winningTeam = isBlueAdvantage ? "<span style='color:#1e90ff'>블루팀</span>" : "<span style='color:#ff4757'>레드팀</span>";
 
-            // 비선형 포커싱 타겟팅 산출 (밤 시간대 및 생존기 부재 가중치 증폭)
             const getPrimaryTarget = (team) => {
                 let maxScore = -1;
                 let target = null;
                 team.forEach(char => {
-                    let targetScore = (100 - char.hp) * 2.5; // 체력이 낮을수록 가파르게 상승
+                    let targetScore = (100 - char.hp) * 2.5; 
                     if (char.ult === '쿨다운') targetScore += 60; 
                     if (char.tac === '쿨다운') targetScore += 40;
                     
-                    // 밤 시간대 후방 딜러나 생존기 빠진 타겟의 위험도 비선형 증폭
+                    // 밤 시간대 후방 딜러나 생존기 빠진 타겟의 위험도 증폭
                     if (timeVal === '밤' && (char.role === '원딜' || char.role === '메이지')) {
                         targetScore *= 1.25;
                     }
