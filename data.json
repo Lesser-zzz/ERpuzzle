@@ -4,1990 +4,1329 @@
     "name": "가넷",
     "weapon": "방망이",
     "role": "퓨어탱커",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Garnet_Bat.webp",
-    "core_items_order": [
-      "서리바람 흉갑",
-      "요술램프",
-      "성기사의 투구",
-      "마법봉",
-      "헤르메스의 부츠"
-    ]
+    "core_items_order": ["서리바람 흉갑", "요술램프", "성기사의 투구", "마법봉", "헤르메스의 부츠"]
   },
   {
     "id": "Nadine_Bow",
     "name": "나딘",
     "weapon": "활",
     "role": "스증원딜",
+    "ult_dependency": 1.7,
     "description": "공속",
     "image": "./images/characters/Nadine_Bow.webp",
-    "core_items_order": [
-      "블레이드 부츠",
-      "성법의",
-      "레이싱 헬멧",
-      "텔루리안 타임피스",
-      "페일노트"
-    ]
+    "core_items_order": ["블레이드 부츠", "성법의", "레이싱 헬멧", "텔루리안 타임피스", "페일노트"]
   },
   {
     "id": "Nadine_Crossbow",
     "name": "나딘",
     "weapon": "석궁",
     "role": "평원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Nadine_Crossbow.webp",
-    "core_items_order": [
-      "빛의 증표",
-      "운명의 주사위",
-      "현자의 로브",
-      "알렉산드로스",
-      "혈색반월-진홍"
-    ]
+    "core_items_order": ["빛의 증표", "운명의 주사위", "현자의 로브", "알렉산드로스", "혈색반월-진홍"]
   },
   {
     "id": "Nathapon_Camera",
     "name": "나타폰",
     "weapon": "카메라",
     "role": "스증원딜",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Nathapon_Camera.webp",
-    "core_items_order": [
-      "트리플 포커스",
-      "페르소나",
-      "진은 드레스",
-      "에메랄드 타블렛",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["트리플 포커스", "페르소나", "진은 드레스", "에메랄드 타블렛", "글레이셜 슈즈"]
   },
   {
     "id": "Niah_Pistol",
     "name": "니아",
     "weapon": "권총",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Niah_Pistol.webp",
-    "core_items_order": [
-      "아흐라만의 손길",
-      "앙 가르드",
-      "진은 드레스",
-      "글레이셜 슈즈",
-      "하이 눈"
-    ]
+    "core_items_order": ["아흐라만의 손길", "앙 가르드", "진은 드레스", "글레이셜 슈즈", "하이 눈"]
   },
   {
     "id": "Nicky_Glove",
     "name": "니키",
     "weapon": "글러브",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Nicky_Glove.webp",
-    "core_items_order": [
-      "레버넌트",
-      "요명월",
-      "아이언 피스트",
-      "스페이스 부츠",
-      "전술 고글"
-    ]
+    "core_items_order": ["레버넌트", "요명월", "아이언 피스트", "스페이스 부츠", "전술 고글"]
   },
   {
     "id": "Daniel_OneHandSword",
     "name": "다니엘",
     "weapon": "단검",
     "role": "암살자",
+    "ult_dependency": 1.7,
     "description": "치명",
     "image": "./images/characters/Daniel_OneHandSword.webp",
-    "core_items_order": [
-      "택티컬 아머",
-      "미스릴 완장",
-      "트와일라잇",
-      "소울 리퍼",
-      "알렉산드로스"
-    ]
+    "core_items_order": ["택티컬 아머", "미스릴 완장", "트와일라잇", "소울 리퍼", "알렉산드로스"]
   },
   {
     "id": "Daniel_OneHandSword_2",
     "name": "다니엘",
     "weapon": "단검",
     "role": "탱브루저",
+    "ult_dependency": 1.7,
     "description": "탱",
     "image": "./images/characters/Daniel_OneHandSword_2.webp",
-    "core_items_order": [
-      "소울 리퍼",
-      "불꽃 드레스",
-      "미스릴 투구",
-      "샤를마뉴의 방패",
-      "EOD 부츠"
-    ]
+    "core_items_order": ["소울 리퍼", "불꽃 드레스", "미스릴 투구", "샤를마뉴의 방패", "EOD 부츠"]
   },
   {
     "id": "Darko_Bat",
     "name": "다르코",
     "weapon": "방망이",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "치명",
     "image": "./images/characters/Darko_Bat.webp",
-    "core_items_order": [
-      "스펙터",
-      "미스릴 완장",
-      "시체매",
-      "빛의 증표",
-      "알렉산드로스"
-    ]
+    "core_items_order": ["스펙터", "미스릴 완장", "시체매", "빛의 증표", "알렉산드로스"]
   },
   {
     "id": "Darko_Bat_2",
     "name": "다르코",
     "weapon": "방망이",
     "role": "탱브루저",
+    "ult_dependency": 1.0,
     "description": "천고",
     "image": "./images/characters/Darko_Bat_2.webp",
-    "core_items_order": [
-      "천사의 고리",
-      "여의봉",
-      "타이탄 아머",
-      "달빛 펜던트",
-      "택티컬 슈즈"
-    ]
+    "core_items_order": ["천사의 고리", "여의봉", "타이탄 아머", "달빛 펜던트", "택티컬 슈즈"]
   },
   {
     "id": "DebiMarlene_TwoHandSword",
     "name": "데비&마를렌",
     "weapon": "양손검",
     "role": "탱브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/DebiMarlene_TwoHandSword.webp",
-    "core_items_order": [
-      "천사의 고리",
-      "미스릴 방패",
-      "레이싱 슈트",
-      "레바테인",
-      "블레이드 부츠"
-    ]
+    "core_items_order": ["천사의 고리", "미스릴 방패", "레이싱 슈트", "레바테인", "블레이드 부츠"]
   },
   {
     "id": "Tia_Bat",
     "name": "띠아",
     "weapon": "방망이",
     "role": "스증원딜",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Tia_Bat.webp",
-    "core_items_order": [
-      "페르소나",
-      "롤리팝",
-      "핏빛 망토",
-      "아흐라만의 손길",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["페르소나", "롤리팝", "핏빛 망토", "아흐라만의 손길", "글레이셜 슈즈"]
   },
   {
     "id": "Laura_Whip",
     "name": "라우라",
     "weapon": "채찍",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Laura_Whip.webp",
-    "core_items_order": [
-      "앙 가르드",
-      "우라누스",
-      "카바나",
-      "텔루리안 타임피스",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["앙 가르드", "우라누스", "카바나", "텔루리안 타임피스", "글레이셜 슈즈"]
   },
   {
     "id": "Lenox_Whip",
     "name": "레녹스",
     "weapon": "채찍",
     "role": "퓨어탱커",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Lenox_Whip.webp",
-    "core_items_order": [
-      "바니햇",
-      "미스릴 갑옷",
-      "가시지네 견갑",
-      "운명의 고리",
-      "스페이스 부츠"
-    ]
+    "core_items_order": ["바니햇", "미스릴 갑옷", "가시지네 견갑", "운명의 고리", "스페이스 부츠"]
   },
   {
     "id": "Leni_Pistol",
     "name": "레니",
     "weapon": "권총",
     "role": "서포터",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Leni_Pistol.webp",
-    "core_items_order": [
-      "엘프 드레스",
-      "천룡잠",
-      "클라다 반지",
-      "와일드 워커",
-      "알타이르"
-    ]
+    "core_items_order": ["엘프 드레스", "천룡잠", "클라다 반지", "와일드 워커", "알타이르"]
   },
   {
     "id": "Leon_Glove",
     "name": "레온",
     "weapon": "글러브",
     "role": "암살자",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Leon_Glove.webp",
-    "core_items_order": [
-      "텔루리안 타임피스",
-      "레이싱 헬멧",
-      "프로스트 팽",
-      "글레이셜 슈즈",
-      "성법의"
-    ]
+    "core_items_order": ["텔루리안 타임피스", "레이싱 헬멧", "프로스트 팽", "글레이셜 슈즈", "성법의"]
   },
   {
     "id": "Leon_Tonfa",
     "name": "레온",
     "weapon": "톤파",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Leon_Tonfa.webp",
-    "core_items_order": [
-      "오르비스",
-      "흑요석 짓테",
-      "핏빛 망토",
-      "페르소나",
-      "칼날 다리"
-    ]
+    "core_items_order": ["오르비스", "흑요석 짓테", "핏빛 망토", "페르소나", "칼날 다리"]
   },
   {
     "id": "Rozzi_Pistol",
     "name": "로지",
     "weapon": "권총",
     "role": "평원딜",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Rozzi_Pistol.webp",
-    "core_items_order": [
-      "플라즈마 건",
-      "레이더",
-      "쿼드아이",
-      "갤럭시 스텝",
-      "화령장"
-    ]
+    "core_items_order": ["플라즈마 건", "레이더", "쿼드아이", "갤럭시 스텝", "화령장"]
   },
   {
     "id": "Lucia_SniperRifle",
     "name": "루치아",
     "weapon": "저격총",
     "role": "스증원딜",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Lucia_SniperRifle.webp",
-    "core_items_order": [
-      "호루스",
-      "성법의",
-      "사사성광",
-      "앙 가르드",
-      "칼날 다리"
-    ]
+    "core_items_order": ["호루스", "성법의", "사사성광", "앙 가르드", "칼날 다리"]
   },
   {
     "id": "Luke_Bat",
     "name": "루크",
     "weapon": "방망이",
     "role": "탱브루저",
+    "ult_dependency": 1.0,
     "description": "극탱",
     "image": "./images/characters/Luke_Bat.webp",
-    "core_items_order": [
-      "야생의 허기",
-      "미스릴 방패",
-      "여의봉",
-      "타이탄 아머",
-      "미스릴 부츠"
-    ]
+    "core_items_order": ["야생의 허기", "미스릴 방패", "여의봉", "타이탄 아머", "미스릴 부츠"]
   },
   {
     "id": "Luke_Bat_2",
     "name": "루크",
     "weapon": "방망이",
     "role": "탱브루저",
+    "ult_dependency": 1.0,
     "description": "브루저",
     "image": "./images/characters/Luke_Bat_2.webp",
-    "core_items_order": [
-      "헬릭스",
-      "타이탄 아머",
-      "여의봉",
-      "미스릴 투구",
-      "블레이드 부츠"
-    ]
+    "core_items_order": ["헬릭스", "타이탄 아머", "여의봉", "미스릴 투구", "블레이드 부츠"]
   },
   {
     "id": "Luke_Bat_3",
     "name": "루크",
     "weapon": "방망이",
     "role": "암살자",
+    "ult_dependency": 1.0,
     "description": "방관",
     "image": "./images/characters/Luke_Bat_3.webp",
-    "core_items_order": [
-      "블래스터 헬멧",
-      "프시케의 칼날",
-      "여의봉",
-      "아이언 메이든",
-      "택티컬 아머"
-    ]
+    "core_items_order": ["블래스터 헬멧", "프시케의 칼날", "여의봉", "아이언 메이든", "택티컬 아머"]
   },
   {
     "id": "Lenore_Guitar",
     "name": "르노어",
     "weapon": "기타",
     "role": "스증원딜",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Lenore_Guitar.webp",
-    "core_items_order": [
-      "헤븐즈 도어",
-      "용의 비늘",
-      "검은 죽음",
-      "핏빛 망토",
-      "칼날 다리"
-    ]
+    "core_items_order": ["헤븐즈 도어", "용의 비늘", "검은 죽음", "핏빛 망토", "칼날 다리"]
   },
   {
     "id": "LiDailin_Glove",
     "name": "리 다이린",
     "weapon": "글러브",
     "role": "암살자",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/LiDailin_Glove.webp",
-    "core_items_order": [
-      "택티컬 아머",
-      "인사이트",
-      "천잠장갑",
-      "미스릴 완장",
-      "알렉산드로스"
-    ]
+    "core_items_order": ["택티컬 아머", "인사이트", "천잠장갑", "미스릴 완장", "알렉산드로스"]
   },
   {
     "id": "LiDailin_Glove_2",
     "name": "리 다이린",
     "weapon": "글러브",
     "role": "탱브루저",
+    "ult_dependency": 1.7,
     "description": "탱",
     "image": "./images/characters/LiDailin_Glove_2.webp",
-    "core_items_order": [
-      "미니어쳐 솔라 시스템",
-      "불꽃 드레스",
-      "주작자문",
-      "캡틴 햇",
-      "EOD 부츠"
-    ]
+    "core_items_order": ["미니어쳐 솔라 시스템", "불꽃 드레스", "주작자문", "캡틴 햇", "EOD 부츠"]
   },
   {
     "id": "LiDailin_Nunchaku",
     "name": "리 다이린",
     "weapon": "쌍절곤",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/LiDailin_Nunchaku.webp",
-    "core_items_order": [
-      "레가투스",
-      "갤럭시 스텝",
-      "고스트",
-      "네온 체인",
-      "미스릴 완장"
-    ]
+    "core_items_order": ["레가투스", "갤럭시 스텝", "고스트", "네온 체인", "미스릴 완장"]
   },
   {
     "id": "Rio_Bow",
     "name": "리오",
     "weapon": "활",
     "role": "평원딜",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Rio_Bow.webp",
-    "core_items_order": [
-      "길리 슈트",
-      "운명의 주사위",
-      "쿼드 아이",
-      "갤럭시 스텝",
-      "페일노트-진홍"
-    ]
+    "core_items_order": ["길리 슈트", "운명의 주사위", "쿼드 아이", "갤럭시 스텝", "페일노트-진홍"]
   },
   {
     "id": "Martina_Camera",
     "name": "마르티나",
     "weapon": "카메라",
     "role": "평원딜",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Martina_Camera.webp",
-    "core_items_order": [
-      "운명의 주사위",
-      "트와일라잇",
-      "카메라 캐논",
-      "고스트",
-      "알렉산드로스"
-    ]
+    "core_items_order": ["운명의 주사위", "트와일라잇", "카메라 캐논", "고스트", "알렉산드로스"]
   },
   {
     "id": "Mai_Whip",
     "name": "마이",
     "weapon": "채찍",
     "role": "탱브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Mai_Whip.webp",
-    "core_items_order": [
-      "불꽃 드레스",
-      "토템",
-      "미스릴 투구",
-      "EOD 부츠",
-      "우라누스"
-    ]
+    "core_items_order": ["불꽃 드레스", "토템", "미스릴 투구", "EOD 부츠", "우라누스"]
   },
   {
     "id": "Markus_Hammer",
     "name": "마커스",
     "weapon": "망치",
     "role": "탱브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Markus_Hammer.webp",
-    "core_items_order": [
-      "야생의 허기",
-      "토템",
-      "뿅망치",
-      "미스릴 갑옷",
-      "EOD 부츠"
-    ]
+    "core_items_order": ["야생의 허기", "토템", "뿅망치", "미스릴 갑옷", "EOD 부츠"]
   },
   {
     "id": "Markus_Axe",
     "name": "마커스",
     "weapon": "도끼",
     "role": "탱브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Markus_Axe.webp",
-    "core_items_order": [
-      "야생의 허기",
-      "토템",
-      "반고부",
-      "미스릴 갑옷",
-      "EOD 부츠"
-    ]
+    "core_items_order": ["야생의 허기", "토템", "반고부", "미스릴 갑옷", "EOD 부츠"]
   },
   {
     "id": "Magnus_Hammer",
     "name": "매그너스",
     "weapon": "망치",
     "role": "탱브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Magnus_Hammer.webp",
-    "core_items_order": [
-      "서리바람 흉갑",
-      "하트 온 파이어",
-      "미스릴 투구",
-      "EOD 부츠",
-      "피스브링어"
-    ]
+    "core_items_order": ["서리바람 흉갑", "하트 온 파이어", "미스릴 투구", "EOD 부츠", "피스브링어"]
   },
   {
     "id": "Magnus_Hammer_2",
     "name": "매그너스",
     "weapon": "망치",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "포킹",
     "image": "./images/characters/Magnus_Hammer_2.webp",
-    "core_items_order": [
-      "둠스데이",
-      "성법의",
-      "검은 베일",
-      "용의 비늘",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["둠스데이", "성법의", "검은 베일", "용의 비늘", "글레이셜 슈즈"]
   },
   {
     "id": "Magnus_Bat",
     "name": "매그너스",
     "weapon": "방망이",
     "role": "탱브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Magnus_Bat.webp",
-    "core_items_order": [
-      "서리바람 흉갑",
-      "하트 온 파이어",
-      "캡틴 햇",
-      "롤리팝",
-      "EOD 부츠"
-    ]
+    "core_items_order": ["서리바람 흉갑", "하트 온 파이어", "캡틴 햇", "롤리팝", "EOD 부츠"]
   },
   {
     "id": "Magnus_Bat_2",
     "name": "매그너스",
     "weapon": "방망이",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "치명",
     "image": "./images/characters/Magnus_Bat_2.webp",
-    "core_items_order": [
-      "여의봉",
-      "큐브 워치",
-      "길리 슈트",
-      "블래스터 헬멧",
-      "알렉산드로스"
-    ]
+    "core_items_order": ["여의봉", "큐브 워치", "길리 슈트", "블래스터 헬멧", "알렉산드로스"]
   },
   {
     "id": "Mirka_Hammer",
     "name": "미르카",
     "weapon": "망치",
     "role": "탱브루저",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Mirka_Hammer.webp",
-    "core_items_order": [
-      "바니햇",
-      "하트 온 파이어",
-      "흑염룡의 갑주",
-      "스페이스 부츠",
-      "개밥바라기"
-    ]
+    "core_items_order": ["바니햇", "하트 온 파이어", "흑염룡의 갑주", "스페이스 부츠", "개밥바라기"]
   },
   {
     "id": "Vanya_Arcana",
     "name": "바냐",
     "weapon": "아르카나",
     "role": "딜브루저",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Vanya_Arcana.webp",
-    "core_items_order": [
-      "여제",
-      "성법의",
-      "틴달로스의 군주",
-      "앙 가르드",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["여제", "성법의", "틴달로스의 군주", "앙 가르드", "글레이셜 슈즈"]
   },
   {
     "id": "Babara_Pistol",
     "name": "바바라",
     "weapon": "권총",
     "role": "스증원딜",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Babara_Pistol.webp",
-    "core_items_order": [
-      "이단심판관",
-      "천룡잠",
-      "스카디의 팔찌",
-      "칼날다리",
-      "하이 눈-새벽"
-    ]
+    "core_items_order": ["이단심판관", "천룡잠", "스카디의 팔찌", "칼날다리", "하이 눈-새벽"]
   },
   {
     "id": "Bernice_SniperRifle",
     "name": "버니스",
     "weapon": "저격총",
     "role": "평원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Bernice_SniperRifle.webp",
-    "core_items_order": [
-      "살라딘의 화살통",
-      "화령장",
-      "인터벤션",
-      "빛의 증표",
-      "갤럭시 스텝"
-    ]
+    "core_items_order": ["살라딘의 화살통", "화령장", "인터벤션", "빛의 증표", "갤럭시 스텝"]
   },
   {
     "id": "Blair_DualSword",
     "name": "블레어",
     "weapon": "쌍검",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Blair_DualSword.webp",
-    "core_items_order": [
-      "갤럭시 스텝",
-      "아오자이",
-      "간장과 막야",
-      "오토-암즈",
-      "트와일라잇"
-    ]
+    "core_items_order": ["갤럭시 스텝", "아오자이", "간장과 막야", "오토-암즈", "트와일라잇"]
   },
   {
     "id": "Bianca_Arcana",
     "name": "비앙카",
     "weapon": "아르카나",
     "role": "암살자",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Bianca_Arcana.webp",
-    "core_items_order": [
-      "성법의",
-      "전술 고글",
-      "틴달로스의 군주",
-      "더 문",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["성법의", "전술 고글", "틴달로스의 군주", "더 문", "글레이셜 슈즈"]
   },
   {
     "id": "Bihyung_Bat",
     "name": "비형",
     "weapon": "방망이",
     "role": "탱브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Bihyung_Bat.webp",
-    "core_items_order": [
-      "달빛 펜던트",
-      "팬텀 자켓",
-      "시체매",
-      "택티컬 슈즈",
-      "성기사의 투구"
-    ]
+    "core_items_order": ["달빛 펜던트", "팬텀 자켓", "시체매", "택티컬 슈즈", "성기사의 투구"]
   },
   {
     "id": "Charlotte_Arcana",
     "name": "샬럿",
     "weapon": "아르카나",
     "role": "서포터",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Charlotte_Arcana.webp",
-    "core_items_order": [
-      "엘프 드레스",
-      "백야의 관",
-      "클라다 반지",
-      "더 썬",
-      "와일드 워커"
-    ]
+    "core_items_order": ["엘프 드레스", "백야의 관", "클라다 반지", "더 썬", "와일드 워커"]
   },
   {
     "id": "Ceres_TwoHandSword",
     "name": "세레스",
     "weapon": "양손검",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Ceres_TwoHandSword.webp",
-    "core_items_order": [
-      ""
-    ]
+    "core_items_order": [""]
   },
   {
     "id": "Celine_HighAngleFire",
     "name": "셀린",
     "weapon": "투척",
     "role": "스증원딜",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Celine_HighAngleFire.webp",
-    "core_items_order": [
-      "스카디의 팔찌",
-      "페르소나",
-      "핏빛 망토",
-      "칼날 다리",
-      "체이서"
-    ]
+    "core_items_order": ["스카디의 팔찌", "페르소나", "핏빛 망토", "칼날 다리", "체이서"]
   },
   {
     "id": "Xiukai_Spear",
     "name": "쇼우",
     "weapon": "창",
     "role": "퓨어탱커",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Xiukai_Spear.webp",
-    "core_items_order": [
-      "미니어쳐 솔라 시스템",
-      "성기사의 투구",
-      "와일드 워커",
-      "배틀 슈트",
-      "코스믹 바이던트"
-    ]
+    "core_items_order": ["미니어쳐 솔라 시스템", "성기사의 투구", "와일드 워커", "배틀 슈트", "코스믹 바이던트"]
   },
   {
     "id": "Xiukai_OneHandSword",
     "name": "쇼우",
     "weapon": "단검",
     "role": "퓨어탱커",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Xiukai_OneHandSword.webp",
-    "core_items_order": [
-      "미니어쳐 솔라 시스템",
-      "성기사의 투구",
-      "스페이스 부츠",
-      "배틀 슈트",
-      "월식"
-    ]
+    "core_items_order": ["미니어쳐 솔라 시스템", "성기사의 투구", "스페이스 부츠", "배틀 슈트", "월식"]
   },
   {
     "id": "Xiukai_OneHandSword_2",
     "name": "쇼우",
     "weapon": "단검",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "극딜",
     "image": "./images/characters/Xiukai_OneHandSword_2.webp",
-    "core_items_order": [
-      "성법의",
-      "악의",
-      "우주 비행사의 헬멧",
-      "용의 비늘",
-      "칼날 다리"
-    ]
+    "core_items_order": ["성법의", "악의", "우주 비행사의 헬멧", "용의 비늘", "칼날 다리"]
   },
   {
     "id": "Shoichi_OneHandSword",
     "name": "쇼이치",
     "weapon": "단검",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Shoichi_OneHandSword.webp",
-    "core_items_order": [
-      "앙 가르드",
-      "틴달로스의 군주",
-      "월식",
-      "성법의",
-      "와일드 워커"
-    ]
+    "core_items_order": ["앙 가르드", "틴달로스의 군주", "월식", "성법의", "와일드 워커"]
   },
   {
     "id": "Sua_Hammer",
     "name": "수아",
     "weapon": "망치",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Sua_Hammer.webp",
-    "core_items_order": [
-      "쿠튀리에",
-      "둠스데이",
-      "전술 고글",
-      "틴달로스의 군주",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["쿠튀리에", "둠스데이", "전술 고글", "틴달로스의 군주", "글레이셜 슈즈"]
   },
   {
     "id": "Sua_Bat",
     "name": "수아",
     "weapon": "방망이",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Sua_Bat.webp",
-    "core_items_order": [
-      "성법의",
-      "사이버 스토커",
-      "마법봉",
-      "호루스의 눈",
-      "와일드 워커"
-    ]
+    "core_items_order": ["성법의", "사이버 스토커", "마법봉", "호루스의 눈", "와일드 워커"]
   },
   {
     "id": "Shurin_Rapier",
     "name": "슈린",
     "weapon": "레이피어",
     "role": "암살자",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Shurin_Rapier.webp",
-    "core_items_order": [
-      "아오자이",
-      "주와이외즈",
-      "큐브 워치",
-      "인사이트",
-      "택티컬 슈즈"
-    ]
+    "core_items_order": ["아오자이", "주와이외즈", "큐브 워치", "인사이트", "택티컬 슈즈"]
   },
   {
     "id": "Sissela_DirectFire",
     "name": "시셀라",
     "weapon": "암기",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Sissela_DirectFire.webp",
-    "core_items_order": [
-      "핏빛 망토",
-      "페르소나",
-      "생사부",
-      "틴달로스의 군주",
-      "칼날 다리"
-    ]
+    "core_items_order": ["핏빛 망토", "페르소나", "생사부", "틴달로스의 군주", "칼날 다리"]
   },
   {
     "id": "Sissela_HighAngleFire",
     "name": "시셀라",
     "weapon": "투척",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Sissela_HighAngleFire.webp",
-    "core_items_order": [
-      "핏빛 망토",
-      "파초선",
-      "검은 죽음",
-      "칼날 다리",
-      "체이서-새벽"
-    ]
+    "core_items_order": ["핏빛 망토", "파초선", "검은 죽음", "칼날 다리", "체이서-새벽"]
   },
   {
     "id": "Silvia_Pistol",
     "name": "실비아",
     "weapon": "권총",
     "role": "딜브루저",
+    "ult_dependency": 0.3,
     "description": "",
     "image": "./images/characters/Silvia_Pistol.webp",
-    "core_items_order": [
-      "성법의",
-      "호루스",
-      "우주 비행사의 헬멧",
-      "마탄의 사수",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["성법의", "호루스", "우주 비행사의 헬멧", "마탄의 사수", "글레이셜 슈즈"]
   },
   {
     "id": "Adela_Rapier",
     "name": "아델라",
     "weapon": "레이피어",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Adela_Rapier.webp",
-    "core_items_order": [
-      "아르고스의 눈",
-      "페르소나",
-      "카바나",
-      "용의 비늘",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["아르고스의 눈", "페르소나", "카바나", "용의 비늘", "글레이셜 슈즈"]
   },
   {
     "id": "Adela_Bat",
     "name": "아델라",
     "weapon": "방망이",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Adela_Bat.webp",
-    "core_items_order": [
-      "쿤달라",
-      "성법의",
-      "터럭손 방망이",
-      "용의 비늘",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["쿤달라", "성법의", "터럭손 방망이", "용의 비늘", "글레이셜 슈즈"]
   },
   {
     "id": "Adriana_HighAngleFire",
     "name": "아드리아나",
     "weapon": "투척",
     "role": "스증원딜",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Adriana_HighAngleFire.webp",
-    "core_items_order": [
-      "핏빛 망토",
-      "페르소나",
-      "글레이셜 슈즈",
-      "파초선",
-      "체이서-새벽"
-    ]
+    "core_items_order": ["핏빛 망토", "페르소나", "글레이셜 슈즈", "파초선", "체이서-새벽"]
   },
   {
     "id": "Adina_Arcana",
     "name": "아디나",
     "weapon": "아르카나",
     "role": "스증원딜",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Adina_Arcana.webp",
-    "core_items_order": [
-      "핏빛 망토",
-      "페르소나",
-      "더 행맨",
-      "에메랄드 타블렛",
-      "칼날 다리"
-    ]
+    "core_items_order": ["핏빛 망토", "페르소나", "더 행맨", "에메랄드 타블렛", "칼날 다리"]
   },
   {
     "id": "Arda_Arcana",
     "name": "아르다",
     "weapon": "아르카나",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Arda_Arcana.webp",
-    "core_items_order": [
-      "이단심판관",
-      "천룡잠",
-      "스카디의 팔찌",
-      "더 행맨",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["이단심판관", "천룡잠", "스카디의 팔찌", "더 행맨", "글레이셜 슈즈"]
   },
   {
     "id": "Abigail_Axe",
     "name": "아비게일",
     "weapon": "도끼",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Abigail_Axe.webp",
-    "core_items_order": [
-      "앙 가르드",
-      "네플리온",
-      "요명월",
-      "레버넌트",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["앙 가르드", "네플리온", "요명월", "레버넌트", "글레이셜 슈즈"]
   },
   {
     "id": "Aya_AssaultRifle",
     "name": "아야",
     "weapon": "돌격 소총",
     "role": "평원딜",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Aya_AssaultRifle.webp",
-    "core_items_order": [
-      "레가투스",
-      "저지먼트",
-      "살라딘의 화살통",
-      "고스트",
-      "알렉산드로스"
-    ]
+    "core_items_order": ["레가투스", "저지먼트", "살라딘의 화살통", "고스트", "알렉산드로스"]
   },
   {
     "id": "Aya_SniperRifle",
     "name": "아야",
     "weapon": "저격총",
     "role": "스증원딜",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Aya_SniperRifle.webp",
-    "core_items_order": [
-      "호루스의 눈",
-      "성법의",
-      "데드 아이",
-      "검은 죽음",
-      "칼날 다리"
-    ]
+    "core_items_order": ["호루스의 눈", "성법의", "데드 아이", "검은 죽음", "칼날 다리"]
   },
   {
     "id": "Aya_Pistol",
     "name": "아야",
     "weapon": "권총",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Aya_Pistol.webp",
-    "core_items_order": [
-      "스카디의 팔찌",
-      "페르소나",
-      "알타이르",
-      "카바나",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["스카디의 팔찌", "페르소나", "알타이르", "카바나", "글레이셜 슈즈"]
   },
   {
     "id": "Isol_AssaultRifle",
     "name": "아이솔",
     "weapon": "돌격 소총",
     "role": "평원딜",
+    "ult_dependency": 0.3,
     "description": "",
     "image": "./images/characters/Isol_AssaultRifle.webp",
-    "core_items_order": [
-      "살라딘의 화살통",
-      "레가투스",
-      "저지먼트",
-      "고스트",
-      "레이싱 부츠"
-    ]
+    "core_items_order": ["살라딘의 화살통", "레가투스", "저지먼트", "고스트", "레이싱 부츠"]
   },
   {
     "id": "Isol_Pistol",
     "name": "아이솔",
     "weapon": "권총",
     "role": "스증원딜",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Isol_Pistol.webp",
-    "core_items_order": [
-      "핏빛 망토",
-      "페르소나",
-      "아흐라만의 손길",
-      "알타이르",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["핏빛 망토", "페르소나", "아흐라만의 손길", "알타이르", "글레이셜 슈즈"]
   },
   {
     "id": "Isaac_Tonfa",
     "name": "아이작",
     "weapon": "톤파",
     "role": "딜브루저",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Isaac_Tonfa.webp",
-    "core_items_order": [
-      "천사의 고리",
-      "맨티스 톤파",
-      "미스릴 방패",
-      "선녀강림",
-      "미라지 워커"
-    ]
+    "core_items_order": ["천사의 고리", "맨티스 톤파", "미스릴 방패", "선녀강림", "미라지 워커"]
   },
   {
     "id": "Alex_Tonfa",
     "name": "알렉스",
     "weapon": "톤파",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Alex_Tonfa.webp",
-    "core_items_order": [
-      "헬릭스",
-      "레이싱 슈트",
-      "블래스터 헬멧",
-      "미라지 워커",
-      ""
-    ]
+    "core_items_order": ["헬릭스", "레이싱 슈트", "블래스터 헬멧", "미라지 워커", ""]
   },
   {
     "id": "Alonso_Glove",
     "name": "알론소",
     "weapon": "글러브",
     "role": "퓨어탱커",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Alonso_Glove.webp",
-    "core_items_order": [
-      "유령 신부의 드레스",
-      "하트 온 파이어",
-      "드워프의 투구",
-      "EOD 부츠",
-      "아이언 피스트"
-    ]
+    "core_items_order": ["유령 신부의 드레스", "하트 온 파이어", "드워프의 투구", "EOD 부츠", "아이언 피스트"]
   },
   {
     "id": "Jan_Tonfa",
     "name": "얀",
     "weapon": "톤파",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Jan_Tonfa.webp",
-    "core_items_order": [
-      "앙 가르드",
-      "윈드러너",
-      "카바나",
-      "텔루리안 타임피스",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["앙 가르드", "윈드러너", "카바나", "텔루리안 타임피스", "글레이셜 슈즈"]
   },
   {
     "id": "Jan_Glove",
     "name": "얀",
     "weapon": "글러브",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Jan_Glove.webp",
-    "core_items_order": [
-      "오토-암즈",
-      "레이싱 슈트",
-      "인사이트",
-      "천잠장갑",
-      "택티컬 슈즈"
-    ]
+    "core_items_order": ["오토-암즈", "레이싱 슈트", "인사이트", "천잠장갑", "택티컬 슈즈"]
   },
   {
     "id": "Estelle_Axe",
     "name": "에스텔",
     "weapon": "도끼",
     "role": "탱브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Estelle_Axe.webp",
-    "core_items_order": [
-      "서리바람 흉갑",
-      "하트 온 파이어",
-      "우주 비행사의 헬멧",
-      "와일드 워커",
-      "네플리온"
-    ]
+    "core_items_order": ["서리바람 흉갑", "하트 온 파이어", "우주 비행사의 헬멧", " 와일드 워커", "네플리온"]
   },
   {
     "id": "Estelle_Axe_2",
     "name": "에스텔",
     "weapon": "도끼",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "극딜",
     "image": "./images/characters/Estelle_Axe_2.webp",
-    "core_items_order": [
-      "성법의",
-      "요명월",
-      "네플리온",
-      "우주 비행사의 헬멧",
-      "스페이스 부츠"
-    ]
+    "core_items_order": ["성법의", "요명월", "네플리온", "우주 비행사의 헬멧", "스페이스 부츠"]
   },
   {
     "id": "Aiden_TwoHandSword",
     "name": "에이든",
     "weapon": "양손검",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "천고",
     "image": "./images/characters/Aiden_TwoHandSword.webp",
-    "core_items_order": [
-      "천사의 고리",
-      "이퀄리브리엄",
-      "살라딘의 화살통",
-      "택티컬 아머",
-      "갤럭시 스텝"
-    ]
+    "core_items_order": ["천사의 고리", "이퀄리브리엄", "살라딘의 화살통", "택티컬 아머", "갤럭시 스텝"]
   },
   {
     "id": "Aiden_TwoHandSword_2",
     "name": "에이든",
     "weapon": "양손검",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "현로렙테",
     "image": "./images/characters/Aiden_TwoHandSword_2.webp",
-    "core_items_order": [
-      "천사의 고리",
-      "갤럭시 스텝",
-      "현자의 로브",
-      "미스릴 퀴버",
-      "레바테인"
-    ]
+    "core_items_order": ["천사의 고리", "갤럭시 스텝", "현자의 로브", "미스릴 퀴버", "레바테인"]
   },
   {
     "id": "Echion_VFArm",
     "name": "에키온",
     "weapon": "VF의수",
     "role": "탱브루저",
+    "ult_dependency": 0.3,
     "description": "블맘",
     "image": "./images/characters/Echion_VFArm.webp",
-    "core_items_order": [
-      "야생의 허기",
-      "토템",
-      "EOD 부츠",
-      "미스릴 크롭",
-      "블랙맘바킹-TL"
-    ]
+    "core_items_order": ["야생의 허기", "토템", "EOD 부츠", "미스릴 크롭", "블랙맘바킹-TL"]
   },
   {
     "id": "Echion_VFArm_2",
     "name": "에키온",
     "weapon": "VF의수",
     "role": "암살자",
+    "ult_dependency": 0.3,
     "description": "방관",
     "image": "./images/characters/Echion_VFArm_2.webp",
-    "core_items_order": [
-      "아이언 메이든",
-      "택티컬 아머",
-      "월계관",
-      "프시케의 칼날",
-      "슈퍼사이드와인더-ML"
-    ]
+    "core_items_order": ["아이언 메이든", "택티컬 아머", "월계관", "프시케의 칼날", "슈퍼사이드와인더-ML"]
   },
   {
     "id": "Echion_VFArm_3",
     "name": "에키온",
     "weapon": "VF의수",
     "role": "딜브루저",
+    "ult_dependency": 0.3,
     "description": "데에",
     "image": "./images/characters/Echion_VFArm_3.webp",
-    "core_items_order": [
-      "레가투스",
-      "미스릴 완장",
-      "길리 슈트",
-      "헤르메스의 부츠",
-      "데스애더퀸-VBS"
-    ]
+    "core_items_order": ["레가투스", "미스릴 완장", "길리 슈트", "헤르메스의 부츠", "데스애더퀸-VBS"]
   },
   {
     "id": "Echion_VFArm_4",
     "name": "에키온",
     "weapon": "VF의수",
     "role": "탱브루저",
+    "ult_dependency": 0.3,
     "description": "사와",
     "image": "./images/characters/Echion_VFArm_4.webp",
-    "core_items_order": [
-      "미니어쳐 솔라 시스템",
-      "불꽃 드레스",
-      "EOD 부츠",
-      "드워프의 투구",
-      "슈퍼사이드와인더-ML"
-    ]
+    "core_items_order": ["미니어쳐 솔라 시스템", "불꽃 드레스", "EOD 부츠", "드워프의 투구", "슈퍼사이드와인더-ML"]
   },
   {
     "id": "Elena_Rapier",
     "name": "엘레나",
     "weapon": "레이피어",
     "role": "탱브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Elena_Rapier.webp",
-    "core_items_order": [
-      "불꽃 드레스",
-      "미니어쳐 솔라 시스템",
-      "성기사의 투구",
-      "EOD 부츠",
-      "필드 쏜"
-    ]
+    "core_items_order": ["불꽃 드레스", "미니어쳐 솔라 시스템", "성기사의 투구", "EOD 부츠", "필드 쏜"]
   },
   {
     "id": "Emma_Arcana",
     "name": "엠마",
     "weapon": "아르카나",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Emma_Arcana.webp",
-    "core_items_order": [
-      "호루스",
-      "성법의",
-      "여제",
-      "검은 베일",
-      "칼날 다리"
-    ]
+    "core_items_order": ["호루스", "성법의", "여제", "검은 베일", "칼날 다리"]
   },
   {
     "id": "Emma_DirectFire",
     "name": "엠마",
     "weapon": "암기",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Emma_DirectFire.webp",
-    "core_items_order": [
-      "페르소나",
-      "건곤권",
-      "아흐라만의 손길",
-      "쿠튀리에",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["페르소나", "건곤권", "아흐라만의 손길", "쿠튀리에", "글레이셜 슈즈"]
   },
   {
     "id": "Johann_Arcana",
     "name": "요한",
     "weapon": "아르카나",
     "role": "서포터",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Johann_Arcana.webp",
-    "core_items_order": [
-      "클라다 반지",
-      "더 썬",
-      "백야의 관",
-      "와일드 워커",
-      "엘프 드레스"
-    ]
+    "core_items_order": ["클라다 반지", "더 썬", "백야의 관", "와일드 워커", "엘프 드레스"]
   },
   {
     "id": "William_HighAngleFire",
     "name": "윌리엄",
     "weapon": "투척",
     "role": "평원딜",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/William_HighAngleFire.webp",
-    "core_items_order": [
-      "운명의 주사위",
-      "쿼드 아이",
-      "프리즘 볼",
-      "고스트",
-      "갤럭시 스텝"
-    ]
+    "core_items_order": ["운명의 주사위", "쿼드 아이", "프리즘 볼", "고스트", "갤럭시 스텝"]
   },
   {
     "id": "Yumin_Arcana",
     "name": "유민",
     "weapon": "아르카나",
     "role": "스증원딜",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Yumin_Arcana.webp",
-    "core_items_order": [
-      "스카디의 팔찌",
-      "쿠튀리에",
-      "더 행맨",
-      "글레이셜 슈즈",
-      "페르소나"
-    ]
+    "core_items_order": ["스카디의 팔찌", "쿠튀리에", "더 행맨", "글레이셜 슈즈", "페르소나"]
   },
   {
     "id": "Justina_Crossbow",
     "name": "유스티나",
     "weapon": "석궁",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Justina_Crossbow.webp",
-    "core_items_order": [
-      "카바나",
-      "페르소나",
-      "팬텀 볼츠",
-      "아이언 메이든",
-      "용의 비늘"
-    ]
+    "core_items_order": ["카바나", "페르소나", "팬텀 볼츠", "아이언 메이든", "용의 비늘"]
   },
   {
     "id": "Yuki_DualSword",
     "name": "유키",
     "weapon": "쌍검",
     "role": "딜브루저",
+    "ult_dependency": 0.7,
     "description": "브루저",
     "image": "./images/characters/Yuki_DualSword.webp",
-    "core_items_order": [
-      "오메르타",
-      "서슬가시 체인",
-      "다비드 헤드폰",
-      "미스릴 부츠",
-      "죽음의 발걸음"
-    ]
+    "core_items_order": ["오메르타", "서슬가시 체인", "다비드 헤드폰", "미스릴 부츠", "죽음의 발걸음"]
   },
   {
     "id": "Yuki_TwoHandSword",
     "name": "유키",
     "weapon": "양손검",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Yuki_TwoHandSword.webp",
-    "core_items_order": [
-      "스펙터",
-      "이퀄리브리엄",
-      "미스릴 투구",
-      "샤를마뉴의 방패",
-      "미라지 워커"
-    ]
+    "core_items_order": ["스펙터", "이퀄리브리엄", "미스릴 투구", "샤를마뉴의 방패", "미라지 워커"]
   },
   {
     "id": "Yuki_TwoHandSword_2",
     "name": "유키",
     "weapon": "양손검",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "치명",
     "image": "./images/characters/Yuki_TwoHandSword_2.webp",
-    "core_items_order": [
-      "오메르타",
-      "빛의 증표",
-      "미스릴 완장",
-      "이퀄리브리엄",
-      "알렉산드로스"
-    ]
+    "core_items_order": ["오메르타", "빛의 증표", "미스릴 완장", "이퀄리브리엄", "알렉산드로스"]
   },
   {
     "id": "Yuki_DualSword_2",
     "name": "유키",
     "weapon": "쌍검",
     "role": "딜브루저",
+    "ult_dependency": 0.7,
     "description": "치명",
     "image": "./images/characters/Yuki_DualSword_2.webp",
-    "core_items_order": [
-      "오메르타",
-      "자웅일대검",
-      "큐브 워치",
-      "빛의 증표",
-      "갤럭시 스텝"
-    ]
+    "core_items_order": ["오메르타", "자웅일대검", "큐브 워치", "빛의 증표", "갤럭시 스텝"]
   },
   {
     "id": "Irem_HighAngleFire",
     "name": "이렘",
     "weapon": "투척",
     "role": "스증원딜",
+    "ult_dependency": 0.3,
     "description": "",
     "image": "./images/characters/Irem_HighAngleFire.webp",
-    "core_items_order": [
-      "호루스",
-      "성법의",
-      "파이어 볼",
-      "앙 가르드",
-      "칼날 다리"
-    ]
+    "core_items_order": ["호루스", "성법의", "파이어 볼", "앙 가르드", "칼날 다리"]
   },
   {
     "id": "Eva_HighAngleFire",
     "name": "이바",
     "weapon": "투척",
     "role": "스증원딜",
+    "ult_dependency": 0.3,
     "description": "",
     "image": "./images/characters/Eva_HighAngleFire.webp",
-    "core_items_order": [
-      "쿠튀리에",
-      "천룡잠",
-      "임세티",
-      "글레이셜 슈즈",
-      "체이서"
-    ]
+    "core_items_order": ["쿠튀리에", "천룡잠", "임세티", "글레이셜 슈즈", "체이서"]
   },
   {
     "id": "Istvan_Spear",
     "name": "이슈트반",
     "weapon": "창",
     "role": "암살자",
+    "ult_dependency": 1.3,
     "description": "방관",
     "image": "./images/characters/Istvan_Spear.webp",
-    "core_items_order": [
-      "프시케의 칼날",
-      "월계관",
-      "택티컬 아머",
-      "아이언 메이든",
-      "롱기누스의 창"
-    ]
+    "core_items_order": ["프시케의 칼날", "월계관", "택티컬 아머", "아이언 메이든", "롱기누스의 창"]
   },
   {
     "id": "Istvan_Spear_2",
     "name": "이슈트반",
     "weapon": "창",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "와류",
     "image": "./images/characters/Istvan_Spear_2.webp",
-    "core_items_order": [
-      "헬릭스",
-      "반역의 의지",
-      "월계관",
-      "애각창",
-      "헤르메스의 부츠"
-    ]
+    "core_items_order": ["헬릭스", "반역의 의지", "월계관", "애각창", "헤르메스의 부츠"]
   },
   {
     "id": "Ian_OneHandSword",
     "name": "이안",
     "weapon": "단검",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Ian_OneHandSword.webp",
-    "core_items_order": [
-      "달빛 펜던트",
-      "오메르타",
-      "소울 리퍼",
-      "오니 가면",
-      "분홍신"
-    ]
+    "core_items_order": ["달빛 펜던트", "오메르타", "소울 리퍼", "오니 가면", "분홍신"]
   },
   {
     "id": "Eleven_Hammer",
     "name": "일레븐",
     "weapon": "망치",
     "role": "퓨어탱커",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Eleven_Hammer.webp",
-    "core_items_order": [
-      "유령 신부의 드레스",
-      "하트 온 파이어",
-      "성기사의 투구",
-      "EOD 부츠",
-      "뿅망치"
-    ]
+    "core_items_order": ["유령 신부의 드레스", "하트 온 파이어", "성기사의 투구", "EOD 부츠", "뿅망치"]
   },
   {
     "id": "Zahir_DirectFire",
     "name": "자히르",
     "weapon": "암기",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Zahir_DirectFire.webp",
-    "core_items_order": [
-      "빙백은침",
-      "앙 가르드",
-      "오르비스",
-      "성법의",
-      "픽시 부츠"
-    ]
+    "core_items_order": ["빙백은침", "앙 가르드", "오르비스", "성법의", "픽시 부츠"]
   },
   {
     "id": "Zahir_HighAngleFire",
     "name": "자히르",
     "weapon": "투척",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Zahir_HighAngleFire.webp",
-    "core_items_order": [
-      "스카디의 팔찌",
-      "앙 가르드",
-      "칼날 다리",
-      "성법의",
-      "체이서"
-    ]
+    "core_items_order": ["스카디의 팔찌", "앙 가르드", "칼날 다리", "성법의", "체이서"]
   },
   {
     "id": "Jackie_Axe",
     "name": "재키",
     "weapon": "도끼",
     "role": "탱브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Jackie_Axe.webp",
-    "core_items_order": [
-      "미니어쳐 솔라 시스템",
-      "캡틴 햇",
-      "미스릴 갑옷",
-      "저거너트",
-      "택티컬 슈즈"
-    ]
+    "core_items_order": ["미니어쳐 솔라 시스템", "캡틴 햇", "미스릴 갑옷", "저거너트", "택티컬 슈즈"]
   },
   {
     "id": "Jackie_OneHandSword",
     "name": "재키",
     "weapon": "단검",
     "role": "암살자",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Jackie_OneHandSword.webp",
-    "core_items_order": [
-      "큐브 워치",
-      "택티컬 아머",
-      "소울 리퍼",
-      "갤럭시 스텝",
-      "아이실드"
-    ]
+    "core_items_order": ["큐브 워치", "택티컬 아머", "소울 리퍼", "갤럭시 스텝", "아이실드"]
   },
   {
     "id": "Jackie_DualSword",
     "name": "재키",
     "weapon": "쌍검",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Jackie_DualSword.webp",
-    "core_items_order": [
-      "아오자이",
-      "큐브 워치",
-      "갤럭시 스텝",
-      "자웅일대검",
-      "아이실드"
-    ]
+    "core_items_order": ["아오자이", "큐브 워치", "갤럭시 스텝", "자웅일대검", "아이실드"]
   },
   {
     "id": "Jackie_TwoHandSword",
     "name": "재키",
     "weapon": "양손검",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Jackie_TwoHandSword.webp",
-    "core_items_order": [
-      "큐브 워치",
-      "오메르타",
-      "이퀄리브리엄",
-      "알렉산드로스",
-      "아이실드"
-    ]
+    "core_items_order": ["큐브 워치", "오메르타", "이퀄리브리엄", "알렉산드로스", "아이실드"]
   },
   {
     "id": "Jenny_Pistol",
     "name": "제니",
     "weapon": "권총",
     "role": "평원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Jenny_Pistol.webp",
-    "core_items_order": [
-      "카바나",
-      "텔루리안 타임피스",
-      "레이싱 헬멧",
-      "미스릴 부츠",
-      "하이 눈"
-    ]
+    "core_items_order": ["카바나", "텔루리안 타임피스", "레이싱 헬멧", "미스릴 부츠", "하이 눈"]
   },
   {
     "id": "Tsubame_DirectFire",
     "name": "츠바메",
     "weapon": "암기",
     "role": "평원딜",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Tsubame_DirectFire.webp",
-    "core_items_order": [
-      "수다르사나",
-      "운명의 주사위",
-      "현자의 로브",
-      "빛의 증표",
-      "알렉산드로스"
-    ]
+    "core_items_order": ["수다르사나", "운명의 주사위", "현자의 로브", "빛의 증표", "알렉산드로스"]
   },
   {
     "id": "Camilo_Rapier",
     "name": "카밀로",
     "weapon": "레이피어",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Camilo_Rapier.webp",
-    "core_items_order": [
-      "레이싱 부츠",
-      "아오자이",
-      "미스릴 완장",
-      "천사의 고리",
-      "주와이외즈"
-    ]
+    "core_items_order": ["레이싱 부츠", "아오자이", "미스릴 완장", "천사의 고리", "주와이외즈"]
   },
   {
     "id": "Camilo_DualSword",
     "name": "카밀로",
     "weapon": "쌍검",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Camilo_DualSword.webp",
-    "core_items_order": [
-      "아오자이",
-      "간장과 막야",
-      "빛의 증표",
-      "레이더",
-      "레이싱 부츠"
-    ]
+    "core_items_order": ["아오자이", "간장과 막야", "빛의 증표", "레이더", "레이싱 부츠"]
   },
   {
     "id": "Katja_SniperRifle",
     "name": "카티야",
     "weapon": "저격총",
     "role": "평원딜",
+    "ult_dependency": 0.3,
     "description": "",
     "image": "./images/characters/Katja_SniperRifle.webp",
-    "core_items_order": [
-      "현자총통",
-      "운명의 주사위",
-      "쿼드 아이",
-      "갤럭시 스텝",
-      "고스트"
-    ]
+    "core_items_order": ["현자총통", "운명의 주사위", "쿼드 아이", "갤럭시 스텝", "고스트"]
   },
   {
     "id": "Karla_Crossbow",
     "name": "칼라",
     "weapon": "석궁",
     "role": "스증원딜",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Karla_Crossbow.webp",
-    "core_items_order": [
-      "성법의",
-      "레이싱 헬멧",
-      "영광금귀신기노",
-      "레이싱 부츠",
-      "텔루리안 타임피스"
-    ]
+    "core_items_order": ["성법의", "레이싱 헬멧", "영광금귀신기노", "레이싱 부츠", "텔루리안 타임피스"]
   },
   {
     "id": "Cathy_DualSword",
     "name": "캐시",
     "weapon": "쌍검",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Cathy_DualSword.webp",
-    "core_items_order": [
-      "성법의",
-      "사이버 스토커",
-      "타나토스",
-      "호루스",
-      "와일드 워커"
-    ]
+    "core_items_order": ["성법의", "사이버 스토커", "타나토스", "호루스", "와일드 워커"]
   },
   {
     "id": "Cathy_OneHandSword",
     "name": "캐시",
     "weapon": "단검",
     "role": "암살자",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Cathy_OneHandSword.webp",
-    "core_items_order": [
-      "페르소나",
-      "월식",
-      "핏빛 망토",
-      "칼날 다리",
-      "용의 비늘"
-    ]
+    "core_items_order": ["페르소나", "월식", "핏빛 망토", "칼날 다리", "용의 비늘"]
   },
   {
     "id": "Kenneth_Axe",
     "name": "케네스",
     "weapon": "도끼",
     "role": "탱브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Kenneth_Axe.webp",
-    "core_items_order": [
-      "스펙터",
-      "반고부",
-      "인사이트",
-      "샤를마뉴의 방패",
-      "택티컬 슈즈"
-    ]
+    "core_items_order": ["스펙터", "반고부", "인사이트", "샤를마뉴의 방패", "택티컬 슈즈"]
   },
   {
     "id": "Coraline_Arcana",
     "name": "코렐라인",
     "weapon": "아르카나",
     "role": "스증원딜",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Coraline_Arcana.webp",
-    "core_items_order": [
-      "성법의",
-      "더 행맨",
-      "아흐라만의 손길",
-      "검은 죽음",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["성법의", "더 행맨", "아흐라만의 손길", "검은 죽음", "글레이셜 슈즈"]
   },
   {
     "id": "Craver_Pistol",
     "name": "크레이버",
     "weapon": "권총",
     "role": "스증원딜",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Craver_Pistol.webp",
-    "core_items_order": [
-      "쿠튀리에",
-      "사이버 스토커",
-      "마탄의 사수",
-      "용의 비늘",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["쿠튀리에", "사이버 스토커", "마탄의 사수", "용의 비늘", "글레이셜 슈즈"]
   },
   {
     "id": "Chloe_DirectFire",
     "name": "클로에",
     "weapon": "암기",
     "role": "평원딜",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Chloe_DirectFire.webp",
-    "core_items_order": [
-      "운명의 주사위",
-      "길리 슈트",
-      "황야의 별",
-      "알렉산드로스",
-      "흑련비표-진홍"
-    ]
+    "core_items_order": ["운명의 주사위", "길리 슈트", "황야의 별", "알렉산드로스", "흑련비표-진홍"]
   },
   {
     "id": "Chiara_Rapier",
     "name": "키아라",
     "weapon": "레이피어",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Chiara_Rapier.webp",
-    "core_items_order": [
-      "페르소나",
-      "필드 쏜",
-      "요명월",
-      "이단심판관",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["페르소나", "필드 쏜", "요명월", "이단심판관", "글레이셜 슈즈"]
   },
   {
     "id": "Tazia_DirectFire",
     "name": "타지아",
     "weapon": "암기",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Tazia_DirectFire.webp",
-    "core_items_order": [
-      "앙 가르드",
-      "와일드 워커",
-      "임세티",
-      "빙백은침",
-      "진은 드레스"
-    ]
+    "core_items_order": ["앙 가르드", "와일드 워커", "임세티", "빙백은침", "진은 드레스"]
   },
   {
     "id": "Theodore_SniperRifle",
     "name": "테오도르",
     "weapon": "저격총",
     "role": "스증원딜",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Theodore_SniperRifle.webp",
-    "core_items_order": [
-      "블레이드 부츠",
-      "성법의",
-      "데드 아이",
-      "레이싱 헬멧",
-      "텔루리안 타임피스"
-    ]
+    "core_items_order": ["블레이드 부츠", "성법의", "데드 아이", "레이싱 헬멧", "텔루리안 타임피스"]
   },
   {
     "id": "Fenrir_Glove",
     "name": "펜리르",
     "weapon": "글러브",
     "role": "암살자",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Fenrir_Glove.webp",
-    "core_items_order": [
-      "프시케의 칼날",
-      "트와일라잇",
-      "천잠장갑",
-      "택티컬 아머",
-      "아이언 메이든"
-    ]
+    "core_items_order": ["프시케의 칼날", "트와일라잇", "천잠장갑", "택티컬 아머", "아이언 메이든"]
   },
   {
     "id": "Fenrir_Glove_2",
     "name": "펜리르",
     "weapon": "글러브",
     "role": "딜브루저",
+    "ult_dependency": 1.0,
     "description": "",
     "image": "./images/characters/Fenrir_Glove_2.webp",
-    "core_items_order": [
-      "헬릭스",
-      "반역의 의지",
-      "인사이트",
-      "천잠장갑",
-      "택티컬 슈즈"
-    ]
+    "core_items_order": ["헬릭스", "반역의 의지", "인사이트", "천잠장갑", "택티컬 슈즈"]
   },
   {
     "id": "Felix_Spear",
     "name": "펠릭스",
     "weapon": "창",
     "role": "딜브루저",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Felix_Spear.webp",
-    "core_items_order": [
-      "레이더",
-      "애각창",
-      "빛의 증표",
-      "레이싱 부츠",
-      "아오자이"
-    ]
+    "core_items_order": ["레이더", "애각창", "빛의 증표", "레이싱 부츠", "아오자이"]
   },
   {
     "id": "Priya_Guitar",
     "name": "프리야",
     "weapon": "기타",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Priya_Guitar.webp",
-    "core_items_order": [
-      "천상의 메아리",
-      "에메랄드 타블렛",
-      "헤븐즈 도어",
-      "성법의",
-      "와일드 워커"
-    ]
+    "core_items_order": ["천상의 메아리", "에메랄드 타블렛", "헤븐즈 도어", "성법의", "와일드 워커"]
   },
   {
     "id": "Fiora_TwoHandSword",
     "name": "피오라",
     "weapon": "양손검",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Fiora_TwoHandSword.webp",
-    "core_items_order": [
-      "앙 가르드",
-      "알마스",
-      "성법의",
-      "와일드 워커",
-      "틴달로스의 군주"
-    ]
+    "core_items_order": ["앙 가르드", "알마스", "성법의", "와일드 워커", "틴달로스의 군주"]
   },
   {
     "id": "Fiora_Rapier",
     "name": "피오라",
     "weapon": "레이피어",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Fiora_Rapier.webp",
-    "core_items_order": [
-      "앙 가르드",
-      "필드 쏜",
-      "요명월",
-      "진은 드레스",
-      "와일드 워커"
-    ]
+    "core_items_order": ["앙 가르드", "필드 쏜", "요명월", "진은 드레스", "와일드 워커"]
   },
   {
     "id": "Fiora_Spear",
     "name": "피오라",
     "weapon": "창",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Fiora_Spear.webp",
-    "core_items_order": [
-      "성법의",
-      "쿤달라",
-      "별 사냥꾼",
-      "글레이셜 슈즈",
-      "용의 비늘"
-    ]
+    "core_items_order": ["성법의", "쿤달라", "별 사냥꾼", "글레이셜 슈즈", "용의 비늘"]
   },
   {
     "id": "Piolo_Nunchaku",
     "name": "피올로",
     "weapon": "쌍절곤",
     "role": "딜브루저",
+    "ult_dependency": 0.3,
     "description": "",
     "image": "./images/characters/Piolo_Nunchaku.webp",
-    "core_items_order": [
-      "성법의",
-      "사이버 스토커",
-      "게리온",
-      "에메랄드 타블렛",
-      "와일드 워커"
-    ]
+    "core_items_order": ["성법의", "사이버 스토커", "게리온", "에메랄드 타블렛", "와일드 워커"]
   },
   {
     "id": "Hart_Guitar",
     "name": "하트",
     "weapon": "기타",
     "role": "평원딜",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Hart_Guitar.webp",
-    "core_items_order": [
-      "운명의 주사위",
-      "프리 버드",
-      "블래스터 헬멧",
-      "고스트",
-      "알렉산드로스"
-    ]
+    "core_items_order": ["운명의 주사위", "프리 버드", "블래스터 헬멧", "고스트", "알렉산드로스"]
   },
   {
     "id": "Haze_AssaultRifle",
     "name": "헤이즈",
     "weapon": "돌격 소총",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Haze_AssaultRifle.webp",
-    "core_items_order": [
-      "핏빛 망토",
-      "검은 베일",
-      "발키리",
-      "용의 비늘",
-      "칼날 다리"
-    ]
+    "core_items_order": ["핏빛 망토", "검은 베일", "발키리", "용의 비늘", "칼날 다리"]
   },
   {
     "id": "Henry_DirectFire",
     "name": "헨리",
     "weapon": "암기",
     "role": "스증원딜",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Henry_DirectFire.webp",
-    "core_items_order": [
-      "오르비스",
-      "천룡잠",
-      "핏빛 망토",
-      "생사부",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["오르비스", "천룡잠", "핏빛 망토", "생사부", "글레이셜 슈즈"]
   },
   {
     "id": "Hyunwoo_Glove",
     "name": "현우",
     "weapon": "글러브",
     "role": "탱브루저",
+    "ult_dependency": 0.7,
     "description": "",
     "image": "./images/characters/Hyunwoo_Glove.webp",
-    "core_items_order": [
-      "레이싱 슈트",
-      "주작자문",
-      "택티컬 바이저",
-      "미스릴 방패",
-      "미스릴 부츠"
-    ]
+    "core_items_order": ["레이싱 슈트", "주작자문", "택티컬 바이저", "미스릴 방패", "미스릴 부츠"]
   },
   {
     "id": "Hyunwoo_Tonfa",
     "name": "현우",
     "weapon": "톤파",
     "role": "암살자",
+    "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Hyunwoo_Tonfa.webp",
-    "core_items_order": [
-      "흑요석 짓테",
-      "검은 베일",
-      "카바나",
-      "에메랄드 타블렛",
-      "아이언 메이든"
-    ]
+    "core_items_order": ["흑요석 짓테", "검은 베일", "카바나", "에메랄드 타블렛", "아이언 메이든"]
   },
   {
     "id": "Hyejin_Bow",
     "name": "혜진",
     "weapon": "활",
     "role": "스증원딜",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Hyejin_Bow.webp",
-    "core_items_order": [
-      "성법의",
-      "스카디의 팔찌",
-      "아르테미스",
-      "검은 베일",
-      "글레이셜 슈즈"
-    ]
+    "core_items_order": ["성법의", "스카디의 팔찌", "아르테미스", "검은 베일", "글레이셜 슈즈"]
   },
   {
     "id": "Hyejin_DirectFire",
     "name": "혜진",
     "weapon": "암기",
     "role": "스증원딜",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Hyejin_DirectFire.webp",
-    "core_items_order": [
-      "페르소나",
-      "오르비스",
-      "핏빛 망토",
-      "칼날 다리",
-      "흑련비표-새벽"
-    ]
+    "core_items_order": ["페르소나", "오르비스", "핏빛 망토", "칼날 다리", "흑련비표-새벽"]
   },
   {
     "id": "Hisui_TwoHandSword",
     "name": "히스이",
     "weapon": "양손검",
     "role": "딜브루저",
+    "ult_dependency": 1.7,
     "description": "",
     "image": "./images/characters/Hisui_TwoHandSword.webp",
-    "core_items_order": [
-      "아오자이",
-      "이퀄리브리엄",
-      "트와일라잇",
-      "오토-암즈",
-      "블레이드 부츠"
-    ]
+    "core_items_order": ["아오자이", "이퀄리브리엄", "트와일라잇", "오토-암즈", "블레이드 부츠"]
   }
 ]
