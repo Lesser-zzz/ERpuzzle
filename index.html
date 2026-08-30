@@ -189,8 +189,13 @@
             currentBlueTeam = [];
             currentRedTeam = [];
 
-            const timeVal = document.getElementById('env-time').value || ['낮', '밤'][Math.floor(Math.random() * 2)];
-            const terrainVal = document.getElementById('env-terrain').value || ['좁은 골목', '개활지', '벽과 장애물 지역'][Math.floor(Math.random() * 3)];
+            // DOM에서 환경 값을 읽어오되, 비어있으면 랜덤으로 배정
+            const timeValInput = document.getElementById('env-time').value;
+            const terrainValInput = document.getElementById('env-terrain').value;
+
+            const timeVal = timeValInput || ['낮', '밤'][Math.floor(Math.random() * 2)];
+            const terrainVal = terrainValInput || ['좁은 골목', '개활지', '벽과 장애물 지역'][Math.floor(Math.random() * 3)];
+            
             document.getElementById('env-display').innerText = `현재 전장: ${timeVal} / ${terrainVal}`;
 
             const baseLevel = Math.floor(Math.random() * (16 - 10 + 1)) + 10; 
@@ -287,12 +292,16 @@
             document.getElementById('battlefield-container').innerHTML = html;
         }
 
-        // 지형 및 밤 시간대 변수가 반영된 평가 엔진 함수
+        // 지형 및 밤 시간대 변수 가중치가 반영된 평가 엔진 함수
         function showEvaluation() {
             if (currentBlueTeam.length === 0) return;
 
-            const timeVal = document.getElementById('env-time').value;
-            const terrainVal = document.getElementById('env-terrain').value;
+            const timeValInput = document.getElementById('env-time').value;
+            const terrainValInput = document.getElementById('env-terrain').value;
+
+            // 평가 시점에도 드롭다운 값이 비어있으면 현재 화면에 적용된 환경값을 유추하거나 기본 적용
+            const timeVal = timeValInput || (document.getElementById('env-display').innerText.includes('밤') ? '밤' : '낮');
+            const terrainVal = terrainValInput || ['좁은 골목', '개활지', '벽과 장애물 지역'].find(t => document.getElementById('env-display').innerText.includes(t)) || '';
 
             const getPowerScore = (team) => {
                 return team.reduce((sum, char) => {
@@ -303,14 +312,14 @@
 
                     // 1. 지형 변수 보정
                     if (terrainVal === '좁은 골목' && (char.role === '탱커' || char.role === '브루저')) {
-                        score *= 1.15;
+                        score *= 1.15; // 좁은 골목 진형 붕괴 및 교전력 강화 (+15%)
                     } else if (terrainVal === '개활지' && char.role === '원딜') {
-                        score *= 1.15;
+                        score *= 1.15; // 개활지 원딜 딜링 환경 보정 (+15%)
                     }
 
-                    // 2. 밤 시간대 변수 보정 (암살자/치명타/기습형 역할군 상향)
+                    // 2. 밤 시간대 변수 보정 (암살자/치명타 등 기습 특화 역할군 상향)
                     if (timeVal === '밤' && (char.role === '암살자' || char.role === '치명타')) {
-                        score *= 1.10;
+                        score *= 1.10; // 밤 시야 제한 및 기습 효율 반영 (+10%)
                     }
 
                     score = score * (char.hp / 100);
@@ -334,7 +343,7 @@
                     if (char.ult === '쿨다운') targetScore += 60; 
                     if (char.tac === '쿨다운') targetScore += 40;
                     
-                    // 밤 시간대 후방 딜러나 생존기 빠진 타겟의 위험도 증폭
+                    // 밤 시간대 후방 딜러나 생존기 빠진 타겟의 위험도 비선형 증폭
                     if (timeVal === '밤' && (char.role === '원딜' || char.role === '메이지')) {
                         targetScore *= 1.25;
                     }
@@ -352,7 +361,7 @@
 
             const resultHtml = `
                 <strong style="color: #ffa502; font-size: 18px;">[엔진 평가 결과 (환경 보정 적용)]</strong><br><br>
-                📊 <strong>판세 분석:</strong> [${timeVal || '환경 무관'} / ${terrainVal || '지형 무관'}] 조건 반영, <strong>${winningTeam} 승률 약 ${winRate}%</strong><br><br>
+                📊 <strong>판세 분석:</strong> [${timeVal} / ${terrainVal}] 조건 반영, <strong>${winningTeam} 승률 약 ${winRate}%</strong><br><br>
                 🎯 <strong>최우선 포커싱 타겟:</strong> <strong>${targetChar.name} (${targetChar.weapon})${targetDescText}</strong><br>
                 <span style="font-size: 14px; color: #a4b0be;">(산출 사유: 체력 ${targetChar.hp}% 상태, 스킬 쿨다운 및 전장 환경 복합 비선형 계산)</span>
             `;
