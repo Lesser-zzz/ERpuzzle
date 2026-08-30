@@ -1,17 +1,16 @@
 name: Eternal Return Data Pipeline
 
-# 언제 이 스크립트를 실행할지 결정
 on:
   schedule:
-    # 매일 UTC 19:00 (한국 시간 기준 새벽 4시)에 자동 실행
-    - cron: '0 19 * * *'
-  workflow_dispatch: # 수동으로 버튼을 눌러서 실행할 수 있는 옵션
+    # 매일 한국 시간 기준 새벽 1시 ~ 아침 9시까지 15분 간격 (UTC 16:00 ~ 00:00)
+    - cron: '*/15 16-23,0 * * *'
+  workflow_dispatch: # 수동 실행 버튼 유지
 
 jobs:
   collect-data:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 깃허브 리포지토리에 파일을 쓸 수 있는 권한 부여
+      contents: write
 
     steps:
       - name: 📥 리포지토리 체크아웃
@@ -25,21 +24,16 @@ jobs:
       - name: 📦 필요 라이브러리 설치
         run: |
           pip install requests
-          # 만약 스크립트에서 cloudscraper를 쓴다면 아래 주석을 풀어줘
-          # pip install cloudscraper
 
       - name: 🚀 데이터 수집 스크립트 실행
         env:
-          # 아까 등록한 시크릿 키를 파이썬 환경 변수로 주입
           BSER_API_KEY: ${{ secrets.BSER_API_KEY }}
         run: |
-          # 파이썬 스크립트 파일명을 실제 이름으로 맞춰서 실행해 줘
           python collect_data.py
 
       - name: 💾 변경된 CSV 파일 깃허브에 자동 커밋 & 푸시
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          # CSV 파일에 변경 사항이 있을 때만 커밋을 진행
           git add er_makgeumgu_dataset_v2.csv
           git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 [자동] 막금구 데이터 수집 업데이트" && git push)
