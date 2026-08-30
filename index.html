@@ -12,6 +12,7 @@
         select { padding: 4px; border-radius: 4px; background: #1e272e; color: white; border: 1px solid #57606f; font-size: 12px; }
         select option:disabled { color: #747d8c; background: #2f3542; }
 
+        /* 프리셋 버튼 스타일 */
         .preset-group { margin-bottom: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
         .preset-btn { padding: 8px 15px; font-weight: bold; background: #1e90ff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: 0.2s; font-size: 13px; }
         .preset-btn:hover { background: #3742fa; }
@@ -26,6 +27,7 @@
         .char-img { width: 100%; height: 60px; object-fit: cover; border-radius: 4px; background: #747d8c; }
         .char-name { font-size: 13px; font-weight: bold; margin: 5px 0 2px 0; color: #f1f2f6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         
+        /* 가시성 개선 CSS */
         .char-vars { font-size: 11px; margin-bottom: 5px; color: #f5f6fa; line-height: 1.4; }
         .stat-on { color: #2ecc71; font-weight: bold; }
         .stat-off { color: #7f8fa6; text-decoration: line-through; }
@@ -36,15 +38,17 @@
         #reroll-btn { background-color: #ffa502; color: #2f3542; }
         #reroll-btn:hover { background-color: #ff7f50; }
         
+        /* 평가 기능(Beta) 관련 CSS */
         #eval-btn { background-color: #1e90ff; color: white; }
         #eval-btn:hover { background-color: #3742fa; }
-        #evaluation-result { display: none; margin: 20px auto; padding: 20px; background: #2f3542; border: 2px dashed #1e90ff; border-radius: 8px; max-width: 800px; font-size: 16px; line-height: 1.6; text-align: left; }
+        #evaluation-result { display: none; margin: 20px auto; padding: 20px; background: #2f3542; border: 2px dashed #1e90ff; border-radius: 8px; max-width: 800px; font-size: 16px; line-height: 1.6; }
     </style>
 </head>
 <body>
 
     <h1>이터널리턴 3:3 구도 퍼즐</h1>
     
+    <!-- 프리셋 제어판 -->
     <div class="preset-group">
         <button class="preset-btn" onclick="applyPreset(8, 1)">☀️ 2낮 (Lv.8 / 1코어)</button>
         <button class="preset-btn" onclick="applyPreset(13, 3)">🌙 3밤 (Lv.13 / 3코어)</button>
@@ -57,7 +61,7 @@
         <div class="control-row">
             <span class="control-label">환경:</span>
             <select id="env-time"><option value="">시간 (랜덤)</option><option value="낮">낮</option><option value="밤">밤</option></select>
-            <select id="env-terrain"><option value="">지형 (랜덤)</option><option value="좁은 골목">좁은 골목</option><option value="개활지">개활지</option><option value="벽과 장애물 지역">벽과 장애물 지역</option></select>
+            <select id="env-terrain"><option value="">지형 (랜덤)</option><option value="좁은 골목">좁은 골목</option><option value="개활지">개활지</option><option value="벽과 장애물 지역">벽과 장애물</option></select>
         </div>
         <hr style="border-color: #57606f;">
         <div id="blue-controls"></div>
@@ -102,7 +106,6 @@
         function applyFullCondition() {
             ['b', 'r'].forEach(team => {
                 for(let i=0; i<3; i++) {
-                    document.getElementById(`${team}-hp-${i}`).value = "100";
                     document.getElementById(`${team}-ult-${i}`).value = "ON";
                     document.getElementById(`${team}-wskill-${i}`).value = "ON";
                     document.getElementById(`${team}-tac-${i}`).value = "ON";
@@ -118,7 +121,6 @@
                 charOpts += `<option value="${c.id}">${c.name} (${c.weapon})${descText}</option>`;
             });
 
-            const hpOpts = `<option value="">체력 (랜덤)</option><option value="100">100%</option><option value="70">70%</option><option value="50">50%</option>`;
             const ultOpts = `<option value="">궁 (랜덤)</option><option value="ON">ON</option><option value="쿨다운">쿨다운</option>`;
             const wSkillOpts = `<option value="">무스 (랜덤)</option><option value="ON">ON</option><option value="쿨다운">쿨다운</option>`;
             const tacSkillOpts = `<option value="">전술 (랜덤)</option><option value="ON">ON</option><option value="쿨다운">쿨다운</option>`;
@@ -134,8 +136,8 @@
                 for(let i=0; i<3; i++) {
                     html += `
                         <div class="control-row" style="margin-left: 10px;">
+                            <span style="color:#a4b0be; font-size:12px; width:40px; display:inline-block;">Slot ${i+1}:</span>
                             <select id="${prefix}-char-${i}" onchange="updateTeamDisables('${prefix}')">${charOpts}</select>
-                            <select id="${prefix}-hp-${i}">${hpOpts}</select>
                             <select id="${prefix}-lvl-${i}">${lvlOpts}</select>
                             <select id="${prefix}-item-${i}">${itemOpts}</select>
                             <select id="${prefix}-ult-${i}">${ultOpts}</select>
@@ -189,19 +191,15 @@
             currentBlueTeam = [];
             currentRedTeam = [];
 
-            // DOM에서 환경 값을 읽어오되, 비어있으면 랜덤으로 배정
-            const timeValInput = document.getElementById('env-time').value;
-            const terrainValInput = document.getElementById('env-terrain').value;
-
-            const timeVal = timeValInput || ['낮', '밤'][Math.floor(Math.random() * 2)];
-            const terrainVal = terrainValInput || ['좁은 골목', '개활지', '벽과 장애물 지역'][Math.floor(Math.random() * 3)];
-            
+            const timeVal = document.getElementById('env-time').value || ['낮', '밤'][Math.floor(Math.random() * 2)];
+            const terrainVal = document.getElementById('env-terrain').value || ['좁은 골목', '개활지', '벽과 장애물 지역'][Math.floor(Math.random() * 3)];
             document.getElementById('env-display').innerText = `현재 전장: ${timeVal} / ${terrainVal}`;
 
             const baseLevel = Math.floor(Math.random() * (16 - 10 + 1)) + 10; 
             
             let usedNamesBlue = [];
             let usedNamesRed = [];
+            
             for(let i=0; i<3; i++) {
                 let bVal = document.getElementById(`b-char-${i}`).value;
                 let rVal = document.getElementById(`r-char-${i}`).value;
@@ -220,7 +218,6 @@
 
             const createSlot = (teamPrefix, index, isBlue) => {
                 const charVal = document.getElementById(`${teamPrefix}-char-${index}`).value;
-                const hpVal = document.getElementById(`${teamPrefix}-hp-${index}`).value;
                 const lvlVal = document.getElementById(`${teamPrefix}-lvl-${index}`).value;
                 const itemVal = document.getElementById(`${teamPrefix}-item-${index}`).value;
                 const ultVal = document.getElementById(`${teamPrefix}-ult-${index}`).value;
@@ -237,25 +234,26 @@
                     teamUsedNames.push(charData.name.trim()); 
                 }
 
-                const finalHp = hpVal ? parseInt(hpVal) : [100, 70, 50][Math.floor(Math.random() * 3)];
                 const finalLvl = lvlVal ? parseInt(lvlVal) : baseLevel + Math.floor(Math.random() * 3);
                 const finalItemCount = itemVal !== "" ? parseInt(itemVal) : Math.floor(Math.random() * 6);
                 const finalUlt = ultVal ? ultVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 const finalWskill = wSkillVal ? wSkillVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 const finalTac = tacVal ? tacVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 
+                // 데이터 푸시 (HP 제거, ult_dependency 추가)
                 const matchData = { 
                     name: charData.name, 
                     weapon: charData.weapon, 
                     role: charData.role, 
                     description: charData.description, 
-                    hp: finalHp, 
+                    ult_dependency: charData.ult_dependency || 1.0,
                     level: finalLvl, 
                     items: finalItemCount, 
                     ult: finalUlt, 
                     wskill: finalWskill, 
                     tac: finalTac 
                 };
+                
                 if (isBlue) currentBlueTeam.push(matchData);
                 else currentRedTeam.push(matchData);
 
@@ -277,7 +275,7 @@
                         <h3 class="char-name">${charData.name} (${charData.weapon})</h3>
                         <div class="char-vars">
                             <div style="margin-bottom: 4px;">${roleBadge}${descBadge}</div>
-                            <strong>Lv.${finalLvl} | 체력: ${finalHp}%</strong><br>
+                            <strong>Lv.${finalLvl}</strong><br>
                             ${getStatusSpan('궁', finalUlt)} | ${getStatusSpan('무스', finalWskill)}<br>
                             ${getStatusSpan('전술', finalTac)}
                         </div>
@@ -292,37 +290,41 @@
             document.getElementById('battlefield-container').innerHTML = html;
         }
 
-        // 지형 및 밤 시간대 변수 가중치가 반영된 평가 엔진 함수
+        // 고도화된 평가 엔진 (HP 배제, 멀티플라이어 적용)
         function showEvaluation() {
             if (currentBlueTeam.length === 0) return;
 
             const timeValInput = document.getElementById('env-time').value;
             const terrainValInput = document.getElementById('env-terrain').value;
 
-            // 평가 시점에도 드롭다운 값이 비어있으면 현재 화면에 적용된 환경값을 유추하거나 기본 적용
             const timeVal = timeValInput || (document.getElementById('env-display').innerText.includes('밤') ? '밤' : '낮');
             const terrainVal = terrainValInput || ['좁은 골목', '개활지', '벽과 장애물 지역'].find(t => document.getElementById('env-display').innerText.includes(t)) || '';
 
             const getPowerScore = (team) => {
                 return team.reduce((sum, char) => {
-                    let score = (char.level * 10) + (char.items * 15);
-                    if (char.ult === 'ON') score += 30;
+                    // 레벨 17점, 아이템 20점
+                    let score = (char.level * 17) + (char.items * 20);
+                    
+                    // 멀티플라이어 반영 스킬 점수 계산
+                    if (char.ult === 'ON') {
+                        score += 30;
+                    } else {
+                        score -= (30 * char.ult_dependency) - 30; // 의존도가 1.0 초과일 때만 감점 패널티 발생
+                    }
+
                     if (char.wskill === 'ON') score += 15;
                     if (char.tac === 'ON') score += 20;
-
-                    // 1. 지형 변수 보정
+                    
+                    // 지형 및 밤 보정
                     if (terrainVal === '좁은 골목' && (char.role === '탱커' || char.role === '브루저')) {
-                        score *= 1.15; // 좁은 골목 진형 붕괴 및 교전력 강화 (+15%)
+                        score *= 1.15;
                     } else if (terrainVal === '개활지' && char.role === '원딜') {
-                        score *= 1.15; // 개활지 원딜 딜링 환경 보정 (+15%)
+                        score *= 1.15;
                     }
-
-                    // 2. 밤 시간대 변수 보정 (암살자/치명타 등 기습 특화 역할군 상향)
                     if (timeVal === '밤' && (char.role === '암살자' || char.role === '치명타')) {
-                        score *= 1.10; // 밤 시야 제한 및 기습 효율 반영 (+10%)
+                        score *= 1.10;
                     }
 
-                    score = score * (char.hp / 100);
                     return sum + score; 
                 }, 0);
             };
@@ -339,11 +341,10 @@
                 let maxScore = -1;
                 let target = null;
                 team.forEach(char => {
-                    let targetScore = (100 - char.hp) * 2.5; 
+                    let targetScore = 0; // 체력 기반 타겟팅 영구 제거
                     if (char.ult === '쿨다운') targetScore += 60; 
                     if (char.tac === '쿨다운') targetScore += 40;
                     
-                    // 밤 시간대 후방 딜러나 생존기 빠진 타겟의 위험도 비선형 증폭
                     if (timeVal === '밤' && (char.role === '원딜' || char.role === '메이지')) {
                         targetScore *= 1.25;
                     }
@@ -360,10 +361,10 @@
             const targetDescText = targetChar.description ? ` - ${targetChar.description}` : '';
 
             const resultHtml = `
-                <strong style="color: #ffa502; font-size: 18px;">[엔진 평가 결과 (환경 보정 적용)]</strong><br><br>
-                📊 <strong>판세 분석:</strong> [${timeVal} / ${terrainVal}] 조건 반영, <strong>${winningTeam} 승률 약 ${winRate}%</strong><br><br>
+                <strong style="color: #ffa502; font-size: 18px;">[엔진 평가 결과]</strong><br><br>
+                📊 <strong>판세 분석:</strong> 하드코딩된 가중치 기준, <strong>${winningTeam} 승률 약 ${winRate}%</strong><br><br>
                 🎯 <strong>최우선 포커싱 타겟:</strong> <strong>${targetChar.name} (${targetChar.weapon})${targetDescText}</strong><br>
-                <span style="font-size: 14px; color: #a4b0be;">(산출 사유: 체력 ${targetChar.hp}% 상태, 스킬 쿨다운 및 전장 환경 복합 비선형 계산)</span>
+                <span style="font-size: 14px; color: #a4b0be;">(산출 사유: 스킬 쿨다운 및 전장 환경 복합 비선형 계산)</span>
             `;
 
             const resultDiv = document.getElementById('evaluation-result');
