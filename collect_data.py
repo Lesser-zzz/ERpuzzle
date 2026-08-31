@@ -42,7 +42,7 @@ if response_rank.status_code == 200 and response_rank.json().get('topRanks'):
         target_nicknames.add(p['nickname'])
 
 # 안전장치: 한 번 코드를 돌릴 때 최대 탐색할 유저 수 (원하는 만큼 늘려도 됩니다)
-max_loops = 5
+max_loops = 50
 loop_count = 0
 
 # 3. 파도타기 수집 루프 시작
