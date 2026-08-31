@@ -46,7 +46,7 @@ jobs:
           git config --local user.name "GitHub Action Bot"
 
           git add \
-            er_makgeumgu_dataset_v2.csv \
+            er_makgeumgu_dataset_v3_rescued.csv \
             snowball_pending_add.txt \
             snowball_processed.txt \
             known_games.txt
