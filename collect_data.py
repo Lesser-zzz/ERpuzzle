@@ -67,8 +67,11 @@ while target_nicknames and loop_count < max_loops:
         if res_games.status_code == 200 and res_games.json().get('userGames'):
             games_data = res_games.json()['userGames']
 
-            # 테스트를 위해 유저당 최근 3게임만 확인합니다. (확장 가능)
-            game_id_list = list(set([game['gameId'] for game in games_data]))[:3]
+            # 기존 코드: 최근 3게임만 확인
+            # game_id_list = list(set([game['gameId'] for game in games_data]))[:3]
+            
+            # 🔥 튜닝: 최근 20게임까지 깊게 파헤치기
+            game_id_list = list(set([game['gameId'] for game in games_data]))[:20]
 
             for gid in game_id_list:
                 # 💡 [중복 방지 필터] 이미 수집한 게임이면 통신(시간)을 낭비하지 않고 바로 패스!
