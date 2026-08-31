@@ -1,4 +1,3 @@
-```python
 import requests
 import csv
 import time
