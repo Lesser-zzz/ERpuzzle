@@ -1,4 +1,3 @@
-
 name: Eternal Return Data Pipeline
 
 on:
@@ -8,6 +7,7 @@ on:
     - cron: '*/10 16-23,0 * * *'
   workflow_dispatch:
 
+# 같은 수집 작업이 동시에 두 개 실행되지 않도록 방지
 concurrency:
   group: er-makgeumgu-collector
   cancel-in-progress: false
@@ -58,8 +58,10 @@ jobs:
 
           git commit -m "🤖 [자동] 막금구 데이터 수집 업데이트"
 
+          # 수집하는 동안 main에 다른 커밋이 들어왔을 경우
+          # 최신 원격 변경사항을 현재 수집 커밋에 반영합니다.
           git fetch origin main
-          git merge origin/main --no-edit
+          git rebase origin/main
 
+          # rebase가 끝난 최신 상태를 push
           git push origin main
-```
