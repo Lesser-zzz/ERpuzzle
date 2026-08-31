@@ -2,22 +2,29 @@ name: Eternal Return Data Pipeline
 
 on:
   schedule:
-    # 매일 한국 시간 기준 새벽 1시 ~ 아침 9시까지 15분 간격 (UTC 16:00 ~ 00:00)
+    # 한국 시간 기준 01:00 ~ 09:00
+    # UTC 기준 16:00 ~ 00:00
     - cron: '*/10 16-23,0 * * *'
-  workflow_dispatch: # 수동 실행 버튼 유지
+  workflow_dispatch:
+
+# 같은 수집 작업이 동시에 두 개 실행되지 않도록 방지
+concurrency:
+  group: er-makgeumgu-collector
+  cancel-in-progress: false
 
 jobs:
   collect-data:
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
 
     steps:
       - name: 📥 리포지토리 체크아웃
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: 🐍 파이썬 환경 세팅 (3.9 버전)
-        uses: actions/setup-python@v4
+      - name: 🐍 파이썬 환경 세팅
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'
 
@@ -31,9 +38,18 @@ jobs:
         run: |
           python collect_data.py
 
-      - name: 💾 변경된 CSV 파일 깃허브에 자동 커밋 & 푸시
+      - name: 💾 수집 데이터 및 Snowball 상태 자동 커밋 & 푸시
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          git add er_makgeumgu_dataset_v2.csv
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 [자동] 막금구 데이터 수집 업데이트" && git push)
+
+          git add \
+            er_makgeumgu_dataset_v2.csv \
+            snowball_pending_add.txt \
+            snowball_processed.txt \
+            known_games.txt
+
+          git diff --cached --quiet || (
+            git commit -m "🤖 [자동] 막금구 데이터 수집 업데이트" &&
+            git push
+          )
