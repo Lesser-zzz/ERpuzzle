@@ -53,7 +53,7 @@ INITIAL_SEED_COUNT = 100
 RECENT_GAME_LIMIT = 20
 
 # 1회 실행당 최대 탐색 유저 수
-MAX_LOOPS = 50
+MAX_LOOPS = 20
 
 # API 요청 간 최소 간격
 REQUEST_INTERVAL = 1.1
