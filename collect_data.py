@@ -8,7 +8,7 @@ from collections import deque
 # 설정
 # ============================================================
 
-API_KEY = "6ws22XYyOd4F0Puup5Hps2eK0XZ5uHMC3kqKIrYL"
+API_KEY = os.environ["BSER_API_KEY"]
 HEADERS = {
     "x-api-key": API_KEY,
     "accept": "application/json"
