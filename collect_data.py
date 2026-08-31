@@ -286,8 +286,8 @@ if (
     )
 
     url_rank = (
-        "https://open-api.bser.io/v1/rank/top/"
-        f"{SEASON_ID}/{INITIAL_SEED_COUNT}"
+    "https://open-api.bser.io/v1/rank/top/"
+    f"{SEASON_ID}/{MATCHING_MODE}"
     )
 
     response_rank = api_get(url_rank)
