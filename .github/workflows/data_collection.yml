@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: 📥 리포지토리 체크아웃
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: 🐍 파이썬 환경 세팅
         uses: actions/setup-python@v5
@@ -49,7 +51,18 @@ jobs:
             snowball_processed.txt \
             known_games.txt
 
-          git diff --cached --quiet || (
-            git commit -m "🤖 [자동] 막금구 데이터 수집 업데이트" &&
-            git push
-          )
+          if git diff --cached --quiet; then
+            echo "변경사항이 없습니다."
+            exit 0
+          fi
+
+          git commit -m "🤖 [자동] 막금구 데이터 수집 업데이트"
+
+          # 수집하는 동안 main에 다른 커밋이 들어왔을 경우
+          # 최신 원격 변경사항을 현재 수집 커밋에 반영합니다.
+          git fetch origin main
+          git rebase origin/main
+
+          # rebase가 끝난 최신 상태를 push
+          git push origin main
+```
