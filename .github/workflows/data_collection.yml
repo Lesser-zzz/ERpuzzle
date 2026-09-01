@@ -2,20 +2,18 @@ name: Eternal Return Data Pipeline
 
 on:
   schedule:
-    # 한국 시간 기준 01:00 ~ 09:00
-    # UTC 기준 16:00 ~ 00:00
+    # 매일 한국 시간 기준 새벽 1시 ~ 아침 9시까지 15분 간격 (UTC 16:00 ~ 00:00)
     - cron: '*/30 16-23,0 * * *'
   workflow_dispatch:
 
-# 같은 수집 작업이 동시에 두 개 실행되지 않도록 방지
+# 중복 실행 방지
 concurrency:
-  group: er-makgeumgu-collector
+  group: er-normal-collector
   cancel-in-progress: false
 
 jobs:
   collect-data:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
@@ -40,7 +38,7 @@ jobs:
         run: |
           python collect_data.py
 
-      - name: 💾 수집 데이터 및 Snowball 상태 자동 커밋 & 푸시
+      - name: 💾 데이터 자동 커밋 & 푸시
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
@@ -56,12 +54,10 @@ jobs:
             exit 0
           fi
 
-          git commit -m "🤖 [자동] 막금구 데이터 수집 업데이트"
-
-          # 수집하는 동안 main에 다른 커밋이 들어왔을 경우
-          # 최신 원격 변경사항을 현재 수집 커밋에 반영합니다.
+          git commit -m "🤖 [자동] 막금구 데이터 수집 완료"
+          
+          # 💡 [충돌 방지 로직] 푸시 전 서버의 최신 커밋을 불러와 부드럽게 이어 붙임
           git fetch origin main
           git rebase origin/main
-
-          # rebase가 끝난 최신 상태를 push
+          
           git push origin main
