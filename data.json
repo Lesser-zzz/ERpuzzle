@@ -283,7 +283,7 @@
     "id": "Mai_Whip",
     "name": "마이",
     "weapon": "채찍",
-    "role": "탱브루저",
+    "role": "퓨어탱커",
     "ult_dependency": 1.3,
     "description": "",
     "image": "./images/characters/Mai_Whip.webp",
