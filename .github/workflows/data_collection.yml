@@ -1,9 +1,6 @@
 name: Eternal Return Data Pipeline
 
 on:
-  schedule:
-    # 매일 한국 시간 기준 새벽 1시 ~ 아침 9시까지 15분 간격 (UTC 16:00 ~ 00:00)
-    - cron: '*/30 16-23,0 * * *'
   workflow_dispatch:
 
 # 중복 실행 방지
