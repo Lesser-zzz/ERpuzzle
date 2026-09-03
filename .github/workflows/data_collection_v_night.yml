@@ -22,6 +22,11 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: 🧹 탐색 닉네임 메모리 100% 초기화
+        run: |
+          > snowball_processed.txt
+          > snowball_pending_add.txt
+
       - name: 🐍 파이썬 환경 세팅
         uses: actions/setup-python@v5
         with:
@@ -53,7 +58,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "🤖 [자동] V-NIGHT 심야 대량 수집 완료"
+          git commit -m "🤖 [자동] V-NIGHT 실시간 데이터 동기화 완료"
           git fetch origin main
-          git rebase origin/main
+          git pull --rebase origin main
           git push origin main
