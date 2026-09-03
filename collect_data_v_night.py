@@ -6,10 +6,10 @@ from collections import deque
 from urllib.parse import quote
 
 # ============================================================
-# ⏱️ 5.5시간 (V-NIGHT) 타이머 및 설정
+# ⏱️ 5.5시간 타이머 및 설정
 # ============================================================
 START_TIME = time.time()
-MAX_EXECUTION_TIME = 5.5 * 3600 # 5.5시간(19800초). 6시간 전 안전 종료 방어.
+MAX_EXECUTION_TIME = 5.3 * 3600 # 5시간 18분 (안전 종료 마진 포함)
 
 API_KEY = os.environ.get("BSER_API_KEY")
 if not API_KEY:
@@ -22,12 +22,12 @@ PENDING_FILE = "snowball_pending_add.txt"
 PROCESSED_FILE = "snowball_processed.txt"
 KNOWN_GAMES_FILE = "known_games.txt"
 
-# 🔥 헤비 듀티 전용 튜닝 파라미터
+# 🔥 최신 메타 동기화 전용 튜닝
 SEASON_ID = 41
 MATCHING_MODE = 3
-INITIAL_SEED_COUNT = 100
-RECENT_GAME_LIMIT = 50  # 기존 20 -> 50으로 증가. 한 유저의 옛날 전적까지 영혼까지 긁어옴
-MAX_LOOPS = 5000        # 사실상 무한 루프
+INITIAL_SEED_COUNT = 100 # 💡 3명 -> 50명으로 대폭 확장! (우물 안 개구리 방지)
+RECENT_GAME_LIMIT = 50  
+MAX_LOOPS = 5000        
 REQUEST_INTERVAL = 1.1
 RATE_LIMIT_WAIT = 10
 NETWORK_ERROR_WAIT = 5
@@ -90,13 +90,15 @@ else:
                 ])
         writer.writerow(header)
 
+# YAML에서 텍스트 파일을 비웠으므로, 아래 셋은 완전히 백지상태로 쾌조의 출발을 함
 processed_nicknames = load_lines(PROCESSED_FILE)
 pending_nicknames = load_lines(PENDING_FILE)
 known_games = load_lines(KNOWN_GAMES_FILE)
 pending_nicknames -= processed_nicknames
 
-print(f"\n🚀 [V-LONG] Heavy Duty 자동 수집기 가동 시작\n{'='*65}")
+print(f"\n🚀 [V-NIGHT] 최신 메타 실시간 동기화 가동 시작\n{'='*65}")
 
+# 백지가 되었으므로 무조건 랭킹 상위 50명을 찔러서 시드로 확보
 if not pending_nicknames and not processed_nicknames:
     response_rank = api_get(f"https://open-api.bser.io/v1/rank/top/{SEASON_ID}/{MATCHING_MODE}")
     if response_rank.status_code == 200:
@@ -110,13 +112,12 @@ queue = deque(pending_nicknames)
 loop_count = 0
 
 # ============================================================
-# 무한 스노우볼 루프 (타이머 체크 포함)
+# 무한 스노우볼 루프 
 # ============================================================
 while queue and loop_count < MAX_LOOPS:
-    # 💡 실행 시간 안전 종료 타이머 체크 (85분 경과 시 종료)
     current_time = time.time()
     if current_time - START_TIME > MAX_EXECUTION_TIME:
-        print("\n⏱️ [안전 종료] 실행 시간이 85분을 초과하여 시스템을 안전하게 종료하고 커밋을 준비합니다.")
+        print("\n⏱️ [안전 종료] 실행 시간이 한계에 도달하여 시스템을 안전하게 종료합니다.")
         break
 
     nickname = queue.popleft()
@@ -181,7 +182,6 @@ while queue and loop_count < MAX_LOOPS:
                 leg_cnt = sum(1 for grade in equip_grades.values() if grade == 5)
                 tran_cnt = sum(1 for grade in equip_grades.values() if grade == 6)
 
-                # 무기 번호(bestWeapon) 포함 추출 로직
                 final_teams[rank].extend([
                     player.get("characterNum"),
                     player.get("bestWeapon", 0),
@@ -199,10 +199,10 @@ while queue and loop_count < MAX_LOOPS:
             
             known_games.add(gid_str)
             append_line(KNOWN_GAMES_FILE, gid_str)
-            print(f"   ✅ 게임 {gid} 저장 | 새 유저 +{discovered_count} | 전체 {len(processed_game_ids):,}")
+            print(f"   ✅ 신규 매치 {gid} 획득 | 큐 추가 +{discovered_count} | 전체 {len(processed_game_ids):,}")
 
     processed_nicknames.add(nickname)
     append_line(PROCESSED_FILE, nickname)
     pending_nicknames.discard(nickname)
 
-print(f"\n🎉 [V-LONG] 수집 사이클 완전 종료 | 획득한 전체 데이터: {len(processed_game_ids):,} 게임")
+print(f"\n🎉 [V-NIGHT] 대기열 고갈(실시간 동기화 완료) 또는 시간 종료 | 누적 데이터: {len(processed_game_ids):,} 게임")
