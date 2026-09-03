@@ -2,12 +2,11 @@ name: Eternal Return V-NIGHT Pipeline
 
 on:
   schedule:
-    # 매일 한국 시간 기준 01:00, 08:00 (UTC 16:00, 23:00)에 실행
     - cron: '0 16,23 * * *'
   workflow_dispatch:
 
 concurrency:
-  group: er-vnight-collector
+  group: er-data-collector-queue
   cancel-in-progress: false
 
 jobs:
@@ -20,6 +19,7 @@ jobs:
       - name: 📥 리포지토리 체크아웃
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: 🐍 파이썬 환경 세팅
@@ -31,7 +31,7 @@ jobs:
         run: |
           pip install requests
 
-      - name: 🚀 V-NIGHT 심야 스크립트 실행 (최대 5.5시간)
+      - name: 🚀 V-NIGHT 심야 스크립트 실행
         env:
           BSER_API_KEY: ${{ secrets.BSER_API_KEY }}
         run: |
