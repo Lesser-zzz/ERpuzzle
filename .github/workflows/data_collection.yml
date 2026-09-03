@@ -20,6 +20,11 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: 🧹 탐색 닉네임 메모리 100% 초기화
+        run: |
+          > snowball_processed.txt
+          > snowball_pending_add.txt
+
       - name: 🐍 파이썬 환경 세팅
         uses: actions/setup-python@v5
         with:
@@ -53,5 +58,5 @@ jobs:
 
           git commit -m "🤖 [수동] 막금구 데이터 수집 완료"
           git fetch origin main
-          git rebase origin/main
+          git pull --rebase origin main
           git push origin main
