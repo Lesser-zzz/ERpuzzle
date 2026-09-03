@@ -1,12 +1,10 @@
 name: Eternal Return V-LONG Pipeline
 
-# 오직 수동으로 버튼을 눌렀을 때만 작동! (스케줄러 없음)
 on:
   workflow_dispatch:
 
-# 중복 실행 방지 (일반 수집기와 충돌하지 않도록 별도 그룹 지정)
 concurrency:
-  group: er-vlong-collector
+  group: er-data-collector-queue
   cancel-in-progress: false
 
 jobs:
@@ -19,6 +17,7 @@ jobs:
       - name: 📥 리포지토리 체크아웃
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: 🐍 파이썬 환경 세팅
@@ -30,11 +29,10 @@ jobs:
         run: |
           pip install requests
 
-      - name: 🚀 헤비 듀티 스크립트 실행 (1.5시간용)
+      - name: 🚀 V-LONG 수집 스크립트 실행
         env:
           BSER_API_KEY: ${{ secrets.BSER_API_KEY }}
         run: |
-          # V-LONG 파이썬 파일을 실행하도록 지정
           python collect_data_v_long.py
 
       - name: 💾 데이터 자동 커밋 & 푸시
@@ -42,7 +40,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
 
-          # 동일한 CSV 파일에 이어서 누적 저장
           git add \
             er_makgeumgu_dataset_v3_rescued.csv \
             snowball_pending_add.txt \
@@ -54,7 +51,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "🤖 [자동/수동] V-LONG 대량 데이터 수집 완료"
+          git commit -m "🤖 [수동] V-LONG 대량 데이터 수집 완료"
           git fetch origin main
           git rebase origin/main
           git push origin main
