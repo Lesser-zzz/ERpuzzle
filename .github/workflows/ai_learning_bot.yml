@@ -1,0 +1,58 @@
+name: Eternal Return AI Learning Pipeline
+
+on:
+  schedule:
+    # 매일 아침 8시 (한국 시간 기준 KST 08:00 = UTC 23:00)
+    - cron: '0 15 * * *'
+  workflow_dispatch: # 수동 실행 버튼
+
+concurrency:
+  group: er-ai-learning-queue
+  cancel-in-progress: false
+
+jobs:
+  train-ai-model:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 리포지토리 체크아웃 (충돌 방지 정박)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: 🐍 파이썬 환경 세팅
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: 📦 필요 라이브러리 설치
+        run: |
+          pip install requests pandas numpy xgboost scikit-learn
+
+      - name: 🚀 AI 학습 통합 스크립트 실행
+        env:
+          BSER_API_KEY: ${{ secrets.BSER_API_KEY }}
+        run: |
+          python train_ai_model.py
+
+      - name: 💾 결과물(JSON) 자동 커밋 & 푸시
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+
+          # 추출된 2개의 JSON 파일만 추적하여 덮어쓰기
+          git add heuristic_weights.json synergy_matrix.json
+
+          # 변경사항이 없다면 스킵
+          if git diff --cached --quiet; then
+            echo "변경사항이 없습니다."
+            exit 0
+          fi
+
+          git commit -m "🤖 [자동] 일일 AI 학습 완료 및 메타 최신화"
+          git fetch origin main
+          git pull --rebase origin main
+          git push origin main
