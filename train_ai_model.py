@@ -29,7 +29,7 @@ if res_l10n.status_code == 200:
             m = re.match(r'^Character/Name/(\d+)\s*[^a-zA-Z0-9가-힣]*\s*(.+)$', line)
             if m: char_num_to_name[int(m.group(1))] = normalize_name(m.group(2))
 
-# 💡 12번, 17번 결번이 완벽하게 반영된 마스터리 하드코딩 사전
+# 💡 12번, 17번 결번이 반영된 마스터리 하드코딩 사전
 weapon_num_to_type = {
     1: '글러브', 2: '톤파', 3: '방망이', 4: '채찍', 5: '투척',
     6: '암기', 7: '활', 8: '석궁', 9: '권총', 10: '돌격소총',
@@ -96,19 +96,12 @@ print("⏳ AI 훈련 및 휴리스틱 가중치 계산 중...")
 X = diff_df.drop(['Target_Win'], axis=1) 
 y = diff_df['Target_Win']
 
-model = xgb.XGBClassifier(
-    n_estimators=500,
-    learning_rate=0.05, 
-    max_depth=6, 
-    colsample_bytree=0.5,
-    subsample=0.8,
-    random_state=42, 
-    eval_metric='logloss'
-)
+# 💡 기본 모델 옵션 복구
+model = xgb.XGBClassifier(n_estimators=300, learning_rate=0.05, max_depth=6, random_state=42, eval_metric='logloss')
 model.fit(X, y)
 
-# 가중치 질문 횟수(weight) 기준으로 계산
-imp_dict = model.get_booster().get_score(importance_type='weight')
+# 💡 엉뚱한 weight 빼고 정상적인 승률 기여도(Gain)로 복구
+imp_dict = dict(zip(X.columns, model.feature_importances_))
 scale_factor = 20.0 / imp_dict.get('Diff_Total_Leg', 1)
 
 tran_pts = round(float(imp_dict.get('Diff_Total_Tran', 0) * scale_factor), 2)
@@ -144,7 +137,7 @@ win_rates = np.round(model.predict_proba(pred_df)[:, 1] * 100, 2)
 
 synergy_dict = {}
 for idx, (i, j) in enumerate(pairs):
-    # 💡 [핵심 추가] 미러전(완전히 동일한 덱)일 경우 무조건 승률 50.0으로 고정
+    # 💡 미러전(완전히 동일한 덱)일 경우 무조건 승률 50.0으로 고정
     if i == j:
         win_rate = 50.0
     else:
