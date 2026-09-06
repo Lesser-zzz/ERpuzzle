@@ -2,66 +2,58 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이터널리턴 3:3 구도 퍼즐</title>
     <style>
-        body { font-family: 'Malgun Gothic', sans-serif; background-color: #2c2f33; color: white; text-align: center; margin: 0; padding: 15px; }
+        body { font-family: 'Malgun Gothic', sans-serif; background-color: #2c2f33; color: white; text-align: center; margin: 0; padding: 20px; }
         
-        .control-panel { background: #2f3542; border: 2px solid #57606f; border-radius: 8px; padding: 15px; margin-bottom: 20px; display: inline-block; text-align: left; max-width: 100%; box-sizing: border-box; overflow-x: auto; }
+        .control-panel { background: #2f3542; border: 2px solid #57606f; border-radius: 8px; padding: 15px; margin-bottom: 20px; display: inline-block; text-align: left; max-width: 1200px; }
         .control-row { margin-bottom: 8px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
         .control-label { font-weight: bold; width: 60px; color: #ffa502; font-size: 14px; }
         select { padding: 4px; border-radius: 4px; background: #1e272e; color: white; border: 1px solid #57606f; font-size: 12px; }
         select option:disabled { color: #747d8c; background: #2f3542; }
 
+        /* 프리셋 버튼 스타일 */
         .preset-group { margin-bottom: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
         .preset-btn { padding: 8px 15px; font-weight: bold; background: #1e90ff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: 0.2s; font-size: 13px; }
         .preset-btn:hover { background: #3742fa; }
         .preset-btn.full-cond { background: #2ecc71; }
         .preset-btn.full-cond:hover { background: #27ae60; }
 
-        /* 모바일 스크롤 지원 래퍼 */
-        .battlefield-wrapper { width: 100%; max-width: 1100px; margin: 0 auto; overflow-x: auto; border: 3px solid #57606f; border-radius: 12px; }
-        .battlefield { position: relative; width: 1100px; height: 600px; background-color: #1e272e; overflow: hidden; }
-        
-        /* 카드 UI 가시성 전면 개선 */
-        .character-card { position: absolute; width: 150px; background: rgba(47, 53, 66, 0.9); border: 2px solid; border-radius: 8px; padding: 8px; text-align: left; transform: translate(-50%, -50%); transition: all 0.2s ease-in-out; cursor: pointer; z-index: 1; box-shadow: 0 4px 6px rgba(0,0,0,0.5); }
-        .character-card:hover { background: rgba(47, 53, 66, 1); transform: translate(-50%, -50%) scale(1.15); z-index: 10; box-shadow: 0 8px 15px rgba(0,0,0,0.8); }
+        .battlefield { position: relative; width: 1100px; height: 600px; margin: 0 auto; background-color: #1e272e; border: 3px solid #57606f; border-radius: 12px; overflow: hidden; }
+        .character-card { position: absolute; width: 150px; background: rgba(47, 53, 66, 0.85); border: 2px solid; border-radius: 8px; padding: 6px; text-align: left; transform: translate(-50%, -50%); transition: all 0.2s ease-in-out; cursor: pointer; z-index: 1; }
+        .character-card:hover { background: rgba(47, 53, 66, 1); transform: translate(-50%, -50%) scale(1.15); z-index: 10; box-shadow: 0 8px 12px rgba(0,0,0,0.8); }
         .blue-team { border-color: #1e90ff; }
         .red-team { border-color: #ff4757; }
-        .char-img { width: 100%; height: 65px; object-fit: cover; border-radius: 4px; background: #747d8c; margin-bottom: 4px; }
-        .char-name { font-size: 13px; font-weight: bold; margin: 0 0 6px 0; color: #f1f2f6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; }
+        .char-img { width: 100%; height: 60px; object-fit: cover; border-radius: 4px; background: #747d8c; }
+        .char-name { font-size: 13px; font-weight: bold; margin: 5px 0 2px 0; color: #f1f2f6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         
-        /* 스탯 뱃지 디자인 */
-        .char-vars { display: flex; flex-direction: column; gap: 5px; margin-bottom: 6px; }
-        .stat-row { display: flex; justify-content: space-between; align-items: center; gap: 4px; }
-        .stat-badge { padding: 3px 0; flex: 1; text-align: center; border-radius: 4px; font-size: 11px; font-weight: bold; }
+        /* 가시성 개선 CSS */
+        .char-vars { font-size: 11px; margin-bottom: 5px; color: #f5f6fa; line-height: 1.4; }
+        .stat-on { color: #2ecc71; font-weight: bold; }
+        .stat-off { color: #7f8fa6; text-decoration: line-through; }
+        .items { font-size: 11px; color: #eccc68; line-height: 1.2; word-break: keep-all; background: rgba(0,0,0,0.3); padding: 4px; border-radius: 4px; font-weight: bold; }
         
-        .bg-level { background: #34495e; color: #7bed9f; }
-        .bg-hp { background: #34495e; color: #ff6b81; }
-        .stat-on { background: #2ecc71; color: #2f3542; }
-        .stat-off { background: #e74c3c; color: white; }
-        
-        .items { font-size: 11px; color: #eccc68; line-height: 1.3; word-break: keep-all; background: rgba(0,0,0,0.4); padding: 5px; border-radius: 4px; text-align: center; }
-        
-        .btn-group { margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
-        .action-btn { padding: 15px 25px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; transition: 0.2s; }
+        .btn-group { margin-top: 20px; display: flex; justify-content: center; gap: 15px; }
+        .action-btn { padding: 15px 30px; font-size: 18px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; transition: 0.2s; }
         #reroll-btn { background-color: #ffa502; color: #2f3542; }
         #reroll-btn:hover { background-color: #ff7f50; }
+        
+        /* 평가 기능(Beta) 관련 CSS */
         #eval-btn { background-color: #1e90ff; color: white; }
         #eval-btn:hover { background-color: #3742fa; }
-        
-        #evaluation-result { display: none; margin: 20px auto; padding: 20px; background: #2f3542; border: 2px dashed #1e90ff; border-radius: 8px; max-width: 800px; font-size: 15px; line-height: 1.6; text-align: center; }
+        #evaluation-result { display: none; margin: 20px auto; padding: 20px; background: #2f3542; border: 2px dashed #1e90ff; border-radius: 8px; max-width: 800px; font-size: 16px; line-height: 1.6; }
     </style>
 </head>
 <body>
 
     <h1>이터널리턴 3:3 구도 퍼즐</h1>
     
+    <!-- 프리셋 제어판 -->
     <div class="preset-group">
-        <button class="preset-btn" onclick="applyPreset(8, 1)">☀️ 2낮 (Lv.8 / 1코어)</button>
-        <button class="preset-btn" onclick="applyPreset(13, 3)">🌙 3밤 (Lv.13 / 3코어)</button>
-        <button class="preset-btn" onclick="applyPreset(15, 4)">🌙 4밤 (Lv.15 / 4코어)</button>
-        <button class="preset-btn" onclick="applyPreset(18, 5)">🌙 5밤 (Lv.18 / 5코어)</button>
+        <button class="preset-btn" onclick="applyPreset(8, 1, 0)">☀️ 2낮 (Lv.8 / 전설1)</button>
+        <button class="preset-btn" onclick="applyPreset(13, 3, 0)">🌙 3밤 (Lv.13 / 전설3)</button>
+        <button class="preset-btn" onclick="applyPreset(15, 4, 0)">🌙 4밤 (Lv.15 / 전설4)</button>
+        <button class="preset-btn" onclick="applyPreset(20, 4, 1)">🔥 막금구 (Lv.20 / 전설4 초월1)</button>
         <button class="preset-btn full-cond" onclick="applyFullCondition()">🔥 전체 풀컨디션 세팅</button>
     </div>
 
@@ -69,7 +61,7 @@
         <div class="control-row">
             <span class="control-label">환경:</span>
             <select id="env-time"><option value="">시간 (랜덤)</option><option value="낮">낮</option><option value="밤">밤</option></select>
-            <select id="env-terrain"><option value="">지형 (랜덤)</option><option value="좁은 골목">좁은 골목</option><option value="개활지">개활지</option><option value="벽과 장애물 지역">벽과 장애물 지역</option></select>
+            <select id="env-terrain"><option value="">지형 (랜덤)</option><option value="좁은 골목">좁은 골목</option><option value="개활지">개활지</option><option value="벽과 장애물 지역">벽과 장애물</option></select>
         </div>
         <hr style="border-color: #57606f;">
         <div id="blue-controls"></div>
@@ -79,36 +71,42 @@
     
     <div id="env-display" style="font-size: 18px; font-weight: bold; color: #ffa502; margin-bottom: 10px;"></div>
     
-    <div class="battlefield-wrapper">
-        <div class="battlefield" id="battlefield-container"></div>
-    </div>
+    <div class="battlefield" id="battlefield-container"></div>
     
     <div class="btn-group">
         <button id="reroll-btn" class="action-btn" onclick="rollDice()">🎲 설정 적용 & 셔플</button>
-        <button id="eval-btn" class="action-btn" onclick="showEvaluation()">💡 승률 예측 (Beta)</button>
+        <button id="eval-btn" class="action-btn" onclick="showEvaluation()">💡 모범 답안 보기 (Beta)</button>
     </div>
 
     <div id="evaluation-result"></div>
 
     <script>
         let characterPool = [];
+        let synergyMatrix = {};
+        let aiWeights = {};
+
         let currentBlueTeam = []; 
         let currentRedTeam = [];
 
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                // 세레스 미출시 잠금 처리
-                characterPool = data.filter(c => c.name !== '세레스');
-                initDropdowns();
-                rollDice();
-            });
+        Promise.all([
+            fetch('data.json').then(res => res.json()),
+            fetch('synergy_matrix.json').then(res => res.json()).catch(() => ({})),
+            fetch('heuristic_weights.json').then(res => res.json()).catch(() => ({}))
+        ]).then(([data, matrix, weights]) => {
+            characterPool = data;
+            synergyMatrix = matrix;
+            aiWeights = weights;
+            initDropdowns();
+            rollDice();
+        }).catch(error => console.error('데이터 로드 실패:', error));
 
-        function applyPreset(level, itemCnt) {
+        function applyPreset(level, legCnt, tranCnt) {
             ['b', 'r'].forEach(team => {
                 for(let i=0; i<3; i++) {
                     document.getElementById(`${team}-lvl-${i}`).value = level;
-                    document.getElementById(`${team}-item-${i}`).value = itemCnt;
+                    document.getElementById(`${team}-leg-${i}`).value = legCnt;
+                    document.getElementById(`${team}-tran-${i}`).value = tranCnt;
+                    updateItemOptions(team, i); // 합산 5 초과 방지 업데이트
                 }
             });
             rollDice();
@@ -117,7 +115,6 @@
         function applyFullCondition() {
             ['b', 'r'].forEach(team => {
                 for(let i=0; i<3; i++) {
-                    document.getElementById(`${team}-hp-${i}`).value = "100";
                     document.getElementById(`${team}-ult-${i}`).value = "ON";
                     document.getElementById(`${team}-wskill-${i}`).value = "ON";
                     document.getElementById(`${team}-tac-${i}`).value = "ON";
@@ -133,8 +130,6 @@
                 charOpts += `<option value="${c.id}">${c.name} (${c.weapon})${descText}</option>`;
             });
 
-            // 체력 드롭다운 복구
-            const hpOpts = `<option value="">체력 (랜덤)</option><option value="100">100%</option><option value="70">70%</option><option value="50">50%</option>`;
             const ultOpts = `<option value="">궁 (랜덤)</option><option value="ON">ON</option><option value="쿨다운">쿨다운</option>`;
             const wSkillOpts = `<option value="">무스 (랜덤)</option><option value="ON">ON</option><option value="쿨다운">쿨다운</option>`;
             const tacSkillOpts = `<option value="">전술 (랜덤)</option><option value="ON">ON</option><option value="쿨다운">쿨다운</option>`;
@@ -142,18 +137,23 @@
             let lvlOpts = '<option value="">레벨 (랜덤)</option>';
             for(let i=1; i<=20; i++) lvlOpts += `<option value="${i}">Lv.${i}</option>`;
             
-            let itemOpts = '<option value="">아이템 (랜덤)</option>';
-            for(let i=0; i<=5; i++) itemOpts += `<option value="${i}">${i}코어</option>`;
+            // 전설 / 초월 분리
+            let legOpts = '<option value="">전설 (랜덤)</option>';
+            for(let i=0; i<=5; i++) legOpts += `<option value="${i}">🟪 ${i}개</option>`;
+            
+            let tranOpts = '<option value="">초월 (랜덤)</option>';
+            for(let i=0; i<=5; i++) tranOpts += `<option value="${i}">🟥 ${i}개</option>`;
 
             const createTeamControls = (teamName, prefix) => {
                 let html = `<div class="control-label" style="color:${prefix==='b'?'#1e90ff':'#ff4757'}">${teamName}</div>`;
                 for(let i=0; i<3; i++) {
                     html += `
                         <div class="control-row" style="margin-left: 10px;">
+                            <span style="color:#a4b0be; font-size:12px; width:40px; display:inline-block;">Slot ${i+1}:</span>
                             <select id="${prefix}-char-${i}" onchange="updateTeamDisables('${prefix}')">${charOpts}</select>
-                            <select id="${prefix}-hp-${i}">${hpOpts}</select>
                             <select id="${prefix}-lvl-${i}">${lvlOpts}</select>
-                            <select id="${prefix}-item-${i}">${itemOpts}</select>
+                            <select id="${prefix}-leg-${i}" onchange="updateItemOptions('${prefix}', ${i})">${legOpts}</select>
+                            <select id="${prefix}-tran-${i}" onchange="updateItemOptions('${prefix}', ${i})">${tranOpts}</select>
                             <select id="${prefix}-ult-${i}">${ultOpts}</select>
                             <select id="${prefix}-wskill-${i}">${wSkillOpts}</select>
                             <select id="${prefix}-tac-${i}">${tacSkillOpts}</select>
@@ -164,6 +164,25 @@
 
             document.getElementById('blue-controls').innerHTML = createTeamControls('BLUE', 'b');
             document.getElementById('red-controls').innerHTML = createTeamControls('RED', 'r');
+        }
+
+        // 아이템 개수 합이 5를 넘지 않도록 옵션 비활성화 처리
+        function updateItemOptions(prefix, index) {
+            const legEl = document.getElementById(`${prefix}-leg-${index}`);
+            const tranEl = document.getElementById(`${prefix}-tran-${index}`);
+            
+            const legVal = legEl.value === "" ? 0 : parseInt(legEl.value);
+            const tranVal = tranEl.value === "" ? 0 : parseInt(tranEl.value);
+
+            Array.from(legEl.options).forEach(opt => {
+                if (opt.value === "") opt.disabled = false;
+                else opt.disabled = (parseInt(opt.value) + tranVal > 5);
+            });
+
+            Array.from(tranEl.options).forEach(opt => {
+                if (opt.value === "") opt.disabled = false;
+                else opt.disabled = (parseInt(opt.value) + legVal > 5);
+            });
         }
 
         function updateTeamDisables(teamPrefix) {
@@ -232,9 +251,9 @@
 
             const createSlot = (teamPrefix, index, isBlue) => {
                 const charVal = document.getElementById(`${teamPrefix}-char-${index}`).value;
-                const hpVal = document.getElementById(`${teamPrefix}-hp-${index}`).value;
                 const lvlVal = document.getElementById(`${teamPrefix}-lvl-${index}`).value;
-                const itemVal = document.getElementById(`${teamPrefix}-item-${index}`).value;
+                const legVal = document.getElementById(`${teamPrefix}-leg-${index}`).value;
+                const tranVal = document.getElementById(`${teamPrefix}-tran-${index}`).value;
                 const ultVal = document.getElementById(`${teamPrefix}-ult-${index}`).value;
                 const wSkillVal = document.getElementById(`${teamPrefix}-wskill-${index}`).value;
                 const tacVal = document.getElementById(`${teamPrefix}-tac-${index}`).value;
@@ -249,9 +268,35 @@
                     teamUsedNames.push(charData.name.trim()); 
                 }
 
-                const finalHp = hpVal ? parseInt(hpVal) : [100, 70, 50][Math.floor(Math.random() * 3)];
                 const finalLvl = lvlVal ? parseInt(lvlVal) : baseLevel + Math.floor(Math.random() * 3);
-                const finalItemCount = itemVal !== "" ? parseInt(itemVal) : Math.floor(Math.random() * 6);
+                
+                // 🎲 전설/초월 분리 랜덤 분배 로직 (최대 5개 제한)
+                let finalLeg = 0;
+                let finalTran = 0;
+                
+                if (legVal !== "" && tranVal !== "") {
+                    finalLeg = parseInt(legVal);
+                    finalTran = parseInt(tranVal);
+                } else if (legVal === "" && tranVal === "") {
+                    const totalItems = Math.floor(Math.random() * 6);
+                    for(let j=0; j<totalItems; j++) {
+                        if (Math.random() < 0.15) finalTran++;
+                        else finalLeg++;
+                    }
+                } else if (legVal === "") {
+                    // 초월만 고정된 경우, 남은 칸 내에서 전설 랜덤
+                    finalTran = parseInt(tranVal);
+                    const maxLeg = 5 - finalTran;
+                    finalLeg = Math.floor(Math.random() * (maxLeg + 1));
+                } else if (tranVal === "") {
+                    // 전설만 고정된 경우, 남은 칸 내에서 15% 확률로 초월 랜덤
+                    finalLeg = parseInt(legVal);
+                    const maxTran = 5 - finalLeg;
+                    for(let j=0; j<maxTran; j++) {
+                         if (Math.random() < 0.15) finalTran++;
+                    }
+                }
+
                 const finalUlt = ultVal ? ultVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 const finalWskill = wSkillVal ? wSkillVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
                 const finalTac = tacVal ? tacVal : (Math.random() > 0.5 ? 'ON' : '쿨다운');
@@ -262,9 +307,9 @@
                     role: charData.role, 
                     description: charData.description, 
                     ult_dependency: charData.ult_dependency || 1.0,
-                    hp: finalHp,
                     level: finalLvl, 
-                    items: finalItemCount, 
+                    legendary: finalLeg, 
+                    transcendent: finalTran,
                     ult: finalUlt, 
                     wskill: finalWskill, 
                     tac: finalTac 
@@ -278,30 +323,26 @@
                 const posX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
                 const posY = Math.floor(Math.random() * (85 - 15 + 1)) + 15;
                 
-                const itemsText = finalItemCount > 0 ? charData.core_items_order.slice(0, finalItemCount).join(', ') : '전설 없음';
+                let itemsText = '템 없음';
+                if (finalLeg > 0 || finalTran > 0) {
+                    itemsText = `🟪 전설 ${finalLeg} / 🟥 초월 ${finalTran}`;
+                }
                 
-                // 새로운 뱃지 UI 생성
-                const getStatusBadge = (label, status) => status === 'ON' ? `<div class="stat-badge stat-on">${label} ON</div>` : `<div class="stat-badge stat-off">${label} OFF</div>`;
+                const getStatusSpan = (label, status) => status === 'ON' ? `<span class="stat-on">${label}: ON</span>` : `<span class="stat-off">${label}: OFF</span>`;
                 const roleBadge = charData.role ? `<span style="background: #ffa502; color: #2f3542; padding: 2px 4px; border-radius: 4px; font-weight: bold; font-size: 10px;">${charData.role}</span>` : '';
                 const descBadge = charData.description ? `<span style="background: #1e90ff; color: white; padding: 2px 4px; border-radius: 4px; font-weight: bold; font-size: 10px; margin-left: 4px;">${charData.description}</span>` : '';
 
                 return `
                     <div class="character-card ${isBlue ? 'blue-team' : 'red-team'}" style="left: ${posX}%; top: ${posY}%;">
                         <img src="${charData.image}" alt="${charData.name}" class="char-img" onerror="this.style.display='none'">
-                        <h3 class="char-name">${charData.name}</h3>
+                        <h3 class="char-name">${charData.name} (${charData.weapon})</h3>
                         <div class="char-vars">
-                            <div style="text-align: center; margin-bottom: 2px;">${roleBadge}${descBadge}</div>
-                            <div class="stat-row">
-                                <div class="stat-badge bg-level">Lv.${finalLvl}</div>
-                                <div class="stat-badge bg-hp">HP ${finalHp}%</div>
-                            </div>
-                            <div class="stat-row">
-                                ${getStatusBadge('궁', finalUlt)}
-                                ${getStatusBadge('무스', finalWskill)}
-                                ${getStatusBadge('전술', finalTac)}
-                            </div>
+                            <div style="margin-bottom: 4px;">${roleBadge}${descBadge}</div>
+                            <strong>Lv.${finalLvl}</strong><br>
+                            ${getStatusSpan('궁', finalUlt)} | ${getStatusSpan('무스', finalWskill)}<br>
+                            ${getStatusSpan('전술', finalTac)}
                         </div>
-                        <div class="items">코어: ${itemsText}</div>
+                        <div class="items">${itemsText}</div>
                     </div>
                 `;
             };
@@ -312,18 +353,22 @@
             document.getElementById('battlefield-container').innerHTML = html;
         }
 
+        // 고도화된 평가 엔진 (상성 베이스라인 + 다이나믹 스킬 가중치)
         function showEvaluation() {
             if (currentBlueTeam.length === 0) return;
 
             const timeValInput = document.getElementById('env-time').value;
             const terrainValInput = document.getElementById('env-terrain').value;
-
             const timeVal = timeValInput || (document.getElementById('env-display').innerText.includes('밤') ? '밤' : '낮');
             const terrainVal = terrainValInput || ['좁은 골목', '개활지', '벽과 장애물 지역'].find(t => document.getElementById('env-display').innerText.includes(t)) || '';
 
             const getPowerScore = (team) => {
                 return team.reduce((sum, char) => {
-                    let score = (char.level * 17) + (char.items * 20);
+                    let lvlPts = aiWeights.LEVEL_PER_PERSON || 17;
+                    let legPts = aiWeights.LEGENDARY_ITEM || 20;
+                    let tranPts = aiWeights.TRANSCENDENT_ITEM || 35; 
+
+                    let score = (char.level * lvlPts) + (char.legendary * legPts) + (char.transcendent * tranPts);
                     
                     if (char.ult === 'ON') {
                         score += 30;
@@ -334,14 +379,9 @@
                     if (char.wskill === 'ON') score += 15;
                     if (char.tac === 'ON') score += 20;
                     
-                    if (terrainVal === '좁은 골목' && (char.role === '탱커' || char.role === '브루저')) {
-                        score *= 1.15;
-                    } else if (terrainVal === '개활지' && char.role === '원딜') {
-                        score *= 1.15;
-                    }
-                    if (timeVal === '밤' && (char.role === '암살자' || char.role === '치명타')) {
-                        score *= 1.10;
-                    }
+                    if (terrainVal === '좁은 골목' && (char.role === '퓨어탱커' || char.role === '탱브루저')) score *= 1.15;
+                    if (terrainVal === '개활지' && char.role.includes('원딜')) score *= 1.15;
+                    if (timeVal === '밤' && (char.role === '암살자' || char.role === '딜브루저')) score *= 1.10;
 
                     return sum + score; 
                 }, 0);
@@ -349,20 +389,46 @@
 
             const bluePower = getPowerScore(currentBlueTeam);
             const redPower = getPowerScore(currentRedTeam);
-            const totalPower = bluePower + redPower;
-
-            const isBlueAdvantage = bluePower >= redPower;
-            const winRate = totalPower === 0 ? "50.0" : ((Math.max(bluePower, redPower) / totalPower) * 100).toFixed(1);
+            
+            const getDeckKey = (team) => team.map(c => c.role).sort().join(" + ");
+            const blueDeckKey = getDeckKey(currentBlueTeam);
+            const redDeckKey = getDeckKey(currentRedTeam);
+            const synergyKey = `${blueDeckKey} VS ${redDeckKey}`;
+            
+            const baseSynergyWinRate = synergyMatrix[synergyKey] || 50.0;
+            const powerDiffRatio = (bluePower - redPower) / (bluePower + redPower + 1); 
+            let finalWinRate = baseSynergyWinRate + (powerDiffRatio * 150); 
+            
+            finalWinRate = Math.max(5.0, Math.min(95.0, finalWinRate)).toFixed(1);
+            const isBlueAdvantage = finalWinRate >= 50.0;
             const winningTeam = isBlueAdvantage ? "<span style='color:#1e90ff'>블루팀</span>" : "<span style='color:#ff4757'>레드팀</span>";
 
+            const getPrimaryTarget = (team) => {
+                let maxScore = -1;
+                let target = null;
+                team.forEach(char => {
+                    let targetScore = 0; 
+                    if (char.ult === '쿨다운') targetScore += 60; 
+                    if (char.tac === '쿨다운') targetScore += 40;
+                    if (timeVal === '밤' && char.role.includes('원딜')) targetScore *= 1.25;
+                    
+                    if (targetScore > maxScore) {
+                        maxScore = targetScore;
+                        target = char;
+                    }
+                });
+                return target;
+            };
+
+            const targetChar = isBlueAdvantage ? getPrimaryTarget(currentRedTeam) : getPrimaryTarget(currentBlueTeam);
+            const targetDescText = targetChar.description ? ` - ${targetChar.description}` : '';
+
             const resultHtml = `
-                <strong style="color: #ffa502; font-size: 20px;">[엔진 평가 결과]</strong><br><br>
-                📊 <strong>판세 분석:</strong> [${timeVal} / ${terrainVal}] 환경 보정 반영<br>
-                현재 <strong>${winningTeam} 승률 약 ${winRate}%</strong> 예측<br><br>
-                <span style="font-size: 13px; color: #a4b0be; text-align: left; display: block; background: #222f3e; padding: 10px; border-radius: 6px;">
-                    ※ 주의: 엔진은 유저의 '상황 부여용'인 <strong>체력 변수를 배제</strong>하고,<br>
-                    순수 체급(레벨/아이템)과 스킬 가치(궁극기 의존도 포함)만을 벤치마킹하여 승률을 산출합니다.
-                </span>
+                <strong style="color: #ffa502; font-size: 18px;">[엔진 평가 결과]</strong><br><br>
+                📊 <strong>판세 분석:</strong> AI 조합 상성 + 인게임 체급 융합 기준<br>
+                ▶ <strong>${winningTeam} 승률 약 ${finalWinRate}%</strong><br><br>
+                🎯 <strong>최우선 포커싱 타겟:</strong> <strong>${targetChar.name} (${targetChar.weapon})${targetDescText}</strong><br>
+                <span style="font-size: 14px; color: #a4b0be;">(산출 사유: 전장 환경 및 스킬 쿨다운 복합 비선형 계산)</span>
             `;
 
             const resultDiv = document.getElementById('evaluation-result');
