@@ -38,7 +38,6 @@
         #reroll-btn { background-color: #ffa502; color: #2f3542; }
         #reroll-btn:hover { background-color: #ff7f50; }
         
-        /* 평가 기능(Beta) 관련 CSS */
         #eval-btn { background-color: #1e90ff; color: white; }
         #eval-btn:hover { background-color: #3742fa; }
         #evaluation-result { display: none; margin: 20px auto; padding: 20px; background: #2f3542; border: 2px dashed #1e90ff; border-radius: 8px; max-width: 800px; font-size: 16px; line-height: 1.6; }
@@ -93,7 +92,8 @@
             fetch('synergy_matrix.json').then(res => res.json()).catch(() => ({})),
             fetch('heuristic_weights.json').then(res => res.json()).catch(() => ({}))
         ]).then(([data, matrix, weights]) => {
-            characterPool = data;
+            // 미출시 캐릭터 세레스 숨김 처리
+            characterPool = data.filter(c => c.name !== '세레스');
             synergyMatrix = matrix;
             aiWeights = weights;
             initDropdowns();
@@ -145,7 +145,6 @@
             let lvlOpts = '<option value="">레벨 (랜덤)</option>';
             for(let i=1; i<=20; i++) lvlOpts += `<option value="${i}">Lv.${i}</option>`;
             
-            // 전설 / 초월 분리
             let legOpts = '<option value="">전설 (랜덤)</option>';
             for(let i=0; i<=5; i++) legOpts += `<option value="${i}">🟪 ${i}개</option>`;
             
@@ -174,7 +173,6 @@
             document.getElementById('red-controls').innerHTML = createTeamControls('RED', 'r');
         }
 
-        // 아이템 개수 합이 5를 넘지 않도록 옵션 비활성화 처리
         function updateItemOptions(prefix, index) {
             const legEl = document.getElementById(`${prefix}-leg-${index}`);
             const tranEl = document.getElementById(`${prefix}-tran-${index}`);
@@ -403,14 +401,20 @@
             const powerDiffRatio = (bluePower - redPower) / (bluePower + redPower + 1); 
             let finalWinRate = baseSynergyWinRate + (powerDiffRatio * 150); 
             
-            finalWinRate = Math.max(5.0, Math.min(95.0, finalWinRate)).toFixed(1);
+            // 승률을 5.0 ~ 95.0 사이로 제한
+            finalWinRate = Math.max(5.0, Math.min(95.0, finalWinRate));
+            
             const isBlueAdvantage = finalWinRate >= 50.0;
             const winningTeam = isBlueAdvantage ? "<span style='color:#1e90ff'>블루팀</span>" : "<span style='color:#ff4757'>레드팀</span>";
+            
+            // 승자 기준 확률로 변환
+            const displayWinRate = isBlueAdvantage ? finalWinRate : (100.0 - finalWinRate);
+            const finalWinRateText = displayWinRate.toFixed(1);
 
             const resultHtml = `
                 <strong style="color: #1e90ff; font-size: 18px;">[💡 승률 예측 결과]</strong><br><br>
                 📊 <strong>판세 분석:</strong> AI 조합 상성 + 인게임 체급 융합 기준<br>
-                ▶ <strong>${winningTeam} 승률 약 ${finalWinRate}%</strong>
+                ▶ <strong>${winningTeam} 승률 약 ${finalWinRateText}%</strong>
             `;
 
             const resultDiv = document.getElementById('evaluation-result');
