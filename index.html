@@ -253,6 +253,17 @@
                 }
             }
 
+            // 🎲 Y축 가상 구역 분할 (겹침 완벽 방지)
+            const yZones = [
+                { min: 15, max: 35 },
+                { min: 40, max: 60 },
+                { min: 65, max: 85 }
+            ];
+            
+            // 매 셔플마다 어느 구역에 들어갈지 랜덤하게 섞음
+            const blueZones = [...yZones].sort(() => 0.5 - Math.random());
+            const redZones = [...yZones].sort(() => 0.5 - Math.random());
+
             let html = '';
 
             const createSlot = (teamPrefix, index, isBlue) => {
@@ -321,10 +332,14 @@
                 if (isBlue) currentBlueTeam.push(matchData);
                 else currentRedTeam.push(matchData);
 
+                // 💡 지터링을 통한 좌표 생성
                 const minX = isBlue ? 8 : 55;
                 const maxX = isBlue ? 45 : 92;
                 const posX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
-                const posY = Math.floor(Math.random() * (85 - 15 + 1)) + 15;
+                
+                // 배정받은 구역 내에서만 Y좌표를 랜덤하게 흔듦
+                const myZone = isBlue ? blueZones[index] : redZones[index];
+                const posY = Math.floor(Math.random() * (myZone.max - myZone.min + 1)) + myZone.min;
                 
                 let itemsText = '템 없음';
                 if (finalLeg > 0 || finalTran > 0) {
