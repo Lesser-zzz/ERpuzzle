@@ -96,11 +96,21 @@ print("⏳ AI 훈련 및 휴리스틱 가중치 계산 중...")
 X = diff_df.drop(['Target_Win'], axis=1) 
 y = diff_df['Target_Win']
 
-# 💡 기본 모델 옵션 복구
-model = xgb.XGBClassifier(n_estimators=300, learning_rate=0.05, max_depth=6, random_state=42, eval_metric='logloss')
+# 💡 모델 튜닝: L2 정규화, 최소 표본 기준, 가중치 산출 방식(weight) 변경
+model = xgb.XGBClassifier(
+    n_estimators=300, 
+    learning_rate=0.05, 
+    max_depth=6, 
+    random_state=42, 
+    eval_metric='logloss',
+    importance_type='weight',    # 💡 튀는 승률 대신 '트리 분할에 쓰인 빈도' 기반으로 신뢰도 높은 점수비 도출
+    colsample_bytree=0.5,        # 💡 특정 역할군(변수)에 과의존하는 현상 방지
+    reg_lambda=50.0,             # 💡 튀는 상대적 가중치를 평균으로 강력하게 억제
+    min_child_weight=10          # 💡 표본이 적은 노이즈 데이터는 학습에서 배제
+)
 model.fit(X, y)
 
-# 💡 엉뚱한 weight 빼고 정상적인 승률 기여도(Gain)로 복구
+# 💡 weight로 뽑아낸 신뢰도 높은 점수비(feature_importances_)로 복구
 imp_dict = dict(zip(X.columns, model.feature_importances_))
 scale_factor = 20.0 / imp_dict.get('Diff_Total_Leg', 1)
 
