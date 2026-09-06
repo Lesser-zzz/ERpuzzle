@@ -371,6 +371,7 @@
             document.getElementById('battlefield-container').innerHTML = html;
         }
 
+        // 💡 고도화된 평가 엔진 (상성 베이스라인 + 다이나믹 스킬 가중치)
         function showEvaluation() {
             if (currentBlueTeam.length === 0) return;
 
@@ -379,11 +380,12 @@
             const timeVal = timeValInput || (document.getElementById('env-display').innerText.includes('밤') ? '밤' : '낮');
             const terrainVal = terrainValInput || ['좁은 골목', '개활지', '벽과 장애물 지역'].find(t => document.getElementById('env-display').innerText.includes(t)) || '';
 
+            // 💡 엔진 전투력 합산 함수
             const getPowerScore = (team) => {
                 return team.reduce((sum, char) => {
-                    let lvlPts = aiWeights.LEVEL_PER_PERSON || 17;
-                    let legPts = aiWeights.LEGENDARY_ITEM || 20;
-                    let tranPts = aiWeights.TRANSCENDENT_ITEM || 35; 
+                    let lvlPts = aiWeights.LEVEL_PER_PERSON || 22.73; // 최신 AI 도출 레벨 점수
+                    let legPts = aiWeights.LEGENDARY_ITEM || 20.0;
+                    let tranPts = aiWeights.TRANSCENDENT_ITEM || 93.49; // 최신 초월템 점수
 
                     let score = (char.level * lvlPts) + (char.legendary * legPts) + (char.transcendent * tranPts);
                     
@@ -396,24 +398,35 @@
                     if (char.wskill === 'ON') score += 15;
                     if (char.tac === 'ON') score += 20;
                     
+                    // 환경 보정
                     if (terrainVal === '좁은 골목' && (char.role === '퓨어탱커' || char.role === '탱브루저')) score *= 1.15;
                     if (terrainVal === '개활지' && char.role.includes('원딜')) score *= 1.15;
                     if (timeVal === '밤' && (char.role === '암살자' || char.role === '딜브루저')) score *= 1.10;
 
+                    // 🚨 버그 방지: 계산된 score를 sum에 누적해서 반환!
                     return sum + score; 
                 }, 0);
             };
 
             const bluePower = getPowerScore(currentBlueTeam);
             const redPower = getPowerScore(currentRedTeam);
+            const totalPower = bluePower + redPower;
             
+            // 역할군 키 조합 (상성 매트릭스 탐색용)
             const getDeckKey = (team) => team.map(c => c.role).sort().join(" + ");
             const blueDeckKey = getDeckKey(currentBlueTeam);
             const redDeckKey = getDeckKey(currentRedTeam);
             const synergyKey = `${blueDeckKey} VS ${redDeckKey}`;
             
+            // AI 베이스라인 승률 (데이터가 없거나 못 불러왔을 경우 대비 50.0으로 초기화)
             const baseSynergyWinRate = synergyMatrix[synergyKey] || 50.0;
-            const powerDiffRatio = (bluePower - redPower) / (bluePower + redPower + 1); 
+            
+            // NaN 방지 및 전투력 비율에 따른 추가 승률 스노우볼
+            let powerDiffRatio = 0;
+            if (totalPower > 0) {
+                powerDiffRatio = (bluePower - redPower) / totalPower; 
+            }
+            
             let finalWinRate = baseSynergyWinRate + (powerDiffRatio * 150); 
             
             // 승률을 5.0 ~ 95.0 사이로 제한
@@ -424,7 +437,9 @@
             
             // 승자 기준 확률로 변환
             const displayWinRate = isBlueAdvantage ? finalWinRate : (100.0 - finalWinRate);
-            const finalWinRateText = displayWinRate.toFixed(1);
+            
+            // ✨ 소수점 2번째 자리까지 표기 변경
+            const finalWinRateText = displayWinRate.toFixed(2);
 
             const resultHtml = `
                 <strong style="color: #1e90ff; font-size: 18px;">[💡 승률 예측 결과]</strong><br><br>
