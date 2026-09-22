@@ -1,8 +1,8 @@
 name: Eternal Return V-NIGHT Pipeline
 
 on:
-  schedule:
-    - cron: '0 16,23 * * *'
+  # schedule:
+  #   - cron: '0 16,23 * * *'
   workflow_dispatch:
 
 concurrency:
